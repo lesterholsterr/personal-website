@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="CSS/style.css">
+  <title>Document</title>
+</head>
+
+<body>
+  <!-- 
+  TODO:
+    - Arrow animation on button hover
+    - Delay and animation for buttons appearing
+    - Overall aesthetic (button shape, colours, fonts, format)
+    - Adjust for small screens
+      - Padding for text
+      - Buttons should go straight from 3 horizontal to 3 vertical
+  -->
+
+  <!-- Main Flexbox -->
+  <main>
+    <h1><span class="auto-greeting"></span></h1>
+    <p><span class="auto-thankyou"></span></p>
+    <div>
+      <a href="portfolio.html"><button>I am a recruiter</button></a>
+      <a href="blog.html"><button>To check out your blog!</button></a>
+      <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"><button>Just looking around...</button></a>
+    </div>
+  </main>
+  
+  <!-- Typing animation -->
+  <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+  <script>
+    var typed = new Typed(".auto-greeting", {
+      strings: ["Hi, I'm Matthew!"],
+      typeSpeed: 100,
+      loop: false
+    })
+
+    setTimeout(function() {
+      var typed = new Typed(".auto-thankyou", {
+        strings: ["Thanks for visiting my website. What brings you here?"],
+        typeSpeed: 50,
+        loop: false
+      })
+  }, 2000);
+  </script>
+</body>
+
+</html>
