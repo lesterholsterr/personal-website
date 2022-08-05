@@ -10,24 +10,14 @@
 </head>
 
 <body>
-  <!-- 
-  TODO:
-    - Arrow animation on button hover
-    - Delay and animation for buttons appearing
-    - Overall aesthetic (button shape, colours, fonts, format)
-    - Adjust for small screens
-      - Padding for text
-      - Buttons should go straight from 3 horizontal to 3 vertical
-  -->
-
-  <!-- Main Flexbox -->
-  <main>
+  <!-- Homepage Flexbox -->
+  <main class="homepage-flexbox">
     <h1><span class="auto-greeting"></span></h1>
     <p><span class="auto-thankyou"></span></p>
     <div>
-      <a href="portfolio.html"><button>I am a recruiter</button></a>
-      <a href="blog.html"><button>To check out your blog!</button></a>
-      <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"><button>Just looking around...</button></a>
+      <a href="portfolio.html"><button><span>I am a recruiter</span></button></a>
+      <a href="blog.html"><button><span>Checking out your blog!</span></button></a>
+      <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"><button><span>Just looking around...</span></button></a>
     </div>
   </main>
   
@@ -37,7 +27,7 @@
     var typed = new Typed(".auto-greeting", {
       strings: ["Hi, I'm Matthew!"],
       typeSpeed: 100,
-      loop: false
+      // loop: false
     })
 
     setTimeout(function() {
@@ -46,7 +36,7 @@
         typeSpeed: 50,
         loop: false
       })
-  }, 2000);
+  }, 2200);
   </script>
 </body>
 
