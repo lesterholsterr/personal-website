@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="CSS/style.css">
+  <link rel="stylesheet" href="style.css">
   <title>Document</title>
 </head>
 
@@ -15,6 +15,7 @@
     - About Me layout (2 by 2 grid or horizontal flexbox?)
     - About Me writeup
     - Animations
+    - @media (max-height) to allow for some scroll on smaller screen
 -->
 
 <body>
@@ -30,21 +31,56 @@
   <!-- Portfolio Slideshow -->
   <div class="slideshow">
     <!-- About Me -->
-    <section id="about-me">
-      <h1>About Me</h1>
+    <section>
+      <!-- <div class="background-right"> </div> -->
+      <div class="about-me-flex">
+        <div class="selfie-container">
+          <img src="Images/me2.png" alt="me" class="selfie">
+        </div>
+        <div class="about-me-text">
+          <h1 class="about-me-title">About Me</h1>
+          <p class="about-me-body">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum, consequatur sed eaque sequi, a explicabo illum, voluptas vitae numquam hic inventore architecto nam debitis repudiandae. Numquam dolorum minus nemo facilis?</p>
+        </div>
+      </div>
     </section>
-    <!-- Work Experience -->
-    <section id="work-experience">
-      <h1>Work Experience</h1>
+
+    <!-- Mega Grid -->
+    <section>
+      <div class="mega-grid">
+        <div class="we">Work Experience</div>
+        <!-- <div class="tutor-logo">tutor logo</div>
+        <div class="onehacks-text">onehacks text</div>
+        <div class="onehacks-logo">onehacks logo</div> -->
+        <div class="h">Hackathons</div>
+        <!-- <div class="bmo-logo">bmo logo</div>
+        <div class="bmo-text">bmo text</div>
+        <div class="tutor-text">tutor text</div>
+        <div class="frey-text">frey text</div>
+        <div class="frey-logo">frey logo</div>
+        <div class="deca-text">deca text</div>
+        <div class="shsm-text">shsm text</div> -->
+        <div class="p">Projects</div>
+        <!-- <div class="book-logo">book logo</div>
+        <div class="book-text">book text</div>
+        <div class="ap-text">ap text</div>
+        <div class="shsm-logo">shsm logo</div>
+        <div class="misc-text">misc text</div>
+        <div class="fbla-text">fbla text</div>
+        <div class="ap-logo">ap logo</div>
+        <div class="deca-logo">deca logo</div> -->
+        <div class="ec">Extra-Curriculars</div>
+        <!-- <div class="misc-logo">misc logo</div>
+        <div class="fbla-logo">fbla logo</div> -->
+        <div class="c">Contests</div>
+        <!-- <div class="nothing"> </div> -->
+      </div>
     </section>
-    <!-- Projects -->
-    <section id="projects">
-      <h1>Projects</h1>
+
+    <!-- Contact -->
+    <section>
+      <h1>Contact</h1>
     </section>
-    <!-- Contests -->
-    <section id="contests">
-      <h1>Case competitions and hackathons</h1>
-    </section>
+
   </div>
   
 </body>
