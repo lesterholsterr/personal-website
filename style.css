@@ -219,60 +219,7 @@ header *:hover {
   }
 }
 
-/* Mega Grid */
-.mega-grid {
-  height: 80vh;
-  width: 80vh;
-  background-color: gray;
-  gap: 10px;
-  
-  display: grid;
-  /* grid-template-rows: auto auto auto auto auto;
-  grid-template-columns: auto auto auto auto auto auto auto; */
-  grid-template-areas:
-    "we" "h" "p" "ec" "c";
-    /* "we we tutor-logo onehacks-text onehacks-logo h h"
-    "bmo-logo bmo-text tutor-text onehacks-text frey-text frey-logo deca-text"
-    "shsm-text bmo-text p book-logo book-text ap-text deca-text"
-    "shsm-text shsm-logo misc-text misc-text book-text ap-logo deca-logo"
-    "ec ec misc-logo fbla-text fbla-logo c c"; */
-}
-.mega-grid div {
-  background-color: red;
-  text-align: center;
-  font-size: 15px;
-  text-align: center;
-  line-height: 20px;
-  padding: 5px;
-}
-.grid-we {
-  grid-area: we;
-}
-.grid-h {
-  grid-area: h;
-}
-.grid-p {
-  grid-area: p;
-}
-.grid-ec {
-  grid-area: ec;
-}
-.grid-c {
-  grid-area: c;
-}
-.nothing {
-  grid-area: n;
-}
 
-@media (min-width:100px) {
-  .mega-grid {
-    grid-template-areas:
-    "we we h h"
-    "we we h h"
-    "p p p p"
-    "ec ec c c";
-  }
-}
 
 /* Animations */
 @keyframes float-up {
