@@ -6,38 +6,87 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;400&display=swap" rel="stylesheet">
   <title>Document</title>
 </head>
 
+<!-- 
+  TODO 08/08: 
+    - About Me writeup
+    - DONE Button formatting
+    - DONE Animations
+    - @media
+      - for smaller screens: "Hi I'm Matthew" not typed (blinker affects burger navbar), vh width of grids decreased, image of me shrinked
+    - improve colour scheme
+-->
+
 <body>
-  <!-- Homepage Flexbox -->
-  <main class="homepage-flexbox">
-    <h1><span class="auto-greeting"></span></h1>
-    <p><span class="auto-thankyou"></span></p>
-    <div>
-      <a href="portfolio.html"><button><span>I am a recruiter</span></button></a>
-      <a href="blog.html"><button><span>Checking out your blog!</span></button></a>
-      <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"><button><span>Just looking around...</span></button></a>
+  <!-- Navbar -->
+  <nav>
+    <h3>Matthew Yang</h3>
+    <ul>
+      <li>
+        <a href="#">About Me</a>
+      </li>
+      <li>
+        <a href="#">Portfolio</a>
+      </li>
+      <li>
+        <a href="#">Contact</a>
+      </li>
+      <li>
+        <a href="#">Blog</a>
+      </li>
+      <li>
+        <img src="Images/mail-logo.webp" alt="mail-logo">
+      </li>
+      <li>
+        <img src="Images/linkedin-logo.png" alt="linkedin-logo">
+      </li>
+      <li>
+        <img src="Images/github-logo.png" alt="github-logo">
+      </li>
+    </ul>
+    <div class="burger">
+      <div class="burger-line-1"></div>
+      <div class="burger-line-2"></div>
+      <div class="burger-line-3"></div>
     </div>
-  </main>
+  </nav>
+
+  <!-- About Me -->
+  <section class="about-me">
+    <div class="about-me-grid">
+      <h1><span class="auto-greeting"></span></h1>
+      <div class="image-container">
+        <img src="Images/me.png" alt="me">
+      </div>
+      <div class="about-me-writeup">
+        <h2>About Me</h2>
+        <p>Hi there, thanks for visiting! I am a Computing and Financial Management student (Computer Science & Finance double major) at the University of Waterloo on my 1A term. I don't know what else to write.</p>
+        <br>
+        <p>Also I watch Jeopardy.</p>
+      </div>
+      <a href="portfolio.html"><button class="button1"><span>Portfolio</span></button></a>
+      <a href="blog.html"><button class="button2"><span>Blog</span></button></a>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section>
+    <h1>Contact</h1>
+  </section>
+
   
-  <!-- Typing animation -->
+  <script src="app.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
   <script>
     var typed = new Typed(".auto-greeting", {
       strings: ["Hi, I'm Matthew!"],
       typeSpeed: 100,
-      // loop: false
     })
-
-    setTimeout(function() {
-      var typed = new Typed(".auto-thankyou", {
-        strings: ["Thanks for visiting my website. What brings you here?"],
-        typeSpeed: 50,
-        loop: false
-      })
-  }, 2200);
   </script>
+
 </body>
 
 </html>
