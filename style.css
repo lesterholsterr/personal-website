@@ -14,7 +14,7 @@ nav {
   display: flex;
   justify-content: flex-end;
   align-items: center;
-  height: 7vh;
+  min-height: 7vh;
   background-color: rgb(197,216,214);
 }
 
@@ -22,7 +22,6 @@ nav h3 {
   color: rgb(95, 114, 126);
   letter-spacing: 2px;
   font-size: 30px;
-  font-style: bold;
   margin-right: 25%;
 }
 
@@ -41,7 +40,6 @@ nav li {
 nav a {
   color: rgb(95, 114, 126);
   text-decoration: none;
-  font-weight: bold;
 }
 
 nav img {
@@ -124,12 +122,19 @@ nav *:hover {
     margin-right: 5%;
   }
   nav h3 {
-    margin-right: 60%;
+    margin-right: 50%;
+  }
+}
+@media screen and (max-width: 650px) {
+  nav h3 {
+    margin-right: 30%;
+    font-size: 25px;
   }
 }
 
 /* About Me */
 .about-me {
+  /* width: 100vw; */
   background-color: antiquewhite;
   margin-top: 7vh;
 }
@@ -142,27 +147,29 @@ nav *:hover {
     'A A'
     'B C'
     'B D'
-    'B E';
-  grid-template-columns: 80vh 50vh;
+    'B D';
+  grid-template-columns: 40vw 25vw;
 }
 
 .about-me h1 {
-  font-size: 90px;
+  font-size: 80px;
   margin-top: 3vh;
   text-align: center;
   grid-area: A;
 }
+
 .image-container {
-  height: 76vh;
+  height: 72vh;
+  display: flex;
+  justify-content: center;
   overflow-y: hidden;
   animation: slide-right 2s ease-in-out;
   grid-area: B;
 }
 .about-me img {
-  height: 100vh;
-  display: block;
-  float: left;
+  height: 95vh;
 }
+
 .about-me-writeup {
   animation: slide-left 2s ease-in-out;
   grid-area: C;
@@ -173,15 +180,17 @@ nav *:hover {
 }
 .about-me p {
   margin-top: 2vh;
-  font-size: 20px;
-}
-.button1 {
-  grid-area: D;
-}
-.button2 {
-  grid-area: E;
+  font-size: 22px;
 }
 
+.about-me-buttons {
+  height: 80%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  grid-area: D;
+}
 .about-me button {
   border: none;
   background-color: rgb(197,216,214);;
@@ -191,22 +200,22 @@ nav *:hover {
   text-align: center;
   text-decoration: none;
   font-size: 20px;
-  margin: 30px;
   transition-duration: 0.5s;
 
   animation: slide-left 2s ease-in-out;
 }
-
 .about-me button:hover {
   cursor: pointer;
   box-shadow: -6px 12px 16px 0 rgba(0,0,0,0.24)
 }
-
+.about-me a {
+  color: inherit;
+  text-decoration: none;
+}
 .about-me button span {
   position: relative;
   transition-duration: 0.5s;
 }
-
 .about-me button span:after {
   content: '\00bb';
   position: absolute;
@@ -215,22 +224,121 @@ nav *:hover {
   right: -20px;
   transition-duration: 0.5s;
 }
-
 .about-me button:hover span {
   padding-right: 25px;
   transition-duration: 0.5s;
 }
-
 .about-me button:hover span:after {
   opacity: 1;
   right: 0;
 }
 
-@media screen and (min-width: 1000px) {
+@media screen and (max-width: 1350px) {
   .about-me-grid {
-
-  } 
+    grid-template-columns: 45vw 30vw;
+  }
 }
+@media screen and (max-width: 1250px) {
+  .about-me-grid {
+    grid-template-columns: 53vw 35vw;
+  }
+}
+@media screen and (max-width: 1000px) {
+  .about-me-grid {
+    grid-template-areas: 
+      "A"
+      "C"
+      "D"
+      "B";
+    grid-template-columns: 80vw;
+  }
+  .about-me h2 {
+    margin-top: 30px;
+  }
+  .about-me p {
+    text-align: center;
+  }
+  .about-me-buttons {
+    margin-top: 30px;
+  }
+  .about-me button {
+    margin: 10px;
+  }
+  .image-container {
+    animation: float-up 2s ease-in-out;
+  }
+  .about-me button {
+    animation: slide-right 2s ease-in-out;
+  }
+}
+@media screen and (max-width: 700px) {
+  .image-container {
+    height: 50vh;
+  }
+  .about-me img {
+    height: 70vh;
+  }
+}
+
+@media screen and (max-height: 700px) {
+  .about-me h1 {
+    font-size: 70px;
+  }
+  .about-me h2 {
+    font-size: 30px;
+  }
+  .about-me p {
+    font-size: 20px;
+  }
+}
+
+@media screen and (max-height: 600px) {
+  .about-me h1 {
+    font-size: 60px;
+  }
+  .about-me h2 {
+    font-size: 25px;
+  }
+  .about-me p {
+    font-size: 17px;
+  }
+  .about-me-buttons {
+    flex-direction: row;
+  }
+  .about-me button {
+    margin: 10px;
+  }
+}
+
+@media screen and (max-height: 360px) {
+  .about-me-grid {
+    grid-template-areas: 
+      "A A A"
+      "B C D";
+    grid-template-columns: 25vw 25vw 25vw;
+  }
+  .about-me-buttons {
+    flex-direction: column;
+  }
+  .about-me-buttons {
+    margin-left: 30px;
+  }
+}
+
+/* Work Experience */
+.work-exp {
+  background-color: whitesmoke;
+}
+
+.work-exp div {
+  display: flex;
+}
+/* .work-exp div:nth-child(odd) {
+
+}
+.work-exp div:nth-child(even) {
+
+} */
 
 /* Animations */
 .nav-active {
@@ -261,8 +369,8 @@ nav *:hover {
 @keyframes float-up {
   from {
     opacity: 0; 
-    -webkit-transform: translateY(100px);
-    -moz-transform: translateY(100px);
+    -webkit-transform: translateY(200px);
+    -moz-transform: translateY(200px);
   }
   to {opacity: 100}
 }
