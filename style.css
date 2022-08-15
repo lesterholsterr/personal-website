@@ -534,26 +534,26 @@ nav *:hover {
 
 @media screen and (min-width: 2000px) {
   .job-container {
-    width: 35vw;
+    width: 38vw;
   }
   .ecs-subtitle {
-    width: 35vw;
+    width: 38vw;
   }
 }
 @media screen and (max-width: 2000px) {
   .job-container {
-    width: 40vw;
+    width: 50vw;
   }
   .ecs-subtitle {
-    width: 40vw;
+    width: 50vw;
   }
 }
 @media screen and (max-width: 1500px) {
   .job-container {
-    width: 45vw;
+    width: 55vw;
   }
   .ecs-subtitle {
-    width: 45vw;
+    width: 55vw;
   }
 }
 @media screen and (max-width: 1000px) {
