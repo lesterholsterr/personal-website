@@ -7,3 +7,4 @@ That's the plan anyways :P
 
 Sources:
 Navbar hamburger: https://www.youtube.com/watch?v=gXkqy0b4M5g
+Scroll-out library: https://github.com/scroll-out/scroll-out

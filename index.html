@@ -7,16 +7,15 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="style.css">
   <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;400&display=swap" rel="stylesheet">
-  <title>Document</title>
+  <title>Matthew Yang</title>
 </head>
 
 <!-- 
-  TODO 08/13: 
-    - Work Experience writeup
-    - Work Experience @media screen size (change vertical margin to px)
-    - DONE Projects image hover overlay
-    - Projects @media screen size
-    - Contacts formatting
+  TODO 08/15: 
+    - Work Experience writeups
+    - Project writeups
+    - Contests layout (WHAT IS THE BACKGROUND COLOUR)
+    - Contact form (formatting and JS)
 -->
 
 <body>
@@ -28,22 +27,22 @@
         <a href="#">About Me</a>
       </li>
       <li>
-        <a href="#">Portfolio</a>
+        <a href="#work-exp">Portfolio</a>
       </li>
       <li>
-        <a href="#">Contact</a>
+        <a href="#contact">Contact</a>
       </li>
       <li>
-        <a href="#">Blog</a>
+        <a href="blog.html">Blog</a>
       </li>
       <li>
-        <img src="Images/mail-logo.webp" alt="mail-logo">
+        <a href="mailto:mattyang98@gmail.com"><img src="Images/mail-logo.webp" alt="mail-logo"></a>
       </li>
       <li>
-        <img src="Images/linkedin-logo.png" alt="linkedin-logo">
+        <a href="https://www.linkedin.com/in/matthew-yang-4b9728200/" target="_blank"><img src="Images/linkedin-logo.png" alt="linkedin-logo"></a>
       </li>
       <li>
-        <img src="Images/github-logo.png" alt="github-logo">
+        <a href="https://github.com/lesterholsterr" target="_blank"><img src="Images/github-logo.png" alt="github-logo"></a>
       </li>
     </ul>
     <div class="burger">
@@ -54,37 +53,37 @@
   </nav>
 
   <!-- About Me -->
-  <section class="about-me">
+  <section id="about-me">
     <div class="about-me-grid">
       <h1><span class="auto-greeting"></span></h1>
       <div class="image-container">
         <img src="Images/me.png" alt="me">
       </div>
       <div class="about-me-writeup">
-        <h2>About Me</h2>
+        <h2 data-aos="fade-up">About Me</h2>
         <p>Hi there, thanks for visiting! I am a Computing and Financial Management student (Computer Science & Finance double major) at the University of Waterloo on my 1A term. I enjoy learning new things because it is my strong belief that the only reason you may find something uninteresting is that you haven't learned enough of it yet.</p>
       </div>
       <div class="about-me-buttons">
-        <button><a href="portfolio.html"><span>Portfolio</span></a></button>
+        <button><a href="#work-exp"><span>Portfolio</span></a></button>
         <button><a href="blog.html"><span>Blog</span></a></button>
       </div>
     </div>
   </section>
 
   <!-- Work Experience -->
-  <section class="work-exp">
+  <section id="work-exp">
     <h1>Work Experience</h1>
     <div class="job-container">
       <img src="Images/bmo-logo.png" alt="BMO logo">
       <div>
-        <h3>Financial Analyst Intern @BMO</h3>
+        <h3>Financial Analyst Intern @ BMO</h3>
         <h4>March 2022 - August 2022</h4>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt totam veniam praesentium reprehenderit neque? Qui, quod provident. Perferendis ea deserunt aliquid recusandae, laboriosam harum quaerat doloremque dolorum animi soluta voluptas.</p>
       </div>
     </div>
     <div class="job-container">
       <div>
-        <h3>Tutor @Canada Wisecolt Education</h3>
+        <h3>Tutor @ Canada Wisecolt Education</h3>
         <h4>June 2018 - August 2022</h4>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt totam veniam praesentium reprehenderit neque? Qui, quod provident. Perferendis ea deserunt aliquid recusandae, laboriosam harum quaerat doloremque dolorum animi soluta voluptas.</p>
       </div>
@@ -93,39 +92,157 @@
   </section>
 
   <!-- Projects -->
-  <section class="projects">
+  <section id="projects">
     <h1>Projects</h1>
-    <div class="project-container">
-      <h2>Electric Vehicles: Battleground China</h2>
-      <div class="project-image-container">
-        <img src="Images/book-cover.jpg" alt="book cover">
-        <div class="project-description">
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit deserunt officia, sint, temporibus, illo obcaecati corrupti dicta a quas laboriosam quam quos ut nemo voluptates! Deleniti maiores expedita excepturi error?</p>
+      <div class="project-container">
+        <h2>Electric Vehicles: Battleground China</h2>
+        <div class="project-image-container">
+          <img src="Images/book-cover.jpg" alt="book cover">
+          <div class="project-description">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit deserunt officia, sint, temporibus, illo obcaecati corrupti dicta a quas laboriosam quam quos ut nemo voluptates! Deleniti maiores expedita excepturi error?</p>
+          </div>
         </div>
+        <img src="Images/external-link.png" alt="external link" class="project-button">
       </div>
-    </div>
-    <div class="project-container">
-      <h2>Coming Soon</h2>
-      <div class="project-description">
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit deserunt officia, sint, temporibus, illo obcaecati corrupti dicta a quas laboriosam quam quos ut nemo voluptates! Deleniti maiores expedita excepturi error?</p>
+      <div class="project-container">
+        <h2>Yaoegg Clicker</h2>
+        <p class="project-languages" style="margin-bottom: 15px;">Dart, Flutter, Android Studio</p>
+        <div class="project-image-container">
+          <img src="Images/yaoegg.png" alt="yaoegg">
+          <div class="project-description">
+            <p>IFKYK</p>
+          </div>
+        </div>
+        <img src="Images/external-link.png" alt="external link" class="project-button">
+        <img src="Images/github-logo.png" alt="github link" class="project-button">
       </div>
-    </div>
-    <div class="project-container">
-      <h2>Coming Soon</h2>
-      <div class="project-description">
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit deserunt officia, sint, temporibus, illo obcaecati corrupti dicta a quas laboriosam quam quos ut nemo voluptates! Deleniti maiores expedita excepturi error?</p>
+      <div class="project-container">
+        <h2>Coming Soon</h2>
+        <!-- <div class="project-description">
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit deserunt officia, sint, temporibus, illo obcaecati corrupti dicta a quas laboriosam quam quos ut nemo voluptates! Deleniti maiores expedita excepturi error?</p>
+        </div> -->
       </div>
-    </div>
+      <div class="project-container">
+        <h2>Coming Soon</h2>
+        <!-- <div class="project-description">
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit deserunt officia, sint, temporibus, illo obcaecati corrupti dicta a quas laboriosam quam quos ut nemo voluptates! Deleniti maiores expedita excepturi error?</p>
+        </div> -->
+      </div>
+      <div class="project-container">
+        <h2>Coming Soon</h2>
+        <!-- <div class="project-description">
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit deserunt officia, sint, temporibus, illo obcaecati corrupti dicta a quas laboriosam quam quos ut nemo voluptates! Deleniti maiores expedita excepturi error?</p>
+        </div> -->
+      </div>
   </section>
 
-  <!-- Contests/Hackathons -->
-  <section class="contests">
+  <!-- Contests -->
+  <section id="ecs">
+    <h1>Extra-Curriculars</h1>
+    <div class="ecs-subtitle">
+      <h2><b>Hackathons</b></h2>
+    </div>
+    <div class="job-container">
+      <div>
+          <h3>OneHacks II</h3>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt totam veniam praesentium reprehenderit neque? Qui, quod provident. Perferendis ea deserunt aliquid recusandae, laboriosam harum quaerat doloremque dolorum animi soluta voluptas.</p>
+      </div>
+        <img src="Images/one-hacks-ii-logo.png" alt="onehacks ii logo">
+    </div>
+    <div class="job-container">
+      <img src="Images/frey-hacks-logo.png" alt="freyhacks logo">
+      <div>
+          <h3>FreyHacks</h3>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt totam veniam praesentium reprehenderit neque? Qui, quod provident. Perferendis ea deserunt aliquid recusandae, laboriosam harum quaerat doloremque dolorum animi soluta voluptas.</p>
+      </div>
+    </div>
+    
+    <div class="ecs-subtitle">
+      <h2><b>Business Competitions</b></h2>
+    </div>
+    <div class="job-container">
+      <div>
+        <h3>DECA</h3>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt totam veniam praesentium reprehenderit neque? Qui, quod provident. Perferendis ea deserunt aliquid recusandae, laboriosam harum quaerat doloremque dolorum animi soluta voluptas.</p>
+      </div>
+      <img src="Images/deca-logo.png" alt="deca logo">
+    </div>
+    <div class="job-container">
+      <img src="Images/fbla-logo.png" alt="fbla logo">
+      <div>
+        <h3>FBLA</h3>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt totam veniam praesentium reprehenderit neque? Qui, quod provident. Perferendis ea deserunt aliquid recusandae, laboriosam harum quaerat doloremque dolorum animi soluta voluptas.</p>
+      </div>
+    </div>
+
+    <div class="ecs-subtitle">
+      <h2><b>Other</b></h2>
+    </div>
+    <div class="job-container">
+      <div>
+        <h3>Business SHSM Co-President @ A. Y. Jackson Secondary School</h3>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt totam veniam praesentium reprehenderit neque? Qui, quod provident. Perferendis ea deserunt aliquid recusandae, laboriosam harum quaerat doloremque dolorum animi soluta voluptas.</p>
+      </div>
+      <img src="Images/ayj-business-logo.png" alt="ayj business logo">
+    </div>
+    <div class="job-container">
+      <img src="Images/ap-logo.png" alt="ap logo">
+      <div>
+        <h3>Advanced Placement</h3>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt totam veniam praesentium reprehenderit neque? Qui, quod provident. Perferendis ea deserunt aliquid recusandae, laboriosam harum quaerat doloremque dolorum animi soluta voluptas.</p>
+      </div>
+    </div>
 
   </section>
 
   <!-- Contact -->
-  <section class="contact">
-    <h1>Contact</h1>
+  <section id="contact">
+    <div class="form-container">
+      <h1>Contact Me</h1>
+      <!-- Form Start -->
+      <form action="https://formsubmit.co/mattyang98@gmail.com" method="POST">
+        <input type="hidden" name="_subject" value="Website form submission">
+
+        <div class="input-row">
+          <div class="input-group">
+            <label>Name</label>
+            <input type="text" name="name" placeholder="John Smith" required>
+          </div>
+          <div class="input-group">
+            <label>Email</label>
+            <input type="email" name="email" placeholder="me@gmail.com" required>
+          </div>
+        </div>
+
+        <label>Message</label>
+        <textarea type="text" name="name" rows="5" placeholder="Your Message" required></textarea>
+
+        <button type="submit">SEND</button>
+      </form>
+
+    </div>
+    <div class="message-container">
+      <h1>Contact Info</h1>
+      <p>My email address is below, or you can use the built-in form below that only took me 2 excruciating hours to format. (Please use the form it will make me happy :))</p>
+      <table>
+        <tr>
+          <td>Email</td>
+          <td>mattyang98@gmail.com</td>
+        </tr>
+        <tr>
+          <td>Phone Number</td>
+          <td>416-880-9312</td>
+        </tr>
+        <tr>
+          <td>Discord</td>
+          <td>lesterholster#9874</td>
+        </tr>
+        <tr>
+          <td>Instagram</td>
+          <td>@lesterholsterr</td>
+        </tr>
+      </table>
+    </div>
   </section>
 
   
@@ -135,6 +252,13 @@
     var typed = new Typed(".auto-greeting", {
       strings: ["Hi, I'm Matthew!"],
       typeSpeed: 100,
+    })
+  </script>
+
+  <script src="scroll-out.js"></script>
+  <script>
+    ScrollOut({
+      targets: '.image-container, .about-me-writeup, #about-me button, #work-exp h1, .job-container, #projects h1, .project-container, #ecs h1, .ecs-subtitle h2'
     })
   </script>
 
