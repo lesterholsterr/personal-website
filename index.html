@@ -11,11 +11,13 @@
 </head>
 
 <!-- 
-  TODO 08/15: 
+  TODO 08/15-19: 
     - Work Experience writeups
     - Project writeups
-    - Contests layout (WHAT IS THE BACKGROUND COLOUR)
-    - Contact form (formatting and JS)
+    - DONE Contact animations
+    - DONE Contact @media
+    - Blog home format
+    - Hello world blog article
 -->
 
 <body>
@@ -64,8 +66,8 @@
         <p>Hi there, thanks for visiting! I am a Computing and Financial Management student (Computer Science & Finance double major) at the University of Waterloo on my 1A term. I enjoy learning new things because it is my strong belief that the only reason you may find something uninteresting is that you haven't learned enough of it yet.</p>
       </div>
       <div class="about-me-buttons">
-        <button><a href="#work-exp"><span>Portfolio</span></a></button>
-        <button><a href="blog.html"><span>Blog</span></a></button>
+        <a href="#work-exp"><button><span>Portfolio</span></button></a>
+        <a href="blog.html"><button><span>Blog</span></button></a>
       </div>
     </div>
   </section>
@@ -78,14 +80,19 @@
       <div>
         <h3>Financial Analyst Intern @ BMO</h3>
         <h4>March 2022 - August 2022</h4>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt totam veniam praesentium reprehenderit neque? Qui, quod provident. Perferendis ea deserunt aliquid recusandae, laboriosam harum quaerat doloremque dolorum animi soluta voluptas.</p>
+        <ul>
+          <li>Worked with the Corporate Actions department to notify clients of upcoming corporate actions that affect their financial assets</li>
+          <li>Used fintech software and database management systems to remeidate brokerage account discrepancies</li>
+        </ul>
       </div>
     </div>
     <div class="job-container">
       <div>
         <h3>Tutor @ Canada Wisecolt Education</h3>
         <h4>June 2018 - August 2022</h4>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt totam veniam praesentium reprehenderit neque? Qui, quod provident. Perferendis ea deserunt aliquid recusandae, laboriosam harum quaerat doloremque dolorum animi soluta voluptas.</p>
+        <ul>
+          <li>Collaborated with students one-on-one to improve reading, writing and public speaking skills through lectures, discussions, and custom practice questions</li>
+        </ul>
       </div>
       <img src="Images/tutor-logo.png" alt="tutoring logo">
     </div>
@@ -99,10 +106,10 @@
         <div class="project-image-container">
           <img src="Images/book-cover.jpg" alt="book cover">
           <div class="project-description">
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit deserunt officia, sint, temporibus, illo obcaecati corrupti dicta a quas laboriosam quam quos ut nemo voluptates! Deleniti maiores expedita excepturi error?</p>
+            <p>Researched and wrote a book on the Chinese electric vehicle market. Published on Amazon using Kindle Direct Publishing.</p>
           </div>
         </div>
-        <img src="Images/external-link.png" alt="external link" class="project-button">
+        <a href="https://www.amazon.com.au/Electric-Vehicles-Battleground-Matthew-Yang/dp/B09XT6J4SM" target="_blank"><img src="Images/external-link.png" alt="external link" class="project-button"></a>
       </div>
       <div class="project-container">
         <h2>Yaoegg Clicker</h2>
@@ -145,7 +152,9 @@
     <div class="job-container">
       <div>
           <h3>OneHacks II</h3>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt totam veniam praesentium reprehenderit neque? Qui, quod provident. Perferendis ea deserunt aliquid recusandae, laboriosam harum quaerat doloremque dolorum animi soluta voluptas.</p>
+          <ul>
+            <li>ez win</li>
+          </ul>
       </div>
         <img src="Images/one-hacks-ii-logo.png" alt="onehacks ii logo">
     </div>
@@ -153,7 +162,9 @@
       <img src="Images/frey-hacks-logo.png" alt="freyhacks logo">
       <div>
           <h3>FreyHacks</h3>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt totam veniam praesentium reprehenderit neque? Qui, quod provident. Perferendis ea deserunt aliquid recusandae, laboriosam harum quaerat doloremque dolorum animi soluta voluptas.</p>
+          <ul>
+            <li>idk man i just did some html</li>
+          </ul>
       </div>
     </div>
     
@@ -163,7 +174,13 @@
     <div class="job-container">
       <div>
         <h3>DECA</h3>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt totam veniam praesentium reprehenderit neque? Qui, quod provident. Perferendis ea deserunt aliquid recusandae, laboriosam harum quaerat doloremque dolorum animi soluta voluptas.</p>
+        <ul>
+          <li><b>2018 Regionals</b> · Business Management and Administration · Top 10 Oral Presentation</li>
+          <li><b>2019 Provincials</b> · Business Management and Administration · Top 10 Oral Presentation</li>
+          <li><b>2019 Regionals</b> · Business Finance Series · 2nd Overall</li>
+          <li><b>2021 Provincials</b> · Business Finance Series · Top 14 Exam · Top 21 Oral Presentation</li>
+          <li>As a trainer for our school chapter, I worked one-on-one to improve the presentation skills of 8 fellow competitors, 4 of which went on to win awards at the provincial level</li>
+        </ul>
       </div>
       <img src="Images/deca-logo.png" alt="deca logo">
     </div>
@@ -171,7 +188,10 @@
       <img src="Images/fbla-logo.png" alt="fbla logo">
       <div>
         <h3>FBLA</h3>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt totam veniam praesentium reprehenderit neque? Qui, quod provident. Perferendis ea deserunt aliquid recusandae, laboriosam harum quaerat doloremque dolorum animi soluta voluptas.</p>
+        <ul>
+          <li><b>Canadian National Leadership Conference 2021</b> · Banking and Financial Systems · 2nd Place Overall</li>
+          <li><b>Canadian National Leadership Conference 2022</b> · Personal Finance · 1st Place Overall</li>
+        </ul>
       </div>
     </div>
 
@@ -181,7 +201,11 @@
     <div class="job-container">
       <div>
         <h3>Business SHSM Co-President @ A. Y. Jackson Secondary School</h3>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt totam veniam praesentium reprehenderit neque? Qui, quod provident. Perferendis ea deserunt aliquid recusandae, laboriosam harum quaerat doloremque dolorum animi soluta voluptas.</p>
+        <h4>June 2021 - June 2022</h4>
+        <ul>
+          <li>Organized innovative and engaging events such as financial literacy workshops, expanding member count by 64% in one year</li>
+          <li>Frequently interacted with club members and the executive team to foster an exciting and inclusive environment</li>
+        </ul>
       </div>
       <img src="Images/ayj-business-logo.png" alt="ayj business logo">
     </div>
@@ -189,7 +213,10 @@
       <img src="Images/ap-logo.png" alt="ap logo">
       <div>
         <h3>Advanced Placement</h3>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt totam veniam praesentium reprehenderit neque? Qui, quod provident. Perferendis ea deserunt aliquid recusandae, laboriosam harum quaerat doloremque dolorum animi soluta voluptas.</p>
+        <ul>
+          <li><b>Calculus BC</b> · Score: 5 · June 2021</li>
+          <li><b>Statistics</b> · Score: 5 · May 2022</li>
+        </ul>
       </div>
     </div>
 
@@ -223,7 +250,7 @@
     </div>
     <div class="message-container">
       <h1>Contact Info</h1>
-      <p>My email address is below, or you can use the built-in form below that only took me 2 excruciating hours to format. (Please use the form it will make me happy :))</p>
+      <p>My email address is below, or you can use the built-in form that only took me 2 excruciating hours to format (Please use the form it will make me happy :)).</p>
       <table>
         <tr>
           <td>Email</td>
@@ -258,7 +285,7 @@
   <script src="scroll-out.js"></script>
   <script>
     ScrollOut({
-      targets: '.image-container, .about-me-writeup, #about-me button, #work-exp h1, .job-container, #projects h1, .project-container, #ecs h1, .ecs-subtitle h2'
+      targets: '.image-container, .about-me-writeup, #about-me button, #work-exp h1, .job-container, #projects h1, .project-container, #ecs h1, .ecs-subtitle h2, .form-container *, .message-container *'
     })
   </script>
 
