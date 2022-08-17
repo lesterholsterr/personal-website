@@ -26,16 +26,16 @@
     <h3>MATTHEW YANG</h3>
     <ul>
       <li>
-        <a href="#">About Me</a>
+        <a href="#"><p>About Me</p></a>
       </li>
       <li>
-        <a href="#work-exp">Portfolio</a>
+        <a href="#work-exp"><p>Portfolio</p></a>
       </li>
       <li>
-        <a href="#contact">Contact</a>
+        <a href="#contact"><p>Contact</p></a>
       </li>
       <li>
-        <a href="blog.html">Blog</a>
+        <a href="blog.html"><p>Blog</p></a>
       </li>
       <li>
         <a href="mailto:mattyang98@gmail.com"><img src="Images/mail-logo.webp" alt="mail-logo"></a>
@@ -118,7 +118,7 @@
       <div class="project-image-container">
         <img src="Images/website-screenshot.png" alt="yaoegg" class="fat-image">
         <div class="project-description">
-          <p>Simple website built using vanilla HTML/CSS/JS. Experimented with new webdev libraries (extensive list can be found in the README of the github repo below).</p>
+          <p>Simple website built using vanilla HTML/CSS/JS. Experimented with new webdev libraries (the extensive list can be found in the README of the Github repo linked below).</p>
         </div>
       </div>
       <a href="https://github.com/lesterholsterr/personal-website" target="_blank"><img src="Images/github-logo.png" alt="external link" class="project-button"></a>
@@ -130,7 +130,7 @@
       <div class="project-image-container">
         <img src="Images/makria-logo.png" alt="makria logo" class="tall-image">
         <div class="project-description">
-          <p>Automatic speech recognition desktop app that sends you a Telegram when it detects that your name has been spoken in a call. Uses the PyAudio module to continuously provide a stream of internal audio from the user’s computer and Google Cloud’s ML Speech-To-Text API for natural language processing.</p>
+          <p>Automatic speech recognition desktop app that sends you a Telegram when it detects that your name has been spoken in a call. Uses the PyAudio module to continuously provide a stream of internal audio from the user’s computer to Google Cloud’s ML Speech-To-Text API for natural language processing.</p>
         </div>
       </div>
       <a href="https://devpost.com/software/makria" target="_blank"><img src="Images/external-link.png" alt="external link" class="project-button"></a>
@@ -236,11 +236,13 @@
         </div>
 
         <label>Message</label>
-        <textarea type="text" name="name" rows="5" placeholder="Your Message" required></textarea>
+        <textarea type="text" name="message" rows="5" placeholder="Your Message" required></textarea>
 
-        <button type="submit">SEND</button>
+        <div class="submit-row">
+          <button type="submit">SEND</button>
+          <p>Copyright © Matthew Yang 2022</p>
+        </div>
       </form>
-
     </div>
     <div class="message-container">
       <h1>Contact Info</h1>

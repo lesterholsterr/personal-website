@@ -6,35 +6,35 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="style.css">
-  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@200;300&display=swap" rel="stylesheet">
   <title>Blog</title>
 </head>
 
-<body>
+<body style="background-color: rgb(230, 230, 230);">
   <!-- Navbar -->
   <nav>
     <h3>MATTHEW YANG</h3>
     <ul>
       <li>
-        <a href="#">About Me</a>
+        <a href="index.html#"><p>About Me</p></a>
       </li>
       <li>
-        <a href="#">Portfolio</a>
+        <a href="index.html#work-exp"><p>Portfolio</p></a>
       </li>
       <li>
-        <a href="#">Contact</a>
+        <a href="index.html#contact"><p>Contact</p></a>
       </li>
       <li>
-        <a href="#">Blog</a>
+        <a href="blog.html"><p>Blog</p></a>
       </li>
       <li>
-        <img src="Images/mail-logo.webp" alt="mail-logo">
+        <a href="mailto:mattyang98@gmail.com"><img src="Images/mail-logo.webp" alt="mail-logo"></a>
       </li>
       <li>
-        <img src="Images/linkedin-logo.png" alt="linkedin-logo">
+        <a href="https://www.linkedin.com/in/matthew-yang-4b9728200/" target="_blank"><img src="Images/linkedin-logo.png" alt="linkedin-logo"></a>
       </li>
       <li>
-        <img src="Images/github-logo.png" alt="github-logo">
+        <a href="https://github.com/lesterholsterr" target="_blank"><img src="Images/github-logo.png" alt="github-logo"></a>
       </li>
     </ul>
     <div class="burger">
@@ -44,7 +44,27 @@
     </div>
   </nav>
 
-  <script src="app.js"></script>
+  <h1 class="blog-title">Blog</h1>
+
+  <section class="blog-container">
+    <!-- <a href=""><div class="post-container">
+      <p class="post-date">DD MMM YYYY</p>
+      <h2 class="post-title">TITLE</h2>
+      <h5 class="post-subtitle">Subtitle</h5>
+    </div></a> -->
+    <a href="Blog Posts/hello-world.html"><div class="post-container">
+      <p class="post-date">16 AUG 2022</p>
+      <h2 class="post-title">Hello World!</h2>
+      <h5 class="post-subtitle">What more is there to say?</h5>
+    </div></a>
+  </section>
+
+  <footer class="blog-footer">
+    <div class="footer-line"></div>
+    <p>Copyright © Matthew Yang 2022</p>
+  </footer>
+
+  <script src="../app.js"></script>
 
 </body>
 
