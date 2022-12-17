@@ -5,20 +5,18 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="CSS/main.css">
+  <link rel="stylesheet" href="CSS/animations.css">
+  <link rel="stylesheet" href="CSS/dynamic.css">
   <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;400&display=swap" rel="stylesheet">
   <title>Matthew Yang</title>
 </head>
 
-<!-- 
-  TODO 08/15-19: 
-    - Work Experience writeups
-    - Project writeups
-    - DONE Contact animations
-    - DONE Contact @media
-    - Blog home format
-    - Hello world blog article
--->
+<!--
+  TODO
+  - New blog post
+  - Bookshelf skeleton
+ -->
 
 <body>
   <!-- Navbar -->
@@ -35,7 +33,7 @@
         <a href="#contact"><p>Contact</p></a>
       </li>
       <li>
-        <a href="blog.html"><p>Blog</p></a>
+        <a href="Blog/blog.html"><p>Blog</p></a>
       </li>
       <li>
         <a href="mailto:mattyang98@gmail.com"><img src="Images/mail-logo.webp" alt="mail-logo"></a>
@@ -67,7 +65,7 @@
       </div>
       <div class="about-me-buttons">
         <a href="#work-exp"><button><span>Portfolio</span></button></a>
-        <a href="blog.html"><button><span>Blog</span></button></a>
+        <a href="Blog/blog.html"><button><span>Blog</span></button></a>
       </div>
     </div>
   </section>
@@ -81,8 +79,18 @@
         <h3>Financial Analyst Intern @ BMO</h3>
         <h4>March 2022 - August 2022</h4>
         <ul>
-          <li>Worked with the Corporate Actions department to notify clients of upcoming corporate actions that affect their financial assets</li>
-          <li>Used fintech software and database management systems to remeidate brokerage account discrepancies</li>
+          <li>SRD II Initiative
+            <ul id="bmo-ul">
+              <li>Examined bulletins from depositories such as DTCC, CDS, and BNY</li>
+              <li>Worked in a tight knit team to compose and publish notices notifying clients of upcoming corporate actions that affect their financial assets (Ex. reverse splits, mergers) within 72 hours of each action being announced</li>
+            </ul>
+          </li>
+          <li>InvestorLine Remediation Project
+            <ul id="bmo-ul">
+              <li>Researched and used financial accounting software to journalize changes in 80 financial derivatives from various companies on the TSX</li>
+              <li>Used fintech software and database management systems to remediate over 3000 BMO InvestorLine brokerage account discrepancies</li>
+            </ul>
+          </li>
         </ul>
       </div>
     </div>
@@ -106,7 +114,7 @@
       <div class="project-image-container">
         <img src="Images/book-cover.jpg" alt="book cover" class="tall-image">
         <div class="project-description">
-          <p>Researched and wrote a book on the Chinese electric vehicle market over the course of a year. Published on Amazon using Kindle Direct Publishing.</p>
+          <p>Researched, wrote, and published a book on the Chinese electric vehicle market over the course of a year.</p>
         </div>
       </div>
       <a href="https://www.amazon.com.au/Electric-Vehicles-Battleground-Matthew-Yang/dp/B09XT6J4SM" target="_blank"><img src="Images/external-link.png" alt="external link" class="project-button"></a>
@@ -151,6 +159,18 @@
     </div>
 
     <div class="project-container">
+      <h2>Python Roboadvisor</h2>
+      <p class="project-languages" style="margin-bottom: 15px;">Jupyter Notebook, Numpy/Pandas, Matplotlib</p>
+      <div class="project-image-container">
+        <img src="Images/roboadvisor.png" alt="roboadvisor screenshot" class="tall-image">
+        <div class="project-description">
+          <p>Python program that consumes a list of stocks, compares various metrics including standard deviation and correlation, and generates a low-risk portfolio. Explanations and statistical analysis are also provided.</p>
+        </div>
+      </div>
+      <a href="https://github.com/lesterholsterr/python-roboadvisor" target="_blank"><img src="Images/github-logo.png" alt="external link" class="project-button"></a>
+    </div>
+
+    <div class="project-container">
       <h2>Coming Soon</h2>
       <!-- <div class="project-description">
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit deserunt officia, sint, temporibus, illo obcaecati corrupti dicta a quas laboriosam quam quos ut nemo voluptates! Deleniti maiores expedita excepturi error?</p>
@@ -161,10 +181,31 @@
   <!-- Contests -->
   <section id="ecs">
     <h1>Extra-Curriculars</h1>
-    
-    <div class="ecs-subtitle">
-      <h2><b>Business Competitions</b></h2>
+
+    <div class="job-container">
+      <div>
+        <h3>Associate @ hEDGE Financial Services Conference</h3>
+        <h4>September 2022 - Present</h4>
+        <ul>
+          <li>Worked in a team of 12 to organize a financial services conference in downtown Toronto.</li>
+          <li>Pitched our project to the Waterloo Mathematics Endowment Fund and received $X in funding</li>
+        </ul>
+      </div>
+      <img src="Images/hedge-logo.png" alt="hEDGE Logo">
     </div>
+
+    <div class="job-container">
+      <img src="Images/ayj-business-logo.png" alt="AYJ Business Logo">
+      <div>
+        <h3>Business SHSM Co-President @ A. Y. Jackson Secondary School</h3>
+        <h4>June 2021 - June 2022</h4>
+        <ul>
+          <li>Organized innovative and engaging events such as financial literacy workshops, expanding member count by 64% in one year</li>
+          <li>Frequently interacted with club members and the executive team to foster an exciting and inclusive environment</li>
+        </ul>
+      </div>
+    </div>
+
     <div class="job-container">
       <div>
         <h3>DECA</h3>
@@ -178,6 +219,7 @@
       </div>
       <img src="Images/deca-logo.png" alt="deca logo">
     </div>
+
     <div class="job-container">
       <img src="Images/fbla-logo.png" alt="fbla logo">
       <div>
@@ -188,31 +230,7 @@
         </ul>
       </div>
     </div>
-
-    <div class="ecs-subtitle">
-      <h2><b>Other</b></h2>
-    </div>
-    <div class="job-container">
-      <div>
-        <h3>Business SHSM Co-President @ A. Y. Jackson Secondary School</h3>
-        <h4>June 2021 - June 2022</h4>
-        <ul>
-          <li>Organized innovative and engaging events such as financial literacy workshops, expanding member count by 64% in one year</li>
-          <li>Frequently interacted with club members and the executive team to foster an exciting and inclusive environment</li>
-        </ul>
-      </div>
-      <img src="Images/ayj-business-logo.png" alt="ayj business logo">
-    </div>
-    <div class="job-container">
-      <img src="Images/ap-logo.png" alt="ap logo">
-      <div>
-        <h3>Advanced Placement</h3>
-        <ul>
-          <li><b>Calculus BC</b> · Score: 5 · June 2021</li>
-          <li><b>Statistics</b> · Score: 5 · May 2022</li>
-        </ul>
-      </div>
-    </div>
+    
 
   </section>
 
@@ -240,7 +258,7 @@
 
         <div class="submit-row">
           <button type="submit">SEND</button>
-          <p>Copyright © Matthew Yang 2022</p>
+          <p>Copyright © Matthew Yang 2023</p>
         </div>
       </form>
     </div>
@@ -268,8 +286,8 @@
     </div>
   </section>
 
-  
-  <script src="app.js"></script>
+  <!-- JS -->
+  <script src="JS/app.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
   <script>
     var typed = new Typed(".auto-greeting", {
@@ -278,7 +296,7 @@
     })
   </script>
 
-  <script src="scroll-out.js"></script>
+  <script src="JS/scroll-out.js"></script>
   <script>
     ScrollOut({
       targets: '.image-container, .about-me-writeup, #about-me button, #work-exp h1, .job-container, #projects h1, .project-container, #ecs h1, .ecs-subtitle h2, .form-container *, .message-container *'
