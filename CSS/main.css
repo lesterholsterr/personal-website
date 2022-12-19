@@ -254,6 +254,9 @@ nav p:hover {
 .project-container:nth-child(6) {
   grid-area: J;
 }
+.project-container:nth-child(7) {
+  grid-area: K;
+}
 .project-container {
   width: 350px;
   height: auto;
