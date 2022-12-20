@@ -30,6 +30,11 @@
   .ecs-subtitle {
     width: 38vw;
   }
+
+  /* Bookshelf */
+  .book-grid {
+    grid-template-columns: repeat(5, 1fr);
+  }
 }
 
 
@@ -99,6 +104,11 @@
   }
   .ecs-subtitle {
     width: 55vw;
+  }
+
+  /* Bookshelf */
+  .book-grid {
+    grid-template-columns: repeat(3, 1fr);
   }
 }
 
@@ -170,7 +180,6 @@
     height: 93vh;
     width: 50%;
     transform: translateX(100%);
-    background-color: rgb(197,216,214);;
     transition: transform 0.5s ease-in;
   }
   nav li {
@@ -226,6 +235,19 @@
   }
   .input-group {
     margin-bottom: 10px;
+  }
+
+  /* Ultralearning */
+  .body-container {
+    width: 80%;
+  }
+  .ul-container img {
+    display: none;
+  }
+
+  /* Bookshelf */
+  .book-grid {
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 
@@ -287,6 +309,17 @@
     width: 80vw;
   }
   .article-container {
+    width: 80vw;
+  }
+
+  /* Bookshelf */
+  .bookshelf {
+    width: 90vw;
+  }
+  .shelf-container {
+    width: 85vw;
+  }
+  .book-grid {
     width: 80vw;
   }
 }

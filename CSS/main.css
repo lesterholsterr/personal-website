@@ -30,6 +30,7 @@ nav ul {
   align-items: center;
   justify-content: space-around;
   width: 100%;
+  background-color: rgb(197,216,214);
 }
 nav li {
   list-style: none;
@@ -59,10 +60,13 @@ nav p:hover {
 .burger {
   display: none;
 }
+.burger:hover {
+  cursor: pointer;
+}
 .burger div {
   width: 25px;
   height: 3px;
-  background-color: white;
+  background-color: rgb(95, 114, 126);
   margin: 5px;
   transition: all 0.3s ease;
 }
