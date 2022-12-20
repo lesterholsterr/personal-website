@@ -1,0 +1,79 @@
+/* Navbar Updates */
+nav {
+  background-color: rgb(18, 76, 77);
+}
+nav p {
+  color: rgb(216, 210, 210);
+}
+nav h3 {
+  color: rgb(216, 210, 210);
+}
+
+/* Ultralearning Page */
+.background {
+  /* background-color: rgba(3, 149, 146, 0.475); */
+  background-color: rgba(39, 46, 52, 0.939);
+  margin-top: 50px;
+  height: 100%;
+  width: 100%;
+
+  display: flex;
+  justify-content: center;
+}
+
+.body-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 60vw;
+  height: 100%;
+  background-color: rgb(39, 46, 52);
+}
+.body-container h1 {
+  font-size: 50px;
+  margin: 30px 0px 50px 0px;
+  color: rgb(216, 210, 210);
+}
+.body-container p {
+  padding-left: 40px;
+  padding-right: 40px;
+  color: rgb(216, 210, 210);
+  margin-top: 10px;
+  font-size: 20px;
+}
+.body-container a {
+  text-decoration: none;
+  color: rgb(178, 178, 244);
+}
+
+.ul-container {
+  background-color: rgb(18, 76, 77);
+  padding: 30px;
+  margin: 20px;
+  display: flex;
+  align-items: center;
+  border-radius: 20px;
+}
+.ul-container:hover {
+  background-color: rgb(12, 49, 50);
+  transition: 0.5s;
+}
+.ul-container[data-scroll="in"] {
+  animation: slide-right 1s ease-in-out;
+}
+
+.ul-desc h2 {
+  color: whitesmoke;
+  font-size: 30px;
+}
+.ul-desc p {
+  color: whitesmoke;
+  padding: 0px;
+  font-size: 17px;
+}
+
+.ul-container img {
+  border-radius: 20px;
+  height: 150px;
+  margin: 10px;
+}

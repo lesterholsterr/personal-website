@@ -1,3 +1,4 @@
+/* Navbar Hamburger */
 .nav-active {
   transform: translateX(0%);
 }
@@ -23,6 +24,7 @@
   transform: rotate(45deg) translate(-5px, -6px);
 }
 
+/* Moving Text */
 @keyframes float-up {
   from {
     opacity: 0; 
