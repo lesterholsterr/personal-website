@@ -55,6 +55,20 @@ body {
   text-decoration: none;
   color: rgb(178, 178, 244);
 }
+.body-container img {
+  width: 90%;
+}
+.body-container li {
+  color: rgb(216, 210, 210);
+  font-size: 20px;
+  width: 90%;
+  margin: auto;
+}
+.body-container iframe {
+  width: 60%;
+  height: 300px;
+  margin-bottom: 40px;
+}
 
 .ul-container {
   background-color: rgb(18, 76, 77);
