@@ -44,10 +44,10 @@
 @media screen and (max-width: 2000px) {
   /* Navbar */
   nav ul {
-    width: 35%;
+    width: 30%;
   }
   nav h3 {
-    margin-right: 35%;
+    margin-right: 40%;
   }
 
   /* About Me */
@@ -79,10 +79,10 @@
 @media screen and (max-width: 1500px) {
   /* Navbar */
   nav ul {
-    width: 40%;
+    width: 35%;
   }
   nav h3 {
-    margin-right: 30%;
+    margin-right: 35%;
   }
 
   /* About Me */
@@ -119,10 +119,10 @@
 @media screen and (max-width: 1250px) {
   /* Navbar */
   nav ul {
-    width: 50%;
+    width: 45%;
   }
   nav h3 {
-    margin-right: 25%
+    margin-right: 30%
   }
 
   /* About Me */
