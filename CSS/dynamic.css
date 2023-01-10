@@ -1,0 +1,325 @@
+/* SCREEN WIDTH */
+
+/* Above 2000 px */
+@media screen and (min-width: 2000px) {
+  /* Navbar */
+  nav ul {
+    width: 25%;
+  }
+  nav h3 {
+    margin-right: 45%;
+  }
+
+  /* About Me */
+  .about-me-grid {
+    grid-template-columns: 28vw 23vw;
+  }
+
+  /* Projects */
+  #projects {
+    grid-template-areas:
+      "E E E E "
+      "F G H I"
+      "J K . ."
+  }
+
+  /* ECs */
+  .job-container {
+    width: 38vw;
+  }
+  .ecs-subtitle {
+    width: 38vw;
+  }
+
+  /* Bookshelf */
+  .book-grid {
+    grid-template-columns: repeat(5, 1fr);
+  }
+}
+
+
+
+
+/* 2000 - 1500 px */
+@media screen and (max-width: 2000px) {
+  /* Navbar */
+  nav ul {
+    width: 30%;
+  }
+  nav h3 {
+    margin-right: 40%;
+  }
+
+  /* About Me */
+  .about-me-grid {
+    grid-template-columns: 35vw 28vw;
+  }
+
+  /* Projects */
+  #projects {
+    grid-template-areas:
+      "E E E"
+      "F G H"
+      "I J K";
+  }
+
+  /* ECs */
+  .job-container {
+    width: 50vw;
+  }
+  .ecs-subtitle {
+    width: 50vw;
+  }
+}
+
+
+
+
+/* 1500 - 1250 px */
+@media screen and (max-width: 1500px) {
+  /* Navbar */
+  nav ul {
+    width: 35%;
+  }
+  nav h3 {
+    margin-right: 35%;
+  }
+
+  /* About Me */
+  .about-me-grid {
+    grid-template-columns: 45vw 33vw;
+  }
+
+  /* Projects */
+  #projects {
+    grid-template-areas:
+      "E E E"
+      "F G H"
+      "I J K"
+  }
+
+  /* ECs */
+  .job-container {
+    width: 55vw;
+  }
+  .ecs-subtitle {
+    width: 55vw;
+  }
+
+  /* Bookshelf */
+  .book-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+
+
+
+/* 1250 - 1000 px */
+@media screen and (max-width: 1250px) {
+  /* Navbar */
+  nav ul {
+    width: 45%;
+  }
+  nav h3 {
+    margin-right: 30%
+  }
+
+  /* About Me */
+  .about-me-grid {
+    grid-template-columns: 53vw 35vw;
+  }
+
+  /* Projects */
+  #projects {
+    grid-template-areas:
+      "E E"
+      "F G"
+      "H I"
+      "J K";
+    row-gap: 50px;
+  }
+
+  /* Contact */
+  #contact {
+    flex-direction: column-reverse;
+  }
+  .form-container {
+    width: 100vw;
+  }
+  .message-container {
+    width: 100vw;
+  }
+
+  /* Blog Width */
+  .blog-container {
+    width: 60vw;
+  }
+  .article-container {
+    width: 60vw;
+  }
+}
+
+
+
+
+/* 1000 - 750 px */
+@media screen and (max-width: 1000px) {
+  /* Navbar Hamburger Trigger */
+  body {
+    overflow-x: hidden;
+  }
+  nav ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    position: absolute;
+    top: 50px;
+    right: 0px;
+    height: 93vh;
+    width: 50%;
+    transform: translateX(100%);
+    transition: transform 0.5s ease-in;
+  }
+  nav li {
+    opacity: 0;
+  }
+  .burger {
+    display: block;
+    margin-right: 5%;
+  }
+  nav h3 {
+    margin-right: 50%;
+  }
+
+  /* About Me */
+  .about-me-grid {
+    grid-template-areas: 
+      "A"
+      "C"
+      "D"
+      "B";
+    grid-template-columns: 80vw;
+  }
+  #about-me h2 {
+    margin-top: 30px;
+  }
+  #about-me p {
+    text-align: center;
+  }
+  #about-me-buttons {
+    margin-top: 30px;
+  }
+  #about-me button {
+    margin: 10px;
+  }
+  .image-container[data-scroll="in"] {
+    animation: float-up 1s ease-in-out;
+  }
+  #about-me button[data-scroll="in"] {
+    animation: slide-right 1s ease-in-out;
+  }
+
+  /* ECs */
+  .job-container {
+    width: 65vw;
+  }
+  .ecs-subtitle {
+    width: 65vw;
+  }
+
+  /* Contact */
+  .input-row {
+    flex-direction: column;
+  }
+  .input-group {
+    margin-bottom: 10px;
+  }
+
+  /* Ultralearning */
+  .body-container {
+    width: 80%;
+  }
+  .ul-container img {
+    display: none;
+  }
+
+  /* Bookshelf */
+  .book-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+
+
+
+/* Under 750 px */
+@media screen and (max-width: 750px) {
+  /* Navbar */
+  nav h3 {
+    margin-right: 30%;
+    font-size: 25px;
+  }
+
+  /* About Me */
+  .image-container {
+    height: 400px;
+    width: 400px;
+  }
+
+  /* Projects */
+  #projects {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .project-container {
+    width: 75vw;
+  }
+  .project-image-container {
+    height: auto;
+    width: 70vw;
+  }
+  .project-image-container .tall-image {
+    height: 0;
+    width: 0;
+  }
+  .project-image-container .fat-image {
+    height: 0;
+    width: 0;
+  }
+  .project-description {
+    background-color: rgba(0, 0, 0, 0);;
+    color: rgb(184, 184, 184);
+    height: 100%;
+    position: static;
+  }
+
+  /* ECs */
+  .job-container {
+    width: 80vw;
+  }
+  .ecs-subtitle {
+    width: 80vw;
+  }
+
+  /* Blog Width */
+  .blog-container {
+    width: 80vw;
+  }
+  .article-container {
+    width: 80vw;
+  }
+
+  /* Bookshelf */
+  .bookshelf {
+    width: 90vw;
+  }
+  .shelf-container {
+    width: 85vw;
+  }
+  .book-grid {
+    width: 80vw;
+  }
+}
