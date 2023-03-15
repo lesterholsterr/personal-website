@@ -1,3 +1,7 @@
+---
+permalink: /index.html
+---
+
 # personal-website
 Portfolio and Blog.
 
