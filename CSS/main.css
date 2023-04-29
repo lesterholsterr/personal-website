@@ -194,6 +194,7 @@ nav p:hover {
   display: flex;
   width: 50vw;
   align-items: center;
+  justify-content: space-between;
   margin-bottom: 50px;
 }
 .job-container:last-child {
@@ -209,12 +210,16 @@ nav p:hover {
   margin-top: 0px;
   margin-left: 20px;
 }
-#work-exp img:nth-child(odd) {
+/* #work-exp img:nth-child(odd) {
   height: 100px;
   margin-right: 30px;
 }
 #work-exp img:nth-child(even) {
   height: 100px;
+  margin-left: 30px;
+} */
+#work-exp img {
+  width: 100px;
   margin-left: 30px;
 }
 .job-container:nth-child(odd)[data-scroll="in"] {
@@ -358,12 +363,16 @@ nav p:hover {
 .ecs-subtitle h2[data-scroll="in"] {
   animation: slide-right 1s ease-in-out;
 }
-#ecs img:nth-child(odd) {
+/* #ecs img:nth-child(odd) {
   height: 100px;
   margin-right: 30px;
 }
 #ecs img:nth-child(even) {
   height: 100px;
+  margin-left: 30px;
+} */
+#ecs img {
+  width: 120px;
   margin-left: 30px;
 }
 
