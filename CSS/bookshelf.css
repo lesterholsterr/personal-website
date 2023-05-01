@@ -72,6 +72,14 @@ nav ul {
   /* margin-top: -1225px; */
   margin-top: -1845px;
 }
+.book-grid div {
+  position: absolute;
+  text-align: center;
+  width: 166px;
+  background-color: red;
+  color: antiquewhite;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
 .book-grid img {
   height: 250px;
   transition: 0.5s;
