@@ -113,7 +113,7 @@
   transition: 2s;
 }
 .gal-image img {
-  height: 500px;
+  height: 400px;
   margin: auto;
 }
 
@@ -147,4 +147,7 @@
 }
 #gal-btn-4:checked ~ .first {
   margin-left: -60%;
+}
+#gal-btn-5:checked ~ .first {
+  margin-left: -80%;
 }
