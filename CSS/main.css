@@ -2,7 +2,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Source Sans Pro', sans-serif;
+  font-family: "Source Sans Pro", sans-serif;
   scroll-behavior: smooth;
 }
 
@@ -16,7 +16,7 @@ nav {
   justify-content: flex-end;
   align-items: center;
   height: 50px;
-  background-color: rgb(197,216,214);
+  background-color: rgb(197, 216, 214);
   z-index: 999;
 }
 nav h3 {
@@ -30,7 +30,7 @@ nav ul {
   align-items: center;
   justify-content: space-around;
   width: 100%;
-  background-color: rgb(197,216,214);
+  background-color: rgb(197, 216, 214);
 }
 nav li {
   list-style: none;
@@ -71,7 +71,6 @@ nav p:hover {
   transition: all 0.3s ease;
 }
 
-
 /* About Me */
 #about-me {
   background-color: antiquewhite;
@@ -82,10 +81,10 @@ nav p:hover {
   display: grid;
   align-items: center;
   justify-content: center;
-  grid-template-areas: 
-    'A A'
-    'B C'
-    'B D';
+  grid-template-areas:
+    "A A"
+    "B C"
+    "B D";
 }
 
 #about-me h1 {
@@ -134,7 +133,7 @@ nav p:hover {
 }
 #about-me button {
   border: none;
-  background-color: rgb(197,216,214);;
+  background-color: rgb(197, 216, 214);
   color: rgb(95, 114, 126);
   width: 300px;
   padding: 15px 30px;
@@ -149,7 +148,7 @@ nav p:hover {
 }
 #about-me button:hover {
   cursor: pointer;
-  box-shadow: -6px 12px 16px 0 rgba(0,0,0,0.24)
+  box-shadow: -6px 12px 16px 0 rgba(0, 0, 0, 0.24);
 }
 #about-me a {
   color: inherit;
@@ -160,7 +159,7 @@ nav p:hover {
   transition-duration: 0.5s;
 }
 #about-me button span:after {
-  content: '\00bb';
+  content: "\00bb";
   position: absolute;
   opacity: 0;
   top: 0;
@@ -204,7 +203,7 @@ nav p:hover {
   font-size: 26px;
 }
 .job-container ul {
-  margin-top:15px;
+  margin-top: 15px;
 }
 #bmo-ul {
   margin-top: 0px;
@@ -280,7 +279,7 @@ nav p:hover {
   animation: float-up 1s ease-in-out;
 }
 .project-container:hover {
-  box-shadow: -6px 12px 16px 0 rgba(0,0,0,0.5)
+  box-shadow: -6px 12px 16px 0 rgba(0, 0, 0, 0.5);
 }
 .project-container h2 {
   font-size: 30px;
@@ -377,7 +376,6 @@ nav p:hover {
   width: 120px;
   margin-left: 30px;
 }
-
 
 /* Contact */
 #contact {

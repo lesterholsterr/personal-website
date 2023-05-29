@@ -1,25 +1,23 @@
 const navSlide = () => {
-  const burger = document.querySelector('.burger');
-  const nav = document.querySelector('nav ul');
-  const navlinks = document.querySelectorAll('nav li');
+  const burger = document.querySelector(".burger");
+  const nav = document.querySelector("nav ul");
+  const navlinks = document.querySelectorAll("nav li");
 
-  burger.addEventListener('click', ()=> {
-
-    nav.classList.toggle('nav-active');
+  burger.addEventListener("click", () => {
+    nav.classList.toggle("nav-active");
 
     navlinks.forEach((link, index) => {
-      if(link.style.animation) {
-        link.style.animation = '';
-      }
-      else {
-        link.style.animation = `nav-fade 0.5s ease forwards ${index/10 + 0.5}s`;
+      if (link.style.animation) {
+        link.style.animation = "";
+      } else {
+        link.style.animation = `nav-fade 0.5s ease forwards ${
+          index / 10 + 0.5
+        }s`;
       }
     });
 
-    burger.classList.toggle('burger-toggle');
-
-  }); 
-
-}
+    burger.classList.toggle("burger-toggle");
+  });
+};
 
 navSlide();

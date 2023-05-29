@@ -14,7 +14,7 @@ nav h3 {
 nav ul {
   background-color: rgb(182, 139, 95);
 }
-.burger div{
+.burger div {
   background-color: rgb(216, 210, 210);
 }
 
@@ -78,14 +78,14 @@ nav ul {
   width: 166px;
   background-color: red;
   color: antiquewhite;
-  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
 }
 .book-grid img {
   height: 250px;
   transition: 0.5s;
 }
 .book-grid img:hover {
-  box-shadow: -6px 12px 16px 0 rgba(0,0,0,0.24)
+  box-shadow: -6px 12px 16px 0 rgba(0, 0, 0, 0.24);
 }
 
 /* Book Descriptions */

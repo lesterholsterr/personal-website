@@ -20,7 +20,7 @@
     grid-template-areas:
       "E E E E "
       "F G H I"
-      "J K . ."
+      "J K . .";
   }
 
   /* ECs */
@@ -36,9 +36,6 @@
     grid-template-columns: repeat(5, 1fr);
   }
 }
-
-
-
 
 /* 2000 - 1500 px */
 @media screen and (max-width: 2000px) {
@@ -72,9 +69,6 @@
   }
 }
 
-
-
-
 /* 1500 - 1250 px */
 @media screen and (max-width: 1500px) {
   /* Navbar */
@@ -95,7 +89,7 @@
     grid-template-areas:
       "E E E"
       "F G H"
-      "I J K"
+      "I J K";
   }
 
   /* ECs */
@@ -112,9 +106,6 @@
   }
 }
 
-
-
-
 /* 1250 - 1000 px */
 @media screen and (max-width: 1250px) {
   /* Navbar */
@@ -122,7 +113,7 @@
     width: 45%;
   }
   nav h3 {
-    margin-right: 30%
+    margin-right: 30%;
   }
 
   /* About Me */
@@ -160,9 +151,6 @@
   }
 }
 
-
-
-
 /* 1000 - 750 px */
 @media screen and (max-width: 1000px) {
   /* Navbar Hamburger Trigger */
@@ -195,7 +183,7 @@
 
   /* About Me */
   .about-me-grid {
-    grid-template-areas: 
+    grid-template-areas:
       "A"
       "C"
       "D"
@@ -251,9 +239,6 @@
   }
 }
 
-
-
-
 /* Under 750 px */
 @media screen and (max-width: 750px) {
   /* Navbar */
@@ -290,7 +275,7 @@
     width: 0;
   }
   .project-description {
-    background-color: rgba(0, 0, 0, 0);;
+    background-color: rgba(0, 0, 0, 0);
     color: rgb(184, 184, 184);
     height: 100%;
     position: static;

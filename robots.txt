@@ -1,0 +1,5 @@
+User-agent: *
+Disallow: /Images/
+Allow: /
+
+Sitemap: https://matthewyang.ca/sitemap.txt
