@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="../CSS/animations.css" />
     <link rel="stylesheet" href="../CSS/bookshelf.css" />
     <link rel="stylesheet" href="../CSS/dynamic.css" />
+    <link rel="icon" type="image/x-icon" href="/Images/favicon.png" />
     <link
       href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@200;300&display=swap"
       rel="stylesheet"
@@ -34,29 +35,28 @@
       </p>
     </section>
 
-    <section class="bookshelf">
-      <div class="shelf-container"></div>
-      <div class="shelf-container"></div>
-      <div class="shelf-container"></div>
-      <div class="shelf-container"></div>
-      <div class="shelf-container"></div>
-      <div class="shelf-container"></div>
-    </section>
+    <section class="bookshelf"></section>
+
     <div class="book-grid">
-      <a href="the-guns-of-august.html"
+      <a href="mans-search-for-meaning.html"
         ><div>FAVOURITE</div>
-        <img src="../Images/the-guns-of-august.jpg" alt=""
+        <img src="../Images/mans-search-for-meaning.jpeg" alt=""
       /></a>
       <a href="the-subtle-art.html"
         ><div>FAVOURITE</div>
         <img src="../Images/the-subtle-art.jpeg" alt=""
       /></a>
+      <a href="a-thousand-splendid-suns.html"
+        ><div>FAVOURITE</div>
+        <img src="../Images/a-thousand-splendid-suns.jpeg" alt=""
+      /></a>
+      <a href="the-guns-of-august.html">
+        <img src="../Images/the-guns-of-august.jpg" alt=""
+      /></a>
       <a href="tuesdays-with-morrie.html"
         ><img src="../Images/tuesdays-with-morrie.jpeg" alt=""
       /></a>
-      <a href="a-thousand-splendid-suns.html"
-        ><img src="../Images/a-thousand-splendid-suns.jpeg" alt=""
-      /></a>
+
       <a href="a-brief-history-of-time.html"
         ><img src="../Images/a-brief-history-of-time.jpeg" alt=""
       /></a>
@@ -81,9 +81,31 @@
       <a href="brave-new-world.html"
         ><img src="../Images/brave-new-world.jpeg" alt=""
       /></a>
-      <!-- <a href="little-fires-everywhere.html"><img src="../Images/little-fires-everywhere.jpeg" alt=""></a> -->
+      <a href="waking-up.html"><img src="../Images/waking-up.jpg" alt="" /></a>
+      <a href="babel.html"><img src="../Images/babel.jpeg" alt="" /></a>
+      <a href="genghis-khan.html"
+        ><img src="../Images/genghis-khan.jpg" alt=""
+      /></a>
     </div>
 
     <script src="../JS/nav.js"></script>
+    <script>
+      var curHeight = document.body.scrollHeight;
+      const shelfHeight = 310;
+      const baseHeight = 178;
+      var shelves = Math.round((curHeight - baseHeight) / shelfHeight);
+      console.log(shelves);
+
+      const bookshelf = document.getElementsByClassName("bookshelf");
+      for (i = 0; i < shelves; i++) {
+        bookshelf[0].innerHTML += '<div class="shelf-container"></div>';
+      }
+
+      const bookGrid = document.getElementsByClassName("book-grid");
+      const adjustmentFactor = 10; // padding between book and top shelf
+      const negativeMarginTop = (shelfHeight * shelves - adjustmentFactor) * -1;
+      console.log(negativeMarginTop);
+      bookGrid[0].style.marginTop = `${negativeMarginTop}px`;
+    </script>
   </body>
 </html>

@@ -69,8 +69,7 @@ nav ul {
   width: 65vw;
   margin-left: auto;
   margin-right: auto;
-  /* margin-top: -1225px; */
-  margin-top: -1845px;
+  margin-top: 0px;
 }
 .book-grid div {
   position: absolute;
