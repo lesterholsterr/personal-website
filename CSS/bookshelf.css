@@ -66,7 +66,7 @@ nav ul {
   display: grid;
   grid-row-gap: 3.5rem;
   grid-template-columns: repeat(4, 1fr);
-  width: 65vw;
+  width: 67vw;
   margin-left: auto;
   margin-right: auto;
   margin-top: 0px;

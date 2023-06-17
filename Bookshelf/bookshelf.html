@@ -89,23 +89,6 @@
     </div>
 
     <script src="../JS/nav.js"></script>
-    <script>
-      var curHeight = document.body.scrollHeight;
-      const shelfHeight = 310;
-      const baseHeight = 178;
-      var shelves = Math.round((curHeight - baseHeight) / shelfHeight);
-      console.log(shelves);
-
-      const bookshelf = document.getElementsByClassName("bookshelf");
-      for (i = 0; i < shelves; i++) {
-        bookshelf[0].innerHTML += '<div class="shelf-container"></div>';
-      }
-
-      const bookGrid = document.getElementsByClassName("book-grid");
-      const adjustmentFactor = 10; // padding between book and top shelf
-      const negativeMarginTop = (shelfHeight * shelves - adjustmentFactor) * -1;
-      console.log(negativeMarginTop);
-      bookGrid[0].style.marginTop = `${negativeMarginTop}px`;
-    </script>
+    <script src="../JS/bookshelf.js" ;></script>
   </body>
 </html>
