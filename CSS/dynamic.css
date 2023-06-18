@@ -1,7 +1,44 @@
 /* SCREEN WIDTH */
 
-/* Above 2000 px */
-@media screen and (min-width: 2000px) {
+/* Above 2500  */
+@media screen and (min-width: 2500px) {
+  /* Navbar */
+  nav ul {
+    width: 25%;
+  }
+  nav h3 {
+    margin-right: 45%;
+  }
+
+  /* About Me */
+  .about-me-grid {
+    grid-template-columns: 28vw 23vw;
+  }
+
+  /* Projects */
+  #projects {
+    grid-template-areas:
+      "E E E E "
+      "F G H I"
+      "J K . .";
+  }
+
+  /* ECs */
+  .job-container {
+    width: 38vw;
+  }
+  .ecs-subtitle {
+    width: 38vw;
+  }
+
+  /* Bookshelf */
+  .book-grid {
+    grid-template-columns: repeat(8, 1fr);
+  }
+}
+
+/* 2000 - 2500 px */
+@media screen and (max-width: 2500px) {
   /* Navbar */
   nav ul {
     width: 25%;
