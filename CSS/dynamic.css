@@ -343,18 +343,99 @@
   .article-container {
     width: 80vw;
   }
+  .gal-image img {
+    width: 50vw;
+    height: auto;
+  }
 
   /* Bookshelf */
+  .book-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
   .bookshelf {
     width: 90vw;
   }
   .shelf-container {
+    width: 82vw;
+  }
+  .book-grid {
+    width: 78vw;
+    grid-row-gap: 3.2rem;
+  }
+  .book-grid div {
+    width: 100px;
+  }
+  .book-grid img {
+    height: 150px;
+  }
+  .shelf-container {
+    height: 175px;
+  }
+
+  .book-description {
     width: 85vw;
   }
-  .book-grid {
-    width: 80vw;
+}
+
+/* Mobile (Under 500 px) */
+@media screen and (max-width: 500px) {
+  /* Navbar */
+  nav h3 {
+    margin-right: 20%;
+    font-size: 25px;
   }
+  .burger {
+    display: block;
+    margin-right: 10%;
+  }
+
+  /* About Me */
+  .image-container {
+    height: 350px;
+    width: 325px;
+  }
+
+  /* Work Experience */
+  .job-container {
+    flex-direction: column-reverse;
+  }
+  .job-container h3 {
+    padding: 5px;
+  }
+  #work-exp img {
+    margin-bottom: 20px;
+  }
+
+  /* Projects */
+  .project-container {
+    width: 90vw;
+  }
+  #projects {
+    gap: 15px;
+  }
+
+  /* Contact */
+  .submit-row p {
+    margin-left: 20px;
+  }
+
+  /* Blog */
+  .blog-container {
+    width: 90vw;
+  }
+  .article-container {
+    width: 90vw;
+  }
+  .blog-footer {
+    width: 70vw;
+  }
+  .gal-image img {
+    width: 59vw;
+    height: auto;
+  }
+
+  /* Bookshelf */
   .book-grid {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(3, 1fr);
   }
 }

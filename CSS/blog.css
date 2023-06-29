@@ -96,13 +96,12 @@
 /* Image Gallery */
 .gallery-container {
   width: 80%;
-  height: 600px;
   margin: auto;
-  overflow: hidden;
+  overflow-x: hidden;
+  margin-bottom: 50px;
 }
 .gallery {
   width: 500%;
-  height: 600px;
   display: flex;
 }
 .gallery-container input {
@@ -113,13 +112,13 @@
   transition: 2s;
 }
 .gal-image img {
-  height: 400px;
+  width: 35vw;
   margin: auto;
 }
 
 .gal-buttons {
-  position: absolute;
   width: 37%;
+  margin: auto;
   display: flex;
   justify-content: center;
 }
