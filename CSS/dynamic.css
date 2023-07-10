@@ -200,7 +200,7 @@
 
 /* 1000 - 750 px */
 @media screen and (max-width: 1000px) {
-  /* Navbar Hamburger Trigger */
+  /* Navbar Dropdown Trigger */
   body {
     overflow-x: hidden;
   }

@@ -5,8 +5,8 @@ nav {
 nav p {
   color: rgb(216, 210, 210);
 }
-nav p:hover {
-  border-bottom: 2px solid rgb(216, 210, 210);
+.underline::before {
+  background-color: rgb(216, 210, 210);
 }
 nav h3 {
   color: rgb(216, 210, 210);

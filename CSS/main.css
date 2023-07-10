@@ -48,13 +48,25 @@ nav img:hover {
   cursor: pointer;
   height: 35px;
 }
+
 nav p {
-  border-bottom: 0px solid rgb(95, 114, 126);
+  padding-bottom: 0.25rem;
+  position: relative;
+  cursor: pointer;
   transition: all 0.2s ease-in-out;
 }
-nav p:hover {
-  cursor: pointer;
-  border-bottom: 2px solid rgb(95, 114, 126);
+.underline::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  height: 2px;
+  background-color: rgb(95, 114, 126);
+  transition: 0.25s ease-out;
+}
+.underline:hover::before {
+  width: 100%;
 }
 
 .burger {
