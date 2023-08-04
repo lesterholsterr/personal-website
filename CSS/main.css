@@ -116,6 +116,9 @@ nav p {
 .image-container[data-scroll="in"] {
   animation: slide-right 1s ease-in-out;
 }
+.image-container a {
+  cursor: default;
+}
 #about-me img {
   position: absolute;
   width: 100%;
