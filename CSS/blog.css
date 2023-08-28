@@ -150,3 +150,20 @@
 #gal-btn-5:checked ~ .first {
   margin-left: -80%;
 }
+
+/* Links */
+li a {
+  text-decoration: none;
+}
+li a:link {
+  color: rgb(164, 164, 164);
+  transition: 0.5s;
+}
+li a:visited {
+  color: rgb(164, 164, 164);
+  transition: 0.5s;
+}
+li a:hover {
+  color: rgb(98, 98, 98);
+  transition: 0.5s;
+}
