@@ -123,3 +123,9 @@ nav ul {
   margin-top: 20px;
   font-size: 20px;
 }
+.book-description ul {
+  font-size: 20px;
+}
+.book-description li {
+  margin-left: 40px;
+}
