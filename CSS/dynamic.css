@@ -15,20 +15,17 @@
     grid-template-columns: 28vw 23vw;
   }
 
+  /* Work */
+  /* .job-container {
+    width: 38vw;
+  } */
+
   /* Projects */
   #projects {
     grid-template-areas:
       "E E E E "
       "F G H I"
       "J K . .";
-  }
-
-  /* ECs */
-  .job-container {
-    width: 38vw;
-  }
-  .ecs-subtitle {
-    width: 38vw;
   }
 
   /* Bookshelf */
@@ -60,14 +57,6 @@
       "J K . .";
   }
 
-  /* ECs */
-  .job-container {
-    width: 38vw;
-  }
-  .ecs-subtitle {
-    width: 38vw;
-  }
-
   /* Bookshelf */
   .book-grid {
     grid-template-columns: repeat(7, 1fr);
@@ -89,20 +78,17 @@
     grid-template-columns: 35vw 28vw;
   }
 
+  /* Work */
+  /* .job-container {
+    width: 50vw;
+  } */
+
   /* Projects */
   #projects {
     grid-template-areas:
       "E E E"
       "F G H"
       "I J K";
-  }
-
-  /* ECs */
-  .job-container {
-    width: 50vw;
-  }
-  .ecs-subtitle {
-    width: 50vw;
   }
 
   /* Bookshelf */
@@ -126,20 +112,17 @@
     grid-template-columns: 45vw 33vw;
   }
 
+  /* Work */
+  /* .job-container {
+    width: 55vw;
+  } */
+
   /* Projects */
   #projects {
     grid-template-areas:
       "E E E"
       "F G H"
       "I J K";
-  }
-
-  /* ECs */
-  .job-container {
-    width: 55vw;
-  }
-  .ecs-subtitle {
-    width: 55vw;
   }
 
   /* Bookshelf */
@@ -256,12 +239,30 @@
     animation: slide-right 1s ease-in-out;
   }
 
-  /* ECs */
-  .job-container {
+  /* Work */
+  /* .job-container {
     width: 65vw;
+  } */
+  .timeline::after {
+    left: 31px;
   }
-  .ecs-subtitle {
-    width: 65vw;
+  .job-container {
+    width: 100%;
+    padding-left: 80px;
+    padding-right: 25px;
+  }
+  .right-job-container {
+    left: 0;
+  }
+  .left-job-container img,
+  .right-job-container img {
+    left: 10px;
+  }
+  .left-job-description-arrow,
+  .right-job-description-arrow {
+    border-right: 15px solid #fff;
+    border-left: 0;
+    left: -15px;
   }
 
   /* Contact */
@@ -270,14 +271,6 @@
   }
   .input-group {
     margin-bottom: 10px;
-  }
-
-  /* Ultralearning */
-  .body-container {
-    width: 80%;
-  }
-  .ul-container img {
-    display: none;
   }
 
   /* Bookshelf */
@@ -299,6 +292,11 @@
     height: 400px;
     width: 400px;
   }
+
+  /* Work */
+  /* .job-container {
+    width: 80vw;
+  } */
 
   /* Projects */
   #projects {
@@ -326,14 +324,6 @@
     color: rgb(184, 184, 184);
     height: 100%;
     position: static;
-  }
-
-  /* ECs */
-  .job-container {
-    width: 80vw;
-  }
-  .ecs-subtitle {
-    width: 80vw;
   }
 
   /* Blog Width */
@@ -395,7 +385,7 @@
     width: 325px;
   }
 
-  /* Work Experience */
+  /* Work */
   .job-container {
     flex-direction: column-reverse;
   }

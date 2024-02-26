@@ -204,36 +204,89 @@ nav p {
 #work-exp h1[data-scroll="in"] {
   animation: float-up 1s ease-in-out;
 }
-.job-container {
-  display: flex;
-  width: 50vw;
-  align-items: center;
-  justify-content: space-between;
-  margin-bottom: 50px;
-}
-.job-container:last-child {
-  margin-bottom: 50px;
-}
-.job-container h3 {
-  font-size: 26px;
-}
-.job-container ul {
-  margin-top: 15px;
-}
-#bmo-ul {
-  margin-top: 0px;
-  margin-left: 20px;
+#work-exp img {
+  position: absolute;
+  width: 40px;
+  border-radius: 50%;
+  right: -20px;
+  top: 32px;
+  z-index: 2;
 }
 
-#work-exp img {
-  width: 100px;
-  margin-left: 30px;
+.timeline {
+  position: relative;
+  max-width: 1200px;
+  margin: auto;
 }
+.timeline::after {
+  content: "";
+  position: absolute;
+  width: 6px;
+  height: 100%;
+  background: #fff;
+  top: 0;
+  left: 50%;
+  margin-left: -3px;
+  z-index: 1;
+  animation: moveline 6s linear forwards;
+}
+
+.job-container {
+  padding: 10px 50px;
+  position: relative;
+  width: 50%;
+}
+.left-job-container {
+  left: 0;
+}
+.right-job-container {
+  left: 50%;
+}
+.right-job-container img {
+  left: -20px;
+}
+
+.job-description {
+  padding: 20px 30px;
+  background: #fff;
+  position: relative;
+  border-radius: 6px;
+}
+.job-description h3 {
+  font-size: 26px;
+}
+.job-description ul {
+  margin-top: 15px;
+}
+
+.left-job-description-arrow {
+  height: 0;
+  width: 0;
+  position: absolute;
+  top: 28px;
+  z-index: 1;
+  border-top: 15px solid transparent;
+  border-bottom: 15px solid transparent;
+  border-left: 15px solid #fff;
+  right: -15px;
+}
+.right-job-description-arrow {
+  height: 0;
+  width: 0;
+  position: absolute;
+  top: 28px;
+  z-index: 1;
+  border-top: 15px solid transparent;
+  border-bottom: 15px solid transparent;
+  border-right: 15px solid #fff;
+  left: -15px;
+}
+
 .job-container:nth-child(odd)[data-scroll="in"] {
-  animation: slide-left 1s ease-in-out;
+  animation: slide-right 1s ease-in-out;
 }
 .job-container:nth-child(even)[data-scroll="in"] {
-  animation: slide-right 1s ease-in-out;
+  animation: slide-left 1s ease-in-out;
 }
 
 /* Projects */
