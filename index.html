@@ -59,23 +59,45 @@
     <section id="work-exp">
       <h1>Work Experience</h1>
       <div class="timeline">
+        <div class="timeline-year">2024</div>
         <div class="job-container left-job-container">
-          <img src="Images/onex-logo.jpeg" alt="Onex logo" />
+          <img
+            src="Images/onex-logo.jpeg"
+            alt="Onex logo"
+            onclick="toggleJobContainer(this)"
+          />
           <div class="job-description">
             <h3>Risk Management Intern - Onex</h3>
             <h4>Toronto, Canada</h4>
             <h4>January 2024 - Present</h4>
             <ul>
-              <li>Filler</li>
+              <li>
+                Working in a risk management team to support 5 equity investment
+                funds and 35 CLOs with $25 billion in AUM
+              </li>
+              <li>
+                Productionized a multi-asset class factor risk model by building
+                various internal analytics tools using Java Spring Boot, Python,
+                MS SQL, and Power BI.
+              </li>
             </ul>
             <span class="left-job-description-arrow"></span>
           </div>
         </div>
 
+        <div class="timeline-year">2023</div>
         <div class="job-container right-job-container">
-          <img src="Images/waterloo-logo.png" alt="Waterloo logo" />
+          <img
+            src="Images/waterloo-logo.png"
+            alt="Waterloo logo"
+            onclick="toggleJobContainer(this)"
+          />
           <div class="job-description">
-            <h3>Teaching Assistant (<a href="https://uwflow.com/course/cfm101">CFM101</a>) - University of Waterloo</h3>
+            <h3>
+              Teaching Assistant (<a href="https://uwflow.com/course/cfm101"
+                >CFM101</a
+              >) - University of Waterloo
+            </h3>
             <h4>Waterloo, Canada</h4>
             <h4>September 2023 - December 2023</h4>
             <ul>
@@ -91,7 +113,11 @@
         </div>
 
         <div class="job-container left-job-container">
-          <img src="Images/bofa-logo.jpeg" alt="Bank of America logo" />
+          <img
+            src="Images/bofa-logo.jpeg"
+            alt="Bank of America logo"
+            onclick="toggleJobContainer(this)"
+          />
           <div class="job-description">
             <h3>Software Developer Intern - Bank of America</h3>
             <h4>Toronto, Canada</h4>
@@ -119,8 +145,13 @@
           </div>
         </div>
 
+        <div class="timeline-year">2022</div>
         <div class="job-container right-job-container">
-          <img src="Images/bmo-logo.png" alt="BMO logo" />
+          <img
+            src="Images/bmo-logo.png"
+            alt="BMO logo"
+            onclick="toggleJobContainer(this)"
+          />
           <div class="job-description">
             <h3>Financial Analyst Intern - Bank of Montreal</h3>
             <h4>Toronto, Canada</h4>
@@ -143,8 +174,15 @@
           </div>
         </div>
 
-        <div class="job-container left-job-container">
-          <img src="Images/tutor-logo.png" alt="Tutoring logo" />
+        <div
+          class="job-container left-job-container"
+          style="margin-bottom: 30px"
+        >
+          <img
+            src="Images/tutor-logo.png"
+            alt="Tutoring logo"
+            onclick="toggleJobContainer(this)"
+          />
           <div class="job-description">
             <h3>Tutor - Canada Wisecolt Education</h3>
             <h4>Remote</h4>
@@ -164,9 +202,6 @@
         </div>
       </div>
     </section>
-
-    <hr />
-
 
     <!-- Projects -->
     <section id="projects">
@@ -327,7 +362,7 @@
       <div class="project-container">
         <h2>Stockle</h2>
         <p class="project-languages" style="margin-bottom: 15px">
-          React, Node.js, Express.js, MongoDB, Python
+          React, Node.js, MongoDB, Yahoo Finance API
         </p>
         <div class="project-image-container">
           <img
@@ -445,6 +480,7 @@
     <script src="JS/nav-home.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
     <script src="JS/scroll-out.js"></script>
+    <script src="JS/timeline.js"></script>
     <script>
       var typed = new Typed(".auto-greeting", {
         strings: ["Hi, I'm Matthew!"],

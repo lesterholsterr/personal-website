@@ -78,10 +78,10 @@
     grid-template-columns: 35vw 28vw;
   }
 
-  /* Work */
-  /* .job-container {
-    width: 50vw;
-  } */
+  /* Timeline */
+  .timeline {
+    width: 80vw;
+  }
 
   /* Projects */
   #projects {
@@ -112,10 +112,10 @@
     grid-template-columns: 45vw 33vw;
   }
 
-  /* Work */
-  /* .job-container {
-    width: 55vw;
-  } */
+  /* Timeline */
+  .timeline {
+    width: 90vw;
+  }
 
   /* Projects */
   #projects {
@@ -144,6 +144,11 @@
   /* About Me */
   .about-me-grid {
     grid-template-columns: 53vw 35vw;
+  }
+
+  /* Timeline */
+  .timeline {
+    width: 100vw;
   }
 
   /* Projects */
@@ -239,10 +244,15 @@
     animation: slide-right 1s ease-in-out;
   }
 
+  /* Timeline */
+  .timeline {
+    width: 80vw;
+  }
+  .timeline-year {
+    margin-left: 0;
+  }
+
   /* Work */
-  /* .job-container {
-    width: 65vw;
-  } */
   .timeline::after {
     left: 31px;
   }
@@ -256,13 +266,14 @@
   }
   .left-job-container img,
   .right-job-container img {
-    left: 10px;
+    left: 0;
   }
   .left-job-description-arrow,
   .right-job-description-arrow {
-    border-right: 15px solid #fff;
+    border-right: 15px solid rgb(185, 208, 208);
     border-left: 0;
     left: -15px;
+    top: 32px;
   }
 
   /* Contact */
