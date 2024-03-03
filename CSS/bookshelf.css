@@ -123,7 +123,8 @@ nav ul {
   margin-top: 20px;
   font-size: 20px;
 }
-.book-description ul {
+.book-description ul,
+.book-description ol {
   font-size: 20px;
 }
 .book-description li {
