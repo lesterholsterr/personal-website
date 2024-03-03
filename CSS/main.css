@@ -508,6 +508,12 @@ textarea {
   align-items: center;
   justify-content: space-between;
 }
+.submit-row a {
+  all: initial;
+}
+.submit-row a:hover {
+  cursor: pointer;
+}
 form button {
   background: rgba(22, 22, 103, 0.829);
   width: 100px;

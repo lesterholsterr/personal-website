@@ -10,11 +10,8 @@ const toggleJobContainer = (img) => {
   const isNarrowScreen = window.innerWidth <= 1000;
 
   if (isHidden) {
-    if (isLeftElement && !isNarrowScreen) {
       jobDescription.classList.remove("hidden-left");
-    } else {
       jobDescription.classList.remove("hidden-right");
-    }
     jobContainer.classList.remove("hidden-container");
   } else {
     if (isLeftElement && !isNarrowScreen) {
