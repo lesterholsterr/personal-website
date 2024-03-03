@@ -310,10 +310,13 @@ nav p {
   left: -15px;
 }
 
-.job-container:nth-child(odd)[data-scroll="in"] {
+.job-container:nth-child(2)[data-scroll="in"],
+.job-container:nth-child(5)[data-scroll="in"],
+.job-container:nth-child(8)[data-scroll="in"] {
   animation: slide-right 1s ease-in-out;
 }
-.job-container:nth-child(even)[data-scroll="in"] {
+.job-container:nth-child(4)[data-scroll="in"],
+.job-container:nth-child(7)[data-scroll="in"] {
   animation: slide-left 1s ease-in-out;
 }
 
