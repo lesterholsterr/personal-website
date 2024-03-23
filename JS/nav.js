@@ -1,5 +1,5 @@
 const nav_tag = document.getElementById("navbar");
-fetch("../Navbar/nav.html")
+fetch("/Navbar/nav.html")
   .then((res) => res.text())
   .then((data) => {
     nav_tag.innerHTML = data;
