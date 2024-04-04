@@ -2,7 +2,7 @@ const bookshelf = document.getElementsByClassName("bookshelf");
 const bookGrid = document.getElementsByClassName("book-grid");
 var shelfHeight = window.innerWidth > 750 ? 310 : 175;
 var curHeight = bookGrid[0].clientHeight;
-console.log(curHeight);
+// console.log(curHeight);
 var shelves = Math.round(curHeight / shelfHeight);
 
 const shelf = document.createElement("div");
@@ -14,7 +14,7 @@ for (i = 0; i < shelves; i++) {
 
 var adjustmentFactor = 40; // padding between book and top shelf
 var negativeMarginTop = (bookshelf[0].clientHeight - adjustmentFactor) * -1;
-console.log(negativeMarginTop);
+// console.log(negativeMarginTop);
 bookGrid[0].style.marginTop = `${negativeMarginTop}px`;
 
 addEventListener("resize", (event) => {});
@@ -23,7 +23,7 @@ onresize = (event) => {
   shelfHeight = window.innerWidth > 750 ? 310 : 175;
   curHeight = bookGrid[0].clientHeight;
   var diffShelves = Math.round(curHeight / shelfHeight) - shelves;
-  console.log(`diff shelves: ${diffShelves}`);
+  // console.log(`diff shelves: ${diffShelves}`);
   if (diffShelves > 0) {
     for (i = 0; i < diffShelves; i++) {
       shelves++;
