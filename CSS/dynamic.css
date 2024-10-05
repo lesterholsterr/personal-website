@@ -78,11 +78,6 @@
     grid-template-columns: 35vw 28vw;
   }
 
-  /* Timeline */
-  .timeline {
-    width: 80vw;
-  }
-
   /* Projects */
   #projects {
     grid-template-areas:
@@ -248,7 +243,12 @@
   .timeline {
     width: 80vw;
   }
-  .timeline-year {
+  .left-timeline-year {
+    transform: translateX(0px);
+    left: 45%;
+  }
+  .right-timeline-year {
+    left: 45%;
     margin-left: 0;
   }
 
