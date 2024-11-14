@@ -130,3 +130,14 @@ nav ul {
 .book-description li {
   margin-left: 40px;
 }
+
+blockquote {
+  border-left: 3px solid rgb(131, 90, 60);
+  margin: 1.5em 10px;
+  padding: 0.5em 10px;
+}
+.excerpt {
+  display: inline-block;
+  margin-top: 0px;
+  font-size: 20px;
+}
