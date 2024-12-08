@@ -4,10 +4,6 @@ Designed and created (mostly) from scratch by me. Will update as I get better at
 
 That's the plan anyways :P
 
-# Hosting
-
-Since I am starting to add some non-static features to my website, the Github pages deployment of my website probably doesn't work anymore (but I'm too lazy to figure out how to turn it off). The website is now being hosted on Digial Ocean with URL http://matthewyang.ca. The domain is being leased from Google for $17/year.
-
 # Resources
 
 Typed JS library (for the live typing effect used in the title): https://github.com/mattboldt/typed.js/

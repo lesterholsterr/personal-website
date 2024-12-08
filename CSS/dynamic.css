@@ -244,12 +244,10 @@
     width: 80vw;
   }
   .left-timeline-year {
-    transform: translateX(0px);
-    left: 45%;
+    left: calc(10% + 10px);
   }
   .right-timeline-year {
-    left: 45%;
-    margin-left: 0;
+    left: calc(10% + 10px);
   }
 
   /* Work */
@@ -399,12 +397,38 @@
   /* Work */
   .job-container {
     flex-direction: column-reverse;
+    padding: 1.5rem;
   }
   .job-container h3 {
     padding: 5px;
   }
   #work-exp img {
-    margin-bottom: 20px;
+    position: absolute;
+    top: 0px;
+    left: 5px;
+    border: 5px solid rgb(185, 208, 208);
+  }
+  #work-exp h1 {
+    margin-bottom: 0;
+  }
+
+  .timeline {
+    width: 100%;
+  }
+  .left-timeline-year {
+    display: none;
+  }
+  .right-timeline-year {
+    display: none;
+  }
+  .timeline::after {
+    display: none;
+  }
+  .left-job-description-arrow {
+    display: none;
+  }
+  .right-job-description-arrow {
+    display: none;
   }
 
   /* Projects */

@@ -1,4 +1,6 @@
 const toggleJobContainer = (img) => {
+  if (window.innerWidth < 500) return;
+  
   const jobContainer = img.parentElement;
   const jobDescription = jobContainer.querySelector(".job-description");
   const isLeftElement = jobContainer.classList.contains("left-job-container");
