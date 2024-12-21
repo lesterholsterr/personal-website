@@ -112,7 +112,7 @@
 
 /* Image Gallery */
 .gallery-container {
-  width: 80%;
+  width: 100%;
   margin: auto;
   overflow-x: hidden;
   margin-bottom: 50px;
@@ -129,7 +129,7 @@
   transition: 2s;
 }
 .gal-image img {
-  width: 35vw;
+  width: 100%;
   margin: auto;
 }
 
