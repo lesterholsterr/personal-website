@@ -15,6 +15,7 @@
   transition: 0.5s;
 }
 
+/* Text */
 .blog-title {
   margin-top: 80px;
   margin-bottom: 30px;
@@ -110,64 +111,6 @@
   color: rgb(130, 130, 130);
 }
 
-/* Image Gallery */
-.gallery-container {
-  width: 100%;
-  margin: auto;
-  overflow-x: hidden;
-  margin-bottom: 50px;
-}
-.gallery {
-  width: 500%;
-  display: flex;
-}
-.gallery-container input {
-  display: none;
-}
-.gal-image {
-  width: 20%;
-  transition: 2s;
-}
-.gal-image img {
-  width: 100%;
-  margin: auto;
-}
-
-.gal-buttons {
-  width: 37%;
-  margin: auto;
-  display: flex;
-  justify-content: center;
-}
-.gal-btn {
-  border: 2px solid black;
-  padding: 5px;
-  border-radius: 10px;
-  cursor: pointer;
-  transition: 1s;
-}
-.gal-btn:not(:last-child) {
-  margin-right: 40px;
-}
-.gal-btn:hover {
-  background: black;
-}
-#gal-btn-1:checked ~ .first {
-  margin-left: 0;
-}
-#gal-btn-2:checked ~ .first {
-  margin-left: -20%;
-}
-#gal-btn-3:checked ~ .first {
-  margin-left: -40%;
-}
-#gal-btn-4:checked ~ .first {
-  margin-left: -60%;
-}
-#gal-btn-5:checked ~ .first {
-  margin-left: -80%;
-}
-
 blockquote {
   border-left: 3px solid #ccc;
   margin: 1.5em 10px;
@@ -175,4 +118,73 @@ blockquote {
 }
 blockquote p {
   display: inline-block;
+}
+
+/* Image Gallery */
+.gallery-container {
+  width: 100%;
+  margin: auto;
+  overflow-x: hidden;
+  margin-bottom: 50px;
+  position: relative;
+}
+.gallery {
+  width: 400%;
+  display: flex;
+  transition: margin-left 0.5s ease;
+}
+.gal-image {
+  width: 25%;
+}
+.gal-image img {
+  width: 100%;
+  margin: auto;
+}
+
+.gal-nav {
+  position: absolute;
+  width: 100%;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  justify-content: space-between;
+  padding: 0 20px;
+  pointer-events: none;
+}
+.arrow {
+  width: 40px;
+  height: 40px;
+  background: rgba(0, 0, 0, 0.5);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  text-decoration: none;
+  pointer-events: auto;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+.arrow:hover {
+  background: rgba(0, 0, 0, 0.8);
+}
+.arrow.disabled {
+  visibility: hidden;
+}
+
+.arrow-left-symbol {
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  display: inline-block;
+  padding: 3px;
+  transform: rotate(135deg);
+  -webkit-transform: rotate(135deg);
+}
+.arrow-right-symbol {
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  display: inline-block;
+  padding: 3px;
+  transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
 }
