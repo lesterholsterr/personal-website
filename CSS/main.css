@@ -6,6 +6,15 @@
   scroll-behavior: smooth;
 }
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 500;
+}
+
 /* Navbar */
 nav {
   position: fixed;
@@ -239,9 +248,9 @@ nav p {
   position: relative;
   font-size: 50px;
   margin-top: 30px;
-  left: calc(50% - 110px);
+  left: calc(50% - 120px);
   z-index: 5;
-  width: fit-content
+  width: fit-content;
 }
 .right-timeline-year {
   position: relative;
@@ -249,7 +258,7 @@ nav p {
   margin-top: 30px;
   left: calc(50% + 10px);
   z-index: 5;
-  width: fit-content
+  width: fit-content;
 }
 
 .job-container {
