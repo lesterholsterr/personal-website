@@ -36,9 +36,9 @@ const projects: Project[] = [
 
 export default function Projects() {
   return (
-    <section id="projects" className="py-20 px-4 sm:px-6 lg:px-8 bg-white">
+    <section id="projects" className="py-20 px-4 sm:px-6 lg:px-8 bg-white dark:bg-gray-900">
       <div className="max-w-4xl mx-auto">
-        <h2 className="text-3xl sm:text-4xl font-light text-gray-900 mb-12">
+        <h2 className="text-3xl sm:text-4xl font-light text-gray-900 dark:text-gray-100 mb-12">
           Projects
         </h2>
 
@@ -55,23 +55,23 @@ export default function Projects() {
               <div className="flex flex-col sm:flex-row sm:justify-between sm:items-start gap-6">
                 <div className="flex-1">
                   <div className="flex items-baseline gap-4 mb-3">
-                    <h3 className="text-2xl font-light text-gray-900 group-hover:text-gray-600 transition-colors duration-300">
+                    <h3 className="text-2xl font-light text-gray-900 dark:text-gray-100 group-hover:text-gray-600 dark:group-hover:text-gray-400 transition-colors duration-300">
                       {project.title}
                     </h3>
-                    <span className="text-sm text-gray-400 group-hover:text-gray-500 transition-colors duration-300">
+                    <span className="text-sm text-gray-400 dark:text-gray-500 group-hover:text-gray-500 dark:group-hover:text-gray-400 transition-colors duration-300">
                       {String(index + 1).padStart(2, "0")}
                     </span>
                   </div>
 
                   {project.technologies && (
                     <div className="mb-4">
-                      <p className="text-sm text-gray-500 group-hover:text-gray-600 transition-colors duration-300">
+                      <p className="text-sm text-gray-500 dark:text-gray-400 group-hover:text-gray-600 dark:group-hover:text-gray-300 transition-colors duration-300">
                         {project.technologies.join(" • ")}
                       </p>
                     </div>
                   )}
 
-                  <p className="text-gray-600 leading-relaxed text-lg group-hover:text-gray-700 transition-colors duration-300">
+                  <p className="text-gray-600 dark:text-gray-300 leading-relaxed text-lg group-hover:text-gray-700 dark:group-hover:text-gray-200 transition-colors duration-300">
                     {project.description}
                   </p>
                 </div>
@@ -82,7 +82,7 @@ export default function Projects() {
                       href={project.links.demo}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="text-sm text-gray-500 hover:text-gray-900 transition-all duration-300 hover:translate-x-1"
+                      className="text-sm text-gray-500 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-100 transition-all duration-300 hover:translate-x-1"
                     >
                       Demo ↗
                     </a>
@@ -92,7 +92,7 @@ export default function Projects() {
                       href={project.links.github}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="text-sm text-gray-500 hover:text-gray-900 transition-all duration-300 hover:translate-x-1"
+                      className="text-sm text-gray-500 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-100 transition-all duration-300 hover:translate-x-1"
                     >
                       GitHub ↗
                     </a>
@@ -102,7 +102,7 @@ export default function Projects() {
                       href={project.links.external}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="text-sm text-gray-500 hover:text-gray-900 transition-all duration-300 hover:translate-x-1"
+                      className="text-sm text-gray-500 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-100 transition-all duration-300 hover:translate-x-1"
                     >
                       View ↗
                     </a>

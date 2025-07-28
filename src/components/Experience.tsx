@@ -87,9 +87,9 @@ export default function Experience() {
   };
 
   return (
-    <section id="experience" className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-50">
+    <section id="experience" className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-50 dark:bg-gray-800">
       <div className="max-w-4xl mx-auto">
-        <h2 className="text-3xl sm:text-4xl font-light text-gray-900 mb-12">
+        <h2 className="text-3xl sm:text-4xl font-light text-gray-900 dark:text-gray-100 mb-12">
           Work Experience
         </h2>
 
@@ -97,11 +97,11 @@ export default function Experience() {
           {experiences.map((exp) => (
             <div
               key={exp.id}
-              className="border border-gray-200 rounded-lg bg-white"
+              className="border border-gray-200 dark:border-gray-700 rounded-lg bg-white dark:bg-gray-900"
             >
               <button
                 onClick={() => toggleExpanded(exp.id)}
-                className="w-full px-6 py-4 text-left hover:bg-gray-50 transition-all duration-300 focus:outline-none focus:bg-gray-50 cursor-pointer"
+                className="w-full px-6 py-4 text-left hover:bg-gray-50 dark:hover:bg-gray-800 transition-all duration-300 focus:outline-none focus:bg-gray-50 dark:focus:bg-gray-800 cursor-pointer"
               >
                 <div className="flex justify-between items-center">
                   <div className="flex items-center gap-4">
@@ -115,10 +115,10 @@ export default function Experience() {
                       />
                     </div>
                     <div>
-                      <h3 className="text-lg font-medium text-gray-900">
+                      <h3 className="text-lg font-medium text-gray-900 dark:text-gray-100">
                         {exp.company}
                       </h3>
-                      <div className="flex flex-col sm:flex-row sm:items-center sm:gap-2 text-sm text-gray-600 mt-1">
+                      <div className="flex flex-col sm:flex-row sm:items-center sm:gap-2 text-sm text-gray-600 dark:text-gray-300 mt-1">
                         <span>{exp.role}</span>
                         <span className="hidden sm:inline">•</span>
                         <span>{exp.duration}</span>
@@ -127,7 +127,7 @@ export default function Experience() {
                   </div>
                   <div className="flex-shrink-0 ml-4">
                     <svg
-                      className={`w-5 h-5 text-gray-400 transition-transform duration-200 ${
+                      className={`w-5 h-5 text-gray-400 dark:text-gray-500 transition-transform duration-200 ${
                         expandedItems.has(exp.id) ? "rotate-180" : ""
                       }`}
                       fill="none"
@@ -146,16 +146,16 @@ export default function Experience() {
               </button>
 
               {expandedItems.has(exp.id) && (
-                <div className="px-6 pb-4 border-t border-gray-100">
+                <div className="px-6 pb-4 border-t border-gray-100 dark:border-gray-700">
                   <div className="pt-4">
-                    <p className="text-sm text-gray-600 mb-3">{exp.location}</p>
+                    <p className="text-sm text-gray-600 dark:text-gray-300 mb-3">{exp.location}</p>
                     <ul className="space-y-2">
                       {exp.description.map((item, idx) => (
                         <li
                           key={idx}
-                          className="text-sm text-gray-700 leading-relaxed flex"
+                          className="text-sm text-gray-700 dark:text-gray-300 leading-relaxed flex"
                         >
-                          <span className="text-gray-400 mr-2">•</span>
+                          <span className="text-gray-400 dark:text-gray-500 mr-2">•</span>
                           <span>{item}</span>
                         </li>
                       ))}
