@@ -40,8 +40,6 @@ body {
   color: var(--foreground);
   font-family: var(--font-geist-sans), system-ui, -apple-system, sans-serif;
   line-height: 1.6;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
 }
 
 /* Custom scrollbar for webkit browsers */
@@ -96,44 +94,10 @@ body {
 input::placeholder,
 textarea::placeholder {
   color: #6b7280; /* gray-500 */
-  opacity: 1;
-}
-
-input::-webkit-input-placeholder,
-textarea::-webkit-input-placeholder {
-  color: #6b7280;
-}
-
-input::-moz-placeholder,
-textarea::-moz-placeholder {
-  color: #6b7280;
-  opacity: 1;
-}
-
-input:-ms-input-placeholder,
-textarea:-ms-input-placeholder {
-  color: #6b7280;
 }
 
 /* Dark mode placeholder styling */
 .dark input::placeholder,
 .dark textarea::placeholder {
   color: #9ca3af; /* gray-400 */
-  opacity: 1;
-}
-
-.dark input::-webkit-input-placeholder,
-.dark textarea::-webkit-input-placeholder {
-  color: #9ca3af;
-}
-
-.dark input::-moz-placeholder,
-.dark textarea::-moz-placeholder {
-  color: #9ca3af;
-  opacity: 1;
-}
-
-.dark input:-ms-input-placeholder,
-.dark textarea:-ms-input-placeholder {
-  color: #9ca3af;
 }
