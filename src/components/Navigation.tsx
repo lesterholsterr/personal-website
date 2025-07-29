@@ -11,9 +11,13 @@ export default function Navigation() {
     setIsMenuOpen(!isMenuOpen);
   };
 
-  const scrollToTop = (e: React.MouseEvent) => {
+  const goToHome = (e: React.MouseEvent) => {
     e.preventDefault();
-    window.scrollTo({ top: 0, behavior: 'smooth' });
+    if (window.location.pathname === '/') {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    } else {
+      window.location.href = '/';
+    }
   };
 
   return (
@@ -21,14 +25,14 @@ export default function Navigation() {
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           {/* Logo/Name */}
-          <button onClick={scrollToTop} className="text-xl font-medium text-gray-900 dark:text-gray-100 hover:text-gray-600 dark:hover:text-gray-400 transition-colors duration-300">
+          <button onClick={goToHome} className="text-xl font-medium text-gray-900 dark:text-gray-100 hover:text-gray-600 dark:hover:text-gray-400 transition-colors duration-300">
             Matthew Yang
           </button>
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-6">
             <div className="flex space-x-8">
-              <button onClick={scrollToTop} className="text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-100 transition-all duration-300 hover:translate-y-[-1px]">
+              <button onClick={goToHome} className="text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-100 transition-all duration-300 hover:translate-y-[-1px]">
                 Home
               </button>
               <Link href="/blog" className="text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-100 transition-all duration-300 hover:translate-y-[-1px]">
@@ -40,7 +44,7 @@ export default function Navigation() {
               <a href="/Resume.pdf" target="_blank" rel="noopener noreferrer" className="text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-100 transition-all duration-300 hover:translate-y-[-1px]">
                 Resume
               </a>
-              <Link href="#contact" className="text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-100 transition-all duration-300 hover:translate-y-[-1px]">
+              <Link href="/#contact" className="text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-100 transition-all duration-300 hover:translate-y-[-1px]">
                 Contact
               </Link>
             </div>
@@ -85,7 +89,7 @@ export default function Navigation() {
           <div className="py-2 space-y-1">
             <button
               onClick={(e) => {
-                scrollToTop(e);
+                goToHome(e);
                 setIsMenuOpen(false);
               }}
               className="block w-full text-left px-3 py-2 text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-100 hover:bg-gray-50 dark:hover:bg-gray-800 rounded-md transition-colors"
@@ -116,7 +120,7 @@ export default function Navigation() {
               Resume
             </a>
             <Link
-              href="#contact"
+              href="/#contact"
               className="block px-3 py-2 text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-100 hover:bg-gray-50 dark:hover:bg-gray-800 rounded-md transition-colors"
               onClick={() => setIsMenuOpen(false)}
             >

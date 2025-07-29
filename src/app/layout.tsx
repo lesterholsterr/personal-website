@@ -16,7 +16,7 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: "Matthew Yang",
-  description: "Computer Science and Finance student at University of Waterloo. Software engineer and writer.",
+  description: "My portfolio and writing.",
 };
 
 export default function RootLayout({

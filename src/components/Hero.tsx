@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
+import Link from "next/link";
 
 export default function Hero() {
   const [displayedText, setDisplayedText] = useState("");
@@ -80,7 +81,7 @@ export default function Hero() {
           {/* Navigation Cards */}
           <div>
             <div className="space-y-4 mb-6">
-              <a
+              <Link
                 href="/blog"
                 className="block p-6 border border-gray-200 dark:border-gray-700 rounded-lg hover:border-gray-300 dark:hover:border-gray-600 hover:shadow-sm transition-all duration-300 hover:translate-y-[-2px] group bg-white dark:bg-gray-800"
               >
@@ -90,9 +91,9 @@ export default function Hero() {
                 <p className="text-gray-600 dark:text-gray-300">
                   Turning my thoughts into words without LLMs
                 </p>
-              </a>
+              </Link>
 
-              <a
+              <Link
                 href="/bookshelf"
                 className="block p-6 border border-gray-200 dark:border-gray-700 rounded-lg hover:border-gray-300 dark:hover:border-gray-600 hover:shadow-sm transition-all duration-300 hover:translate-y-[-2px] group bg-white dark:bg-gray-800"
               >
@@ -102,7 +103,7 @@ export default function Hero() {
                 <p className="text-gray-600 dark:text-gray-300">
                   Books that have shaped my thinking
                 </p>
-              </a>
+              </Link>
             </div>
 
             {/* Get in touch box - same height as Status box */}
