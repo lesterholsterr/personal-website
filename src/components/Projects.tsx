@@ -71,7 +71,7 @@ export default function Projects() {
                     </div>
                   )}
 
-                  <p className="text-gray-600 dark:text-gray-300 leading-relaxed text-lg group-hover:text-gray-700 dark:group-hover:text-gray-200 transition-colors duration-300">
+                  <p className="text-gray-600 dark:text-gray-300 leading-relaxed text-base sm:text-lg group-hover:text-gray-700 dark:group-hover:text-gray-200 transition-colors duration-300">
                     {project.description}
                   </p>
                 </div>

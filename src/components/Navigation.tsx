@@ -59,20 +59,20 @@ export default function Navigation() {
               className="p-2 rounded-md text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-100 hover:bg-gray-50 dark:hover:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:focus:ring-gray-700"
               aria-label="Toggle menu"
             >
-              <div className="w-6 h-6 relative">
+              <div className="w-8 h-8 relative flex items-center justify-center">
                 <span
                   className={`absolute block h-0.5 w-6 bg-current transform transition duration-300 ease-in-out ${
-                    isMenuOpen ? 'rotate-45 translate-y-2' : 'translate-y-0'
+                    isMenuOpen ? 'rotate-45' : '-translate-y-2'
                   }`}
                 />
                 <span
-                  className={`absolute block h-0.5 w-6 bg-current transform transition duration-300 ease-in-out translate-y-2 ${
+                  className={`absolute block h-0.5 w-6 bg-current transform transition duration-300 ease-in-out ${
                     isMenuOpen ? 'opacity-0' : 'opacity-100'
                   }`}
                 />
                 <span
-                  className={`absolute block h-0.5 w-6 bg-current transform transition duration-300 ease-in-out translate-y-4 ${
-                    isMenuOpen ? '-rotate-45 -translate-y-2' : 'translate-y-0'
+                  className={`absolute block h-0.5 w-6 bg-current transform transition duration-300 ease-in-out ${
+                    isMenuOpen ? '-rotate-45' : 'translate-y-2'
                   }`}
                 />
               </div>

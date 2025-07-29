@@ -88,7 +88,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
     });
 
     return (
-    <main className="pt-16">
+    <main className="pt-16 sm:pt-20">
       <div className="py-20 lg:py-32 px-4 sm:px-6 lg:px-8 bg-white dark:bg-gray-900">
         <div className="max-w-3xl mx-auto">
           {/* Back to Blog */}
@@ -111,7 +111,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
               {formatDate(post.date)}
             </p>
             {post.subtitle && (
-              <p className="text-xl text-gray-600 dark:text-gray-300 font-light leading-relaxed">
+              <p className="text-lg sm:text-xl text-gray-600 dark:text-gray-300 font-light leading-relaxed">
                 {post.subtitle}
               </p>
             )}
@@ -130,7 +130,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
           </header>
 
           {/* Article Content */}
-          <article className="max-w-none">
+          <article className="prose prose-lg dark:prose-invert max-w-none">
             {content}
           </article>
 

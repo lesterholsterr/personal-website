@@ -24,12 +24,8 @@ module.exports = {
               color: 'rgb(75 85 99)', // gray-600
             },
             p: {
-              marginBottom: '3rem', // mb-12
+              marginBottom: '2rem', // mb-8
               lineHeight: '2',
-            },
-            hr: {
-              marginTop: '4rem', // mt-16
-              marginBottom: '4rem', // mb-16
             },
             a: {
               color: 'rgb(75 85 99)', // gray-600
