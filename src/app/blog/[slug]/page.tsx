@@ -2,7 +2,7 @@ import { notFound } from 'next/navigation';
 import Link from 'next/link';
 import { compileMDX } from 'next-mdx-remote/rsc';
 import { getPostBySlug, getAllPostSlugs, getAdjacentPosts, formatDate, type BlogPostMeta } from '@/lib/blog';
-import { useMDXComponents } from '@/mdx-components';
+import { mdxComponents } from '@/mdx-components';
 
 interface BlogPostPageProps {
   params: Promise<{
@@ -79,13 +79,12 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
     const { prev, next } = getAdjacentPosts(slug);
 
     // Compile MDX content with custom components
-    const components = useMDXComponents({});
     const { content } = await compileMDX({
       source: post.content,
       options: {
         parseFrontmatter: false, // We already parsed it
       },
-      components,
+      components: mdxComponents,
     });
 
     return (

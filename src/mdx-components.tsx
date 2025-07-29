@@ -1,7 +1,7 @@
 import type { MDXComponents } from 'mdx/types';
 
-export function useMDXComponents(components: MDXComponents): MDXComponents {
-  return {
+// Export the components directly for use with next-mdx-remote
+export const mdxComponents: MDXComponents = {
     h1: ({ children }) => (
       <h1 className="text-4xl font-light text-gray-900 dark:text-gray-100 mb-8 mt-16">
         {children}
@@ -63,6 +63,11 @@ export function useMDXComponents(components: MDXComponents): MDXComponents {
     hr: () => (
       <hr className="my-16 border-t border-gray-300 dark:border-gray-600" />
     ),
+};
+
+export function useMDXComponents(components: MDXComponents): MDXComponents {
+  return {
+    ...mdxComponents,
     ...components,
   };
 }
