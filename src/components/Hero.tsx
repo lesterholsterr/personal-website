@@ -69,11 +69,10 @@ export default function Hero() {
                 </span>
               </div>
               <p className="text-sm text-gray-600 dark:text-gray-300">
-                Enjoying my last few weeks in New York City for my fourth co-op
-                term
+                On a 12-hour Amtrak back to Toronto due to Air Canada strike. Made some good progress on this website.
               </p>
               <p className="text-xs text-gray-500 dark:text-gray-400 mt-2">
-                Last updated July 27, 2025
+                Last updated August 17, 2025
               </p>
             </div>
           </div>

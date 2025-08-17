@@ -3,6 +3,7 @@ import Link from 'next/link';
 import { compileMDX } from 'next-mdx-remote/rsc';
 import { getPostBySlug, getAllPostSlugs, getAdjacentPosts, formatDate, type BlogPostMeta } from '@/lib/blog';
 import { mdxComponents } from '@/mdx-components';
+import Comments from '@/components/Comments';
 
 interface BlogPostPageProps {
   params: Promise<{
@@ -141,6 +142,9 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
               reading={post.timeCapsule.reading} 
             />
           )}
+
+          {/* Comments */}
+          <Comments />
 
           {/* Post Navigation */}
           <PostNavigation prev={prev} next={next} />
