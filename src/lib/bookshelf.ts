@@ -7,7 +7,6 @@ export interface Book {
   status: 'completed' | 'currently-reading' | 'want-to-read';
   isFavourite: boolean;
   coverImage: string;
-  excerpt: string;
   fullReview: string;
   dateRead?: string;
   dateAdded: string;
@@ -19,12 +18,6 @@ export interface BookshelfFilters {
   sortBy: 'newest' | 'oldest' | 'highest-rated' | 'title';
 }
 
-export interface BookshelfState {
-  view: 'grid' | 'shelf';
-  filters: BookshelfFilters;
-  selectedBook: Book | null;
-  books: Book[];
-}
 
 export const GENRES = [
   'All',

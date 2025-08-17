@@ -3,6 +3,7 @@
 import { Book } from '@/lib/bookshelf';
 import { useState } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 
 interface BookCardProps {
   book: Book;
@@ -42,9 +43,11 @@ export default function BookCard({ book, className = '', style }: BookCardProps)
         {/* Book Cover */}
         <div className="relative overflow-hidden rounded-lg">
           {!imageError ? (
-            <img
+            <Image
               src={book.coverImage}
               alt={book.title}
+              width={300}
+              height={450}
               className="w-full h-64 sm:h-72 object-cover shadow-md group-hover:shadow-xl group-hover:scale-105 transition-all duration-300"
               onError={() => setImageError(true)}
             />

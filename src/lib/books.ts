@@ -13,7 +13,6 @@ export interface Book {
   status: 'completed' | 'currently-reading' | 'want-to-read';
   isFavourite: boolean;
   coverImage: string;
-  excerpt: string;
   content: string;
   dateRead?: string;
   dateAdded: string;
@@ -28,7 +27,6 @@ export interface BookMeta {
   status: 'completed' | 'currently-reading' | 'want-to-read';
   isFavourite: boolean;
   coverImage: string;
-  excerpt: string;
   dateRead?: string;
   dateAdded: string;
 }
@@ -58,7 +56,6 @@ export function getBookBySlug(slug: string): Book {
     status: data.status || 'completed',
     isFavourite: data.isFavourite || false,
     coverImage: data.coverImage || '',
-    excerpt: data.excerpt || '',
     content,
     dateRead: data.dateRead || undefined,
     dateAdded: data.dateAdded || '',
@@ -79,7 +76,6 @@ export function getAllBooks(): BookMeta[] {
         status: book.status,
         isFavourite: book.isFavourite,
         coverImage: book.coverImage,
-        excerpt: book.excerpt,
         dateRead: book.dateRead,
         dateAdded: book.dateAdded,
       };

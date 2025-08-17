@@ -13,8 +13,7 @@ function convertBookMetaToBook(bookMeta: ReturnType<typeof getAllBooks>[0]): Boo
     status: bookMeta.status,
     isFavourite: bookMeta.isFavourite,
     coverImage: bookMeta.coverImage,
-    excerpt: bookMeta.excerpt,
-    fullReview: bookMeta.excerpt, // Use excerpt as fullReview for modal compatibility
+    fullReview: "Click to view full review",
     dateRead: bookMeta.dateRead,
     dateAdded: bookMeta.dateAdded,
   };
