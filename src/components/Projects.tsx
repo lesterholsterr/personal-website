@@ -54,13 +54,47 @@ export default function Projects() {
             >
               <div className="flex flex-col sm:flex-row sm:justify-between sm:items-start gap-6">
                 <div className="flex-1">
-                  <div className="flex items-baseline gap-4 mb-3">
-                    <h3 className="text-2xl font-light text-gray-900 dark:text-gray-100 group-hover:text-gray-600 dark:group-hover:text-gray-400 transition-colors duration-300">
-                      {project.title}
-                    </h3>
-                    <span className="text-sm text-gray-400 dark:text-gray-500 group-hover:text-gray-500 dark:group-hover:text-gray-400 transition-colors duration-300">
-                      {String(index + 1).padStart(2, "0")}
-                    </span>
+                  <div className="flex items-baseline gap-4 mb-3 sm:justify-between">
+                    <div className="flex items-baseline gap-4">
+                      <h3 className="text-2xl font-light text-gray-900 dark:text-gray-100 group-hover:text-gray-600 dark:group-hover:text-gray-400 transition-colors duration-300">
+                        {project.title}
+                      </h3>
+                      <span className="text-sm text-gray-400 dark:text-gray-500 group-hover:text-gray-500 dark:group-hover:text-gray-400 transition-colors duration-300">
+                        {String(index + 1).padStart(2, "0")}
+                      </span>
+                    </div>
+                    <div className="hidden sm:flex gap-3 flex-shrink-0">
+                      {project.links.demo && (
+                        <a
+                          href={project.links.demo}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="text-sm text-gray-500 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-100 transition-all duration-300 hover:translate-x-1"
+                        >
+                          Play ↗
+                        </a>
+                      )}
+                      {project.links.github && (
+                        <a
+                          href={project.links.github}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="text-sm text-gray-500 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-100 transition-all duration-300 hover:translate-x-1"
+                        >
+                          GitHub ↗
+                        </a>
+                      )}
+                      {project.links.external && (
+                        <a
+                          href={project.links.external}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="text-sm text-gray-500 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-100 transition-all duration-300 hover:translate-x-1"
+                        >
+                          Read ↗
+                        </a>
+                      )}
+                    </div>
                   </div>
 
                   {project.technologies && (
@@ -74,39 +108,39 @@ export default function Projects() {
                   <p className="text-gray-600 dark:text-gray-300 leading-relaxed text-base sm:text-lg group-hover:text-gray-700 dark:group-hover:text-gray-200 transition-colors duration-300">
                     {project.description}
                   </p>
-                </div>
 
-                <div className="flex gap-6 sm:flex-col sm:gap-3 flex-shrink-0">
-                  {project.links.demo && (
-                    <a
-                      href={project.links.demo}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="text-sm text-gray-500 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-100 transition-all duration-300 hover:translate-x-1"
-                    >
-                      Play ↗
-                    </a>
-                  )}
-                  {project.links.github && (
-                    <a
-                      href={project.links.github}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="text-sm text-gray-500 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-100 transition-all duration-300 hover:translate-x-1"
-                    >
-                      GitHub ↗
-                    </a>
-                  )}
-                  {project.links.external && (
-                    <a
-                      href={project.links.external}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="text-sm text-gray-500 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-100 transition-all duration-300 hover:translate-x-1"
-                    >
-                      Read ↗
-                    </a>
-                  )}
+                  <div className="flex gap-6 sm:hidden mt-4">
+                    {project.links.demo && (
+                      <a
+                        href={project.links.demo}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-sm text-gray-500 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-100 transition-all duration-300 hover:translate-x-1"
+                      >
+                        Play ↗
+                      </a>
+                    )}
+                    {project.links.github && (
+                      <a
+                        href={project.links.github}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-sm text-gray-500 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-100 transition-all duration-300 hover:translate-x-1"
+                      >
+                        GitHub ↗
+                      </a>
+                    )}
+                    {project.links.external && (
+                      <a
+                        href={project.links.external}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-sm text-gray-500 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-100 transition-all duration-300 hover:translate-x-1"
+                      >
+                        Read ↗
+                      </a>
+                    )}
+                  </div>
                 </div>
               </div>
             </div>

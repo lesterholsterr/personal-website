@@ -136,7 +136,7 @@ export default function Contact() {
 
             {/* Social Links */}
             <div>
-              <h4 className="text-sm font-medium text-gray-700 dark:text-gray-300 mb-3">Find me online</h4>
+              <h4 className="text-sm font-medium text-gray-700 dark:text-gray-300 mb-3">Other Socials</h4>
               <div className="flex flex-col space-y-2">
                 <a
                   href="https://www.linkedin.com/in/matthew-yang-4b9728200/"
