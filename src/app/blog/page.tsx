@@ -13,11 +13,15 @@ export default function BlogPage() {
         <div className="max-w-4xl mx-auto">
           {/* Header */}
           <div className="text-center mb-16">
-            <h1 className="text-5xl sm:text-6xl lg:text-7xl font-light tracking-tight text-gray-900 dark:text-gray-100 mb-6">
+            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-900 dark:text-gray-100 mb-6">
               Blog
             </h1>
-            <p className="text-xl text-gray-600 dark:text-gray-300 font-light max-w-2xl mx-auto">
-              &ldquo;If you&rsquo;re thinking without writing, you only think you&rsquo;re thinking.&rdquo; — Leslie Lamport
+            <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
+              <em>
+                &ldquo;If you&rsquo;re thinking without writing, you only think you&rsquo;re thinking.&rdquo;
+              </em>
+              <br />
+              <span className="text-sm mt-2 block">—Leslie Lamport</span>
             </p>
           </div>
 
