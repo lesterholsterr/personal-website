@@ -154,14 +154,6 @@ export default function Contact() {
                 >
                   GitHub
                 </a>
-                <a
-                  href="/Resume.pdf"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-gray-100 transition-colors text-lg"
-                >
-                  Resume
-                </a>
               </div>
             </div>
           </div>

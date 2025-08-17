@@ -56,8 +56,13 @@ export default function FilterControls({ filters, onFiltersChange, bookCount }: 
       color: "text-orange-600 dark:text-orange-400"
     },
     {
+      range: "6.0 - 6.9",
+      description: "These books are subpar. They weakly satisfy a few metrics and I regret reading the book due to opportunity cost.",
+      color: "text-orange-700 dark:text-orange-500"
+    },
+    {
       range: "5.9 and below",
-      description: "Neither enjoyable nor influential. Writing style, book length, and clarity determine how low the rating will go.",
+      description: "These books are neither enjoyable nor influential. Writing style, book length, and clarity determine how low the rating will go.",
       color: "text-red-600 dark:text-red-400"
     }
   ];
