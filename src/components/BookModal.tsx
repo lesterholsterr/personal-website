@@ -89,7 +89,7 @@ export default function BookModal({ book, onClose }: BookModalProps) {
           </div>
           <button
             onClick={onClose}
-            className="text-gray-400 hover:text-gray-600 dark:text-gray-500 dark:hover:text-gray-300 text-2xl font-light transition-colors ml-4"
+            className="text-gray-400 hover:text-gray-600 dark:text-gray-500 dark:hover:text-gray-300 text-2xl font-light transition-colors ml-4 cursor-pointer"
             aria-label="Close modal"
           >
             ×

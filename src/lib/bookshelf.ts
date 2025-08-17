@@ -21,13 +21,14 @@ export interface BookshelfFilters {
 
 export const GENRES = [
   'All',
-  'Philosophy',
+  'Classic Fiction',
+  'Modern Fiction',
   'Self-Help',
-  'Science',
-  'Fiction',
-  'Biography',
+  'Philosophy',
+  'Politics',
   'History',
-  'Psychology',
+  'Biography',
+  'Science',
   'Business',
   'Technology'
 ] as const;
