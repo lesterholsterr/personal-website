@@ -1,9 +1,11 @@
-import { Book } from '@/lib/bookshelf';
-import { getAllBooks } from '@/lib/books';
-import BookshelfClient from '@/components/BookshelfClient';
+import { Book } from "@/lib/bookshelf";
+import { getAllBooks } from "@/lib/books";
+import BookshelfClient from "@/components/BookshelfClient";
 
 // Convert BookMeta from new system to Book for existing components
-function convertBookMetaToBook(bookMeta: ReturnType<typeof getAllBooks>[0]): Book {
+function convertBookMetaToBook(
+  bookMeta: ReturnType<typeof getAllBooks>[0]
+): Book {
   return {
     id: bookMeta.slug, // Use slug as id for existing components
     title: bookMeta.title,
@@ -35,8 +37,8 @@ export default function BookshelfPage() {
             </h1>
             <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
               <em>
-                &ldquo;I cannot remember the books I&rsquo;ve read any more than the meals I have eaten; 
-                even so, they have made me.&rdquo;
+                &ldquo;I cannot remember the books I&rsquo;ve read any more than
+                the meals I have eaten; even so, they have made me.&rdquo;
               </em>
               <br />
               <span className="text-sm mt-2 block">—Ralph Waldo Emerson</span>
