@@ -104,8 +104,8 @@ export default function NewsletterAdminPage() {
 
   if (loading) {
     return (
-      <main className="pt-16 sm:pt-20">
-        <div className="py-20 px-4 sm:px-6 lg:px-8 bg-white dark:bg-gray-900 min-h-screen">
+      <main className="pt-16 sm:pt-20 bg-white dark:bg-gray-900">
+        <div className="py-20 px-4 sm:px-6 lg:px-8 min-h-screen">
           <div className="max-w-6xl mx-auto">
             <div className="text-center">
               <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-600 mx-auto"></div>
@@ -119,8 +119,8 @@ export default function NewsletterAdminPage() {
 
   if (error) {
     return (
-      <main className="pt-16 sm:pt-20">
-        <div className="py-20 px-4 sm:px-6 lg:px-8 bg-white dark:bg-gray-900 min-h-screen">
+      <main className="pt-16 sm:pt-20 bg-white dark:bg-gray-900">
+        <div className="py-20 px-4 sm:px-6 lg:px-8 min-h-screen">
           <div className="max-w-6xl mx-auto">
             <div className="text-center">
               <div className="text-red-600 dark:text-red-400 mb-4">
@@ -144,8 +144,8 @@ export default function NewsletterAdminPage() {
   }
 
   return (
-    <main className="pt-16 sm:pt-20">
-      <div className="py-20 px-4 sm:px-6 lg:px-8 bg-white dark:bg-gray-900 min-h-screen">
+    <main className="pt-16 sm:pt-20 bg-white dark:bg-gray-900">
+      <div className="py-20 px-4 sm:px-6 lg:px-8 min-h-screen">
         <div className="max-w-6xl mx-auto">
           {/* Header */}
           <div className="mb-8">

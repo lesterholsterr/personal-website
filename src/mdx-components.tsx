@@ -23,7 +23,7 @@ export const mdxComponents: MDXComponents = {
       </p>
     ),
     blockquote: ({ children }) => (
-      <blockquote className="border-l-4 border-gray-300 dark:border-gray-600 pl-6 py-4 my-12 italic text-lg leading-loose text-gray-600 dark:text-gray-400 bg-gray-50 dark:bg-gray-800">
+      <blockquote className="border-l-4 border-gray-300 dark:border-gray-600 pl-6 pr-6 pt-4 pb-4 my-12 italic text-lg leading-loose text-gray-600 dark:text-gray-400 bg-gray-50 dark:bg-gray-800 text-justify [&>p]:mb-0">
         {children}
       </blockquote>
     ),

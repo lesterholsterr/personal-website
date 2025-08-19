@@ -120,8 +120,8 @@ export default async function BookPage({ params }: BookPageProps) {
     };
 
     return (
-      <main className="pt-16 sm:pt-20">
-        <div className="py-20 lg:py-32 px-4 sm:px-6 lg:px-8 bg-white dark:bg-gray-900">
+      <main className="pt-16 sm:pt-20 bg-white dark:bg-gray-900">
+        <div className="pt-20 lg:pt-32 pb-8 px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto">
             {/* Back to Bookshelf */}
             <Link
@@ -207,14 +207,16 @@ export default async function BookPage({ params }: BookPageProps) {
                         </span>
                       </div>
                     )}
-                    <div className="flex justify-between">
-                      <span className="text-gray-600 dark:text-gray-400">
-                        Date Added:
-                      </span>
-                      <span className="font-medium text-gray-900 dark:text-gray-100">
-                        {formatDate(book.dateAdded)}
-                      </span>
-                    </div>
+                    {book.dateReviewed && (
+                      <div className="flex justify-between">
+                        <span className="text-gray-600 dark:text-gray-400">
+                          Date Reviewed:
+                        </span>
+                        <span className="font-medium text-gray-900 dark:text-gray-100">
+                          {formatDate(book.dateReviewed)}
+                        </span>
+                      </div>
+                    )}
                   </div>
                 </div>
               </div>

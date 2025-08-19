@@ -17,7 +17,7 @@ function convertBookMetaToBook(
     coverImage: bookMeta.coverImage,
     fullReview: "Click to view full review",
     dateRead: bookMeta.dateRead,
-    dateAdded: bookMeta.dateAdded,
+    dateReviewed: bookMeta.dateReviewed,
   };
 }
 

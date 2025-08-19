@@ -124,8 +124,8 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
     });
 
     return (
-      <main className="pt-16 sm:pt-20">
-        <div className="pt-20 lg:pt-32 pb-8 px-4 sm:px-6 lg:px-8 bg-white dark:bg-gray-900">
+      <main className="pt-16 sm:pt-20 bg-white dark:bg-gray-900">
+        <div className="pt-20 lg:pt-32 pb-8 px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl mx-auto">
             {/* Back to Blog */}
             <Link
