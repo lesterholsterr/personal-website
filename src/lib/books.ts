@@ -15,7 +15,7 @@ export interface Book {
   coverImage: string;
   content: string;
   dateRead?: string;
-  dateAdded: string;
+  dateReviewed?: string;
 }
 
 export interface BookMeta {
@@ -28,7 +28,7 @@ export interface BookMeta {
   isFavourite: boolean;
   coverImage: string;
   dateRead?: string;
-  dateAdded: string;
+  dateReviewed?: string;
 }
 
 export function getAllBookSlugs(): string[] {
@@ -58,7 +58,7 @@ export function getBookBySlug(slug: string): Book {
     coverImage: data.coverImage || '',
     content,
     dateRead: data.dateRead || undefined,
-    dateAdded: data.dateAdded || '',
+    dateReviewed: data.dateReviewed || undefined,
   };
 }
 
@@ -77,13 +77,13 @@ export function getAllBooks(): BookMeta[] {
         isFavourite: book.isFavourite,
         coverImage: book.coverImage,
         dateRead: book.dateRead,
-        dateAdded: book.dateAdded,
+        dateReviewed: book.dateReviewed,
       };
     })
     .sort((a, b) => {
-      // Sort by date read (most recent first), fallback to date added
-      const dateA = new Date(a.dateRead || a.dateAdded).getTime();
-      const dateB = new Date(b.dateRead || b.dateAdded).getTime();
+      // Sort by date read (most recent first), fallback to date reviewed
+      const dateA = new Date(a.dateRead || a.dateReviewed || '1970-01-01').getTime();
+      const dateB = new Date(b.dateRead || b.dateReviewed || '1970-01-01').getTime();
       return dateB - dateA;
     });
 

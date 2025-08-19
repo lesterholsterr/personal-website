@@ -28,14 +28,21 @@ export default function BookGrid({ books, filters }: BookGridProps) {
     const sorted = [...filtered].sort((a, b) => {
       switch (filters.sortBy) {
         case 'newest':
-          // Sort by dateRead if available, otherwise by dateAdded
-          const dateA = new Date(a.dateRead || a.dateAdded).getTime();
-          const dateB = new Date(b.dateRead || b.dateAdded).getTime();
+          // Prioritize currently-reading books first, then sort others by dateRead/dateReviewed
+          if (a.status === 'currently-reading' && b.status !== 'currently-reading') return -1;
+          if (b.status === 'currently-reading' && a.status !== 'currently-reading') return 1;
+          // If both or neither are currently-reading, sort by dateRead/dateReviewed
+          const dateA = new Date(a.dateRead || a.dateReviewed || '1970-01-01').getTime();
+          const dateB = new Date(b.dateRead || b.dateReviewed || '1970-01-01').getTime();
           return dateB - dateA;
         
         case 'oldest':
-          const oldDateA = new Date(a.dateRead || a.dateAdded).getTime();
-          const oldDateB = new Date(b.dateRead || b.dateAdded).getTime();
+          // Sort completed books first by date, then show currently-reading books at the end
+          if (a.status === 'currently-reading' && b.status !== 'currently-reading') return 1;
+          if (b.status === 'currently-reading' && a.status !== 'currently-reading') return -1;
+          // If both or neither are currently-reading, sort by dateRead/dateReviewed
+          const oldDateA = new Date(a.dateRead || a.dateReviewed || '1970-01-01').getTime();
+          const oldDateB = new Date(b.dateRead || b.dateReviewed || '1970-01-01').getTime();
           return oldDateA - oldDateB;
         
         case 'highest-rated':

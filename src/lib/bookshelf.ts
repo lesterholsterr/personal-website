@@ -9,7 +9,7 @@ export interface Book {
   coverImage: string;
   fullReview: string;
   dateRead?: string;
-  dateAdded: string;
+  dateReviewed?: string;
 }
 
 export interface BookshelfFilters {

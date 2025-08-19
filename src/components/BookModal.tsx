@@ -159,18 +159,20 @@ export default function BookModal({ book, onClose }: BookModalProps) {
                         </span>
                       </div>
                     )}
-                    <div className="flex justify-between">
-                      <span className="text-gray-600 dark:text-gray-400">
-                        Date Added:
-                      </span>
-                      <span className="font-medium text-gray-900 dark:text-gray-100">
-                        {new Date(book.dateAdded).toLocaleDateString("en-US", {
-                          year: "numeric",
-                          month: "long",
-                          day: "numeric",
-                        })}
-                      </span>
-                    </div>
+                    {book.dateReviewed && (
+                      <div className="flex justify-between">
+                        <span className="text-gray-600 dark:text-gray-400">
+                          Date Reviewed:
+                        </span>
+                        <span className="font-medium text-gray-900 dark:text-gray-100">
+                          {new Date(book.dateReviewed).toLocaleDateString("en-US", {
+                            year: "numeric",
+                            month: "long",
+                            day: "numeric",
+                          })}
+                        </span>
+                      </div>
+                    )}
                   </div>
                 </div>
               </div>
