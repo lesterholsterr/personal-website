@@ -11,9 +11,14 @@ export interface BlogPost {
   subtitle?: string;
   tags: string[];
   content: string;
+  disabled?: boolean;
   timeCapsule?: {
     news: string;
     reading: string;
+  };
+  series?: {
+    name: string;
+    order: number;
   };
 }
 
@@ -23,9 +28,14 @@ export interface BlogPostMeta {
   date: string;
   subtitle?: string;
   tags: string[];
+  disabled?: boolean;
   timeCapsule?: {
     news: string;
     reading: string;
+  };
+  series?: {
+    name: string;
+    order: number;
   };
 }
 
@@ -52,7 +62,9 @@ export function getPostBySlug(slug: string): BlogPost {
     subtitle: data.subtitle || '',
     tags: data.tags || [],
     content,
+    disabled: data.disabled || false,
     timeCapsule: data.timeCapsule || undefined,
+    series: data.series || undefined,
   };
 }
 
@@ -67,7 +79,9 @@ export function getAllPosts(): BlogPostMeta[] {
         date: post.date,
         subtitle: post.subtitle,
         tags: post.tags,
+        disabled: post.disabled,
         timeCapsule: post.timeCapsule,
+        series: post.series,
       };
     })
     .sort((a, b) => (new Date(b.date).getTime() - new Date(a.date).getTime()));
@@ -109,3 +123,4 @@ export function formatDate(dateString: string): string {
     day: 'numeric',
   }).toUpperCase();
 }
+
