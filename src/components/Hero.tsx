@@ -100,7 +100,7 @@ export default function Hero() {
                   Bookshelf
                 </h3>
                 <p className="text-gray-600 dark:text-gray-300">
-                  I also read other people's yaps
+                  I also read other people&apos;s yaps
                 </p>
               </Link>
             </div>
