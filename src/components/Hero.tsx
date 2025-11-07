@@ -69,10 +69,10 @@ export default function Hero() {
                 </span>
               </div>
               <p className="text-sm text-gray-600 dark:text-gray-300">
-                Back in Waterloo just in time for my favourte season (Fall!) and my least favourite season (recruiting season).
+                <a href="https://www.youtube.com/watch?v=FZoRlh35ODM"><u>rolling right along...</u></a>
               </p>
               <p className="text-xs text-gray-500 dark:text-gray-400 mt-2">
-                Last updated September 19, 2025
+                Last updated November 6, 2025
               </p>
             </div>
           </div>

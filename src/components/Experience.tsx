@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Link from "next/link";
 
 import Image from "next/image";
 
@@ -11,10 +12,28 @@ interface ExperienceItem {
   location: string;
   duration: string;
   logo: string;
-  description: string[];
+  description: (string | React.ReactNode)[];
 }
 
 const experiences: ExperienceItem[] = [
+  {
+    id: "cubist",
+    company: "Cubist Systematic Strategies",
+    role: "Quantitative Developer Intern",
+    location: "New York City, USA",
+    duration: "May 2026 - Aug 2026 (Expected)",
+    logo: "/cubist-logo.jpg",
+    description: ["Incoming, Central Research Technology team"],
+  },
+  {
+    id: "augment",
+    company: "Augment",
+    role: "Software Engineering Intern",
+    location: "San Francisco, USA",
+    duration: "Jan 2026 - Apr 2026 (Expected)",
+    logo: "/augment-logo.jpeg",
+    description: ["Incoming, Series A AI logistics startup"],
+  },
   {
     id: "p72",
     company: "Point72",
@@ -29,9 +48,9 @@ const experiences: ExperienceItem[] = [
   {
     id: "onex",
     company: "Onex",
-    role: "Software Engineering Intern",
+    role: "Quantitative Developer Intern",
     location: "Toronto, Canada",
-    duration: "Jan 2024 - Apr 2024 | Sep 2024 - Dec 2024",
+    duration: "Jan 2024 - Apr 2024 and Sep 2024 - Dec 2024",
     logo: "/onex-logo.jpeg",
     description: [
       "Developed an in-house risk management system, saving $300,000 annually by replacing a third-party service",
@@ -41,12 +60,22 @@ const experiences: ExperienceItem[] = [
   {
     id: "waterloo",
     company: "University of Waterloo",
-    role: "Teaching Assistant (CFM101)",
+    role: "Teaching Assistant",
     location: "Waterloo, Canada",
     duration: "Sep 2023 - Dec 2023",
     logo: "/waterloo-logo.png",
     description: [
-      "Ran weekly tutorials to teach Python, statistics, and financial markets to 60 students using real market data",
+      <>
+        Ran weekly tutorials for{" "}
+        <Link
+          href="https://uwflow.com/course/cfm101"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-blue-600 dark:text-blue-400 hover:underline"
+        >
+          CFM101
+        </Link>
+      </>,
     ],
   },
   {
@@ -87,7 +116,10 @@ export default function Experience() {
   };
 
   return (
-    <section id="experience" className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-50 dark:bg-gray-800">
+    <section
+      id="experience"
+      className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-50 dark:bg-gray-800"
+    >
       <div className="max-w-4xl mx-auto">
         <h2 className="text-3xl sm:text-4xl font-light text-gray-900 dark:text-gray-100 mb-12">
           Work Experience
@@ -148,14 +180,18 @@ export default function Experience() {
               {expandedItems.has(exp.id) && (
                 <div className="px-6 pb-4 border-t border-gray-100 dark:border-gray-700">
                   <div className="pt-4">
-                    <p className="text-sm text-gray-600 dark:text-gray-300 mb-3">{exp.location}</p>
+                    <p className="text-sm text-gray-600 dark:text-gray-300 mb-3">
+                      {exp.location}
+                    </p>
                     <ul className="space-y-2">
                       {exp.description.map((item, idx) => (
                         <li
                           key={idx}
                           className="text-sm text-gray-700 dark:text-gray-300 leading-relaxed flex"
                         >
-                          <span className="text-gray-400 dark:text-gray-500 mr-2">•</span>
+                          <span className="text-gray-400 dark:text-gray-500 mr-2">
+                            •
+                          </span>
                           <span>{item}</span>
                         </li>
                       ))}

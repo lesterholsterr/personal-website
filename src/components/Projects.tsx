@@ -25,7 +25,7 @@ const projects: Project[] = [
     id: "stockle",
     title: "Stockle",
     description:
-      "A stock market-themed wordle parody. Currently in open Alpha — try it out!.",
+      "A stock market-themed wordle parody. Currently in open Alpha — try it out!",
     links: {
       demo: "https://playstockle.com",
       github: "https://github.com/lesterholsterr/stockle",
