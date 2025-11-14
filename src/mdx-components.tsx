@@ -1,5 +1,6 @@
 import type { MDXComponents } from 'mdx/types';
 import Footnote from '@/components/Footnote';
+import Highlight from '@/components/Highlight';
 
 // Export the components directly for use with next-mdx-remote
 export const mdxComponents: MDXComponents = {
@@ -65,6 +66,7 @@ export const mdxComponents: MDXComponents = {
       <hr className="my-16 border-t border-gray-300 dark:border-gray-600" />
     ),
     Footnote: ({ text }: { text: string }) => <Footnote text={text} />,
+    Highlight: ({ color, children }: { color: 'red' | 'yellow' | 'green'; children: React.ReactNode }) => <Highlight color={color}>{children}</Highlight>,
 };
 
 export function useMDXComponents(components: MDXComponents): MDXComponents {
