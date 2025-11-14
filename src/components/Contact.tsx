@@ -24,7 +24,7 @@ export default function Contact() {
   };
 
   return (
-    <section id="contact" className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-50 dark:bg-gray-800">
+    <section id="contact" className="py-20 px-4 sm:px-6 lg:px-8 bg-[#F8F6F3] dark:bg-gray-800">
       <div className="max-w-4xl mx-auto">
         <h2 className="text-3xl sm:text-4xl font-light text-gray-900 dark:text-gray-100 mb-16 text-center">
           Get In Touch
@@ -32,7 +32,7 @@ export default function Contact() {
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
           {/* Contact Form */}
-          <div className="bg-white dark:bg-gray-900 p-8 rounded-lg border border-gray-200 dark:border-gray-700">
+          <div className="bg-[#F5F2EE] dark:bg-gray-900 p-8 rounded-lg border border-[#EDE8E3] dark:border-gray-700">
             <h3 className="text-xl font-medium text-gray-900 dark:text-gray-100 mb-6">
               Send me a message
             </h3>
@@ -105,7 +105,7 @@ export default function Contact() {
           </div>
 
           {/* Contact Info */}
-          <div className="bg-white dark:bg-gray-900 p-8 rounded-lg border border-gray-200 dark:border-gray-700 h-full">
+          <div className="bg-[#F5F2EE] dark:bg-gray-900 p-8 rounded-lg border border-[#EDE8E3] dark:border-gray-700 h-full">
             <h3 className="text-xl font-medium text-gray-900 dark:text-gray-100 mb-6">
               Contact Information
             </h3>

@@ -27,7 +27,7 @@ export default function BookshelfPage() {
   const books: Book[] = booksData.map(convertBookMetaToBook);
 
   return (
-    <main className="pt-16 min-h-screen bg-white dark:bg-gray-900">
+    <main className="pt-16 min-h-screen bg-[#F8F6F3] dark:bg-gray-900">
       {/* Header */}
       <section className="py-16 lg:py-24">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">

@@ -4,8 +4,8 @@
 @custom-variant dark (&:where(.dark, .dark *));
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #FAF8F5;
+  --foreground: #2D2D2D;
 }
 
 @theme inline {
@@ -48,16 +48,16 @@ body {
 }
 
 ::-webkit-scrollbar-track {
-  background: #f1f1f1;
+  background: #F2EDE8;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #c1c1c1;
+  background: #D4CFC9;
   border-radius: 3px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #a1a1a1;
+  background: #C9C4BC;
 }
 
 /* Dark mode scrollbar */
@@ -227,7 +227,7 @@ body {
 /* Form placeholder styling */
 input::placeholder,
 textarea::placeholder {
-  color: #6b7280; /* gray-500 */
+  color: #6B6B6B; /* warm gray-500 */
 }
 
 /* Dark mode placeholder styling */

@@ -9,7 +9,7 @@ export default function BlogPage() {
 
   return (
     <main className="pt-16">
-      <div className="pt-16 pb-8 lg:pt-20 lg:pb-12 px-4 sm:px-6 lg:px-8 bg-white dark:bg-gray-900">
+      <div className="pt-16 pb-8 lg:pt-20 lg:pb-12 px-4 sm:px-6 lg:px-8 bg-[#F8F6F3] dark:bg-gray-900">
         <div className="max-w-4xl mx-auto">
           {/* Header */}
           <div className="text-center mb-16">

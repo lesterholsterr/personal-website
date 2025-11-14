@@ -24,7 +24,7 @@ export default function Hero() {
   }, []);
 
   return (
-    <section className="py-20 lg:py-32 px-4 sm:px-6 lg:px-8 bg-white dark:bg-gray-900">
+    <section className="py-20 lg:py-32 px-4 sm:px-6 lg:px-8 bg-[#F5F2EE] dark:bg-gray-900">
       <div className="max-w-4xl mx-auto">
         <div className="text-center mb-16">
           <h1 className="text-5xl sm:text-6xl lg:text-7xl font-light tracking-tight text-gray-900 dark:text-gray-100 mb-8">
@@ -61,7 +61,7 @@ export default function Hero() {
             </div>
 
             {/* Status Box */}
-            <div className="p-4 bg-gray-50 dark:bg-gray-800 rounded-lg border border-gray-200 dark:border-gray-700 h-[120px] flex flex-col justify-center">
+            <div className="p-4 bg-[#F5F2EE] dark:bg-gray-800 rounded-lg border border-[#EDE8E3] dark:border-gray-700 h-[120px] flex flex-col justify-center">
               <div className="flex items-center gap-2 mb-2">
                 <div className="w-2 h-2 bg-green-500 rounded-full"></div>
                 <span className="text-sm font-medium text-gray-700 dark:text-gray-300">
@@ -82,7 +82,7 @@ export default function Hero() {
             <div className="space-y-4 mb-6">
               <Link
                 href="/blog"
-                className="block p-6 border border-gray-200 dark:border-gray-700 rounded-lg hover:border-gray-300 dark:hover:border-gray-600 hover:shadow-sm transition-all duration-300 hover:translate-y-[-2px] group bg-white dark:bg-gray-800"
+                className="block p-6 border border-[#EDE8E3] dark:border-gray-700 rounded-lg hover:border-[#E8E3DE] dark:hover:border-gray-600 hover:shadow-sm transition-all duration-300 hover:translate-y-[-2px] group bg-[#F5F2EE] dark:bg-gray-800"
               >
                 <h3 className="text-xl font-medium text-gray-900 dark:text-gray-100 mb-2 group-hover:text-gray-600 dark:group-hover:text-gray-400 transition-colors duration-200">
                   Blog
@@ -94,7 +94,7 @@ export default function Hero() {
 
               <Link
                 href="/bookshelf"
-                className="block p-6 border border-gray-200 dark:border-gray-700 rounded-lg hover:border-gray-300 dark:hover:border-gray-600 hover:shadow-sm transition-all duration-300 hover:translate-y-[-2px] group bg-white dark:bg-gray-800"
+                className="block p-6 border border-[#EDE8E3] dark:border-gray-700 rounded-lg hover:border-[#E8E3DE] dark:hover:border-gray-600 hover:shadow-sm transition-all duration-300 hover:translate-y-[-2px] group bg-[#F5F2EE] dark:bg-gray-800"
               >
                 <h3 className="text-xl font-medium text-gray-900 dark:text-gray-100 mb-2 group-hover:text-gray-600 dark:group-hover:text-gray-400 transition-colors duration-200">
                   Bookshelf

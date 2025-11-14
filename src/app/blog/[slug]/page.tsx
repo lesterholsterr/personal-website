@@ -20,7 +20,7 @@ interface BlogPostPageProps {
 
 function TimeCapsule({ news, reading }: { news: string; reading: string }) {
   return (
-    <div className="mt-12 p-6 border-2 border-gray-300 dark:border-gray-600 bg-gray-50 dark:bg-gray-800 rounded-lg">
+    <div className="mt-12 p-6 border-2 border-[#E8E3DE] dark:border-gray-600 bg-[#F5F2EE] dark:bg-gray-800 rounded-lg">
       <h3 className="text-xl font-medium text-gray-900 dark:text-gray-100 mb-4">
         Time Capsule
       </h3>
@@ -46,7 +46,7 @@ function PostNavigation({
   if (!prev && !next) return null;
 
   return (
-    <nav className="mt-16 pt-8 border-t border-gray-200 dark:border-gray-700">
+    <nav className="mt-16 pt-8 border-t border-[#EDE8E3] dark:border-gray-700">
       <div className="flex justify-between items-center">
         {prev ? (
           <Link
@@ -124,7 +124,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
     });
 
     return (
-      <main className="pt-16 sm:pt-20 bg-white dark:bg-gray-900">
+      <main className="pt-16 sm:pt-20 bg-[#F8F6F3] dark:bg-gray-900">
         <div className="pt-20 lg:pt-32 pb-8 px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl mx-auto">
             {/* Back to Blog */}

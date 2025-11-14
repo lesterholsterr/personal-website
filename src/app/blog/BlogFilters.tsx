@@ -114,9 +114,9 @@ function SeriesDropdownItem({ post }: { post: BlogPostMeta }) {
 
   const content = (
     <article className={`p-4 border-l-2 transition-colors duration-200 ml-4 ${
-      isDisabled 
-        ? 'border-gray-200 dark:border-gray-600 bg-gray-50/50 dark:bg-gray-700/25 opacity-60 cursor-not-allowed' 
-        : 'border-gray-200 dark:border-gray-600 bg-gray-50 dark:bg-gray-700/50 hover:bg-gray-100 dark:hover:bg-gray-700'
+      isDisabled
+        ? 'border-[#EDE8E3] dark:border-gray-600 bg-[#F5F2EE]/50 dark:bg-gray-700/25 opacity-60 cursor-not-allowed'
+        : 'border-[#EDE8E3] dark:border-gray-600 bg-[#F5F2EE] dark:bg-gray-700/50 hover:bg-[#F2EDE8] dark:hover:bg-gray-700'
     }`}>
       <div className="space-y-2">
         {isValidDate(post.date) && (
@@ -166,7 +166,7 @@ function SeriesPostCard({ seriesGroup }: { seriesGroup: SeriesGroup }) {
   return (
     <div className="space-y-0">
       <div className="group">
-        <article className="p-6 border border-gray-200 dark:border-gray-700 rounded-lg hover:border-gray-300 dark:hover:border-gray-600 hover:shadow-sm transition-all duration-300 bg-white dark:bg-gray-800 cursor-pointer" onClick={handleToggle}>
+        <article className="p-6 border border-[#EDE8E3] dark:border-gray-700 rounded-lg hover:border-[#E8E3DE] dark:hover:border-gray-600 hover:shadow-sm transition-all duration-300 bg-[#F5F2EE] dark:bg-gray-800 cursor-pointer" onClick={handleToggle}>
           <div className="space-y-3">
             <p className="text-sm text-gray-500 dark:text-gray-400 tracking-wide">
               SERIES
@@ -201,7 +201,7 @@ function SeriesPostCard({ seriesGroup }: { seriesGroup: SeriesGroup }) {
                 {seriesTags.map((tag) => (
                   <span
                     key={tag}
-                    className="px-2 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-gray-100 dark:bg-gray-700 rounded-md"
+                    className="px-2 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-[#F2EDE8] dark:bg-gray-700 rounded-md"
                   >
                     {tag}
                   </span>
@@ -227,7 +227,7 @@ function SeriesPostCard({ seriesGroup }: { seriesGroup: SeriesGroup }) {
 function PostCard({ post }: { post: BlogPostMeta }) {
   return (
     <Link href={`/blog/${post.slug}`} className="group">
-      <article className="p-6 border border-gray-200 dark:border-gray-700 rounded-lg hover:border-gray-300 dark:hover:border-gray-600 hover:shadow-sm transition-all duration-300 hover:translate-y-[-2px] bg-white dark:bg-gray-800">
+      <article className="p-6 border border-[#EDE8E3] dark:border-gray-700 rounded-lg hover:border-[#E8E3DE] dark:hover:border-gray-600 hover:shadow-sm transition-all duration-300 hover:translate-y-[-2px] bg-[#F5F2EE] dark:bg-gray-800">
         <div className="space-y-3">
           <p className="text-sm text-gray-500 dark:text-gray-400 tracking-wide">
             {formatDate(post.date)}
@@ -245,7 +245,7 @@ function PostCard({ post }: { post: BlogPostMeta }) {
               {post.tags.map((tag) => (
                 <span
                   key={tag}
-                  className="px-2 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-gray-100 dark:bg-gray-700 rounded-md"
+                  className="px-2 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-[#F2EDE8] dark:bg-gray-700 rounded-md"
                 >
                   {tag}
                 </span>

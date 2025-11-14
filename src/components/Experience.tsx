@@ -118,7 +118,7 @@ export default function Experience() {
   return (
     <section
       id="experience"
-      className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-50 dark:bg-gray-800"
+      className="py-20 px-4 sm:px-6 lg:px-8 bg-[#F8F6F3] dark:bg-gray-800"
     >
       <div className="max-w-4xl mx-auto">
         <h2 className="text-3xl sm:text-4xl font-light text-gray-900 dark:text-gray-100 mb-12">
@@ -129,11 +129,11 @@ export default function Experience() {
           {experiences.map((exp) => (
             <div
               key={exp.id}
-              className="border border-gray-200 dark:border-gray-700 rounded-lg bg-white dark:bg-gray-900"
+              className="border border-[#EDE8E3] dark:border-gray-700 rounded-lg bg-[#F5F2EE] dark:bg-gray-900"
             >
               <button
                 onClick={() => toggleExpanded(exp.id)}
-                className="w-full px-6 py-4 text-left hover:bg-gray-50 dark:hover:bg-gray-800 transition-all duration-300 focus:outline-none focus:bg-gray-50 dark:focus:bg-gray-800 cursor-pointer"
+                className="w-full px-6 py-4 text-left hover:bg-[#F2EDE8] dark:hover:bg-gray-800 transition-all duration-300 focus:outline-none focus:bg-[#F2EDE8] dark:focus:bg-gray-800 cursor-pointer"
               >
                 <div className="flex justify-between items-center">
                   <div className="flex items-center gap-4">

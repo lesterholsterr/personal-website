@@ -94,7 +94,7 @@ export default function BookGrid({ books, filters }: BookGridProps) {
       {/* Reading Statistics */}
       <div className="mt-12 pt-8 border-t border-gray-200 dark:border-gray-700">
         <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 text-center">
-          <div className="bg-gray-50 dark:bg-gray-800/50 rounded-lg p-4">
+          <div className="bg-[#F5F2EE] dark:bg-gray-800/50 rounded-lg p-4">
             <div className="text-2xl font-bold text-gray-900 dark:text-gray-100">
               {filteredAndSortedBooks.length}
             </div>
@@ -102,8 +102,8 @@ export default function BookGrid({ books, filters }: BookGridProps) {
               {filters.genre !== 'All' || filters.status !== 'All' ? 'Filtered' : 'Total'} Books
             </div>
           </div>
-          
-          <div className="bg-gray-50 dark:bg-gray-800/50 rounded-lg p-4">
+
+          <div className="bg-[#F5F2EE] dark:bg-gray-800/50 rounded-lg p-4">
             <div className="text-2xl font-bold text-gray-900 dark:text-gray-100">
               {filteredAndSortedBooks.filter(book => book.isFavourite).length}
             </div>
@@ -111,8 +111,8 @@ export default function BookGrid({ books, filters }: BookGridProps) {
               Favourites
             </div>
           </div>
-          
-          <div className="bg-gray-50 dark:bg-gray-800/50 rounded-lg p-4">
+
+          <div className="bg-[#F5F2EE] dark:bg-gray-800/50 rounded-lg p-4">
             <div className="text-2xl font-bold text-gray-900 dark:text-gray-100">
               {filteredAndSortedBooks.filter(book => book.status === 'completed').length}
             </div>
@@ -120,8 +120,8 @@ export default function BookGrid({ books, filters }: BookGridProps) {
               Completed
             </div>
           </div>
-          
-          <div className="bg-gray-50 dark:bg-gray-800/50 rounded-lg p-4">
+
+          <div className="bg-[#F5F2EE] dark:bg-gray-800/50 rounded-lg p-4">
             <div className="text-2xl font-bold text-gray-900 dark:text-gray-100">
               {(filteredAndSortedBooks.filter(book => book.rating > 0)
                 .reduce((sum, book) => sum + book.rating, 0) / 

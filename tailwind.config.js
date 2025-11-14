@@ -17,42 +17,42 @@ module.exports = {
         DEFAULT: {
           css: {
             maxWidth: 'none',
-            color: 'rgb(55 65 81)', // gray-700
+            color: '#4A4A4A', // warm gray (was gray-700)
             lineHeight: '2', // Loose line height
             fontSize: '1.125rem', // text-lg
             '[class~="lead"]': {
-              color: 'rgb(75 85 99)', // gray-600
+              color: '#6B6B6B', // warm medium gray (was gray-600)
             },
             p: {
               marginBottom: '2rem', // mb-8
               lineHeight: '2',
             },
             a: {
-              color: 'rgb(75 85 99)', // gray-600
+              color: '#6B6B6B', // warm medium gray (was gray-600)
               textDecoration: 'underline',
-              textDecorationColor: 'rgb(156 163 175)', // gray-400
+              textDecorationColor: '#9B9B9B', // warm light gray (was gray-400)
               '&:hover': {
-                color: 'rgb(31 41 55)', // gray-800
-                textDecorationColor: 'rgb(107 114 128)', // gray-500
+                color: '#2D2D2D', // warm near-black (was gray-800)
+                textDecorationColor: '#6B6B6B', // warm medium gray (was gray-500)
               },
             },
             strong: {
-              color: 'rgb(31 41 55)', // gray-800
+              color: '#2D2D2D', // warm near-black (was gray-800)
             },
             h1: {
-              color: 'rgb(31 41 55)', // gray-800
+              color: '#2D2D2D', // warm near-black (was gray-800)
             },
             h2: {
-              color: 'rgb(31 41 55)', // gray-800
+              color: '#2D2D2D', // warm near-black (was gray-800)
             },
             h3: {
-              color: 'rgb(31 41 55)', // gray-800
+              color: '#2D2D2D', // warm near-black (was gray-800)
             },
             h4: {
-              color: 'rgb(31 41 55)', // gray-800
+              color: '#2D2D2D', // warm near-black (was gray-800)
             },
             code: {
-              color: 'rgb(31 41 55)', // gray-800
+              color: '#2D2D2D', // warm near-black (was gray-800)
             },
             'blockquote p:first-of-type::before': {
               content: 'none',

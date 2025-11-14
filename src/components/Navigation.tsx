@@ -21,7 +21,7 @@ export default function Navigation() {
   };
 
   return (
-    <nav className="fixed top-0 left-0 right-0 bg-white/80 dark:bg-gray-900/80 backdrop-blur-md border-b border-gray-100 dark:border-gray-800 z-50">
+    <nav className="fixed top-0 left-0 right-0 bg-[#FEFCF9]/80 dark:bg-gray-900/80 backdrop-blur-md border-b border-[#EDE8E3] dark:border-gray-800 z-50">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           {/* Logo/Name */}
@@ -56,7 +56,7 @@ export default function Navigation() {
             <ThemeToggle />
             <button
               onClick={toggleMenu}
-              className="p-2 rounded-md text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-100 hover:bg-gray-50 dark:hover:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:focus:ring-gray-700"
+              className="p-2 rounded-md text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-100 hover:bg-[#F5F2EE] dark:hover:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-[#EDE8E3] dark:focus:ring-gray-700"
               aria-label="Toggle menu"
             >
               <div className="w-8 h-8 relative flex items-center justify-center">
@@ -92,20 +92,20 @@ export default function Navigation() {
                 goToHome(e);
                 setIsMenuOpen(false);
               }}
-              className="block w-full text-left px-3 py-2 text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-100 hover:bg-gray-50 dark:hover:bg-gray-800 rounded-md transition-colors cursor-pointer"
+              className="block w-full text-left px-3 py-2 text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-100 hover:bg-[#F5F2EE] dark:hover:bg-gray-800 rounded-md transition-colors cursor-pointer"
             >
               Home
             </button>
             <Link
               href="/blog"
-              className="block px-3 py-2 text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-100 hover:bg-gray-50 dark:hover:bg-gray-800 rounded-md transition-colors"
+              className="block px-3 py-2 text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-100 hover:bg-[#F5F2EE] dark:hover:bg-gray-800 rounded-md transition-colors"
               onClick={() => setIsMenuOpen(false)}
             >
               Blog
             </Link>
             <Link
               href="/bookshelf"
-              className="block px-3 py-2 text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-100 hover:bg-gray-50 dark:hover:bg-gray-800 rounded-md transition-colors"
+              className="block px-3 py-2 text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-100 hover:bg-[#F5F2EE] dark:hover:bg-gray-800 rounded-md transition-colors"
               onClick={() => setIsMenuOpen(false)}
             >
               Bookshelf
@@ -114,14 +114,14 @@ export default function Navigation() {
               href="/Resume.pdf"
               target="_blank"
               rel="noopener noreferrer"
-              className="block px-3 py-2 text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-100 hover:bg-gray-50 dark:hover:bg-gray-800 rounded-md transition-colors"
+              className="block px-3 py-2 text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-100 hover:bg-[#F5F2EE] dark:hover:bg-gray-800 rounded-md transition-colors"
               onClick={() => setIsMenuOpen(false)}
             >
               Resume
             </a>
             <Link
               href="/#contact"
-              className="block px-3 py-2 text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-100 hover:bg-gray-50 dark:hover:bg-gray-800 rounded-md transition-colors"
+              className="block px-3 py-2 text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-100 hover:bg-[#F5F2EE] dark:hover:bg-gray-800 rounded-md transition-colors"
               onClick={() => setIsMenuOpen(false)}
             >
               Contact

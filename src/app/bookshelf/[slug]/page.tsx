@@ -120,7 +120,7 @@ export default async function BookPage({ params }: BookPageProps) {
     };
 
     return (
-      <main className="pt-16 sm:pt-20 bg-white dark:bg-gray-900">
+      <main className="pt-16 sm:pt-20 bg-[#F8F6F3] dark:bg-gray-900">
         <div className="pt-20 lg:pt-32 pb-8 px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto">
             {/* Back to Bookshelf */}
