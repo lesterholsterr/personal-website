@@ -27,7 +27,7 @@ old_website/
 *.pem
 
 # newsletter data
-/data/newsletter-emails.json
+/data/*
 
 # debug
 npm-debug.log*
