@@ -1,8 +1,7 @@
 'use client';
 
 import { useState, useEffect } from 'react';
-
-const ADMIN_PASSWORD = process.env.NEXT_PUBLIC_ADMIN_PASSWORD || 'your-secure-password-here';
+import { loginAction, logoutAction, getSessionAction } from '../auth-actions';
 
 export default function AdminLayout({
   children,
@@ -10,29 +9,54 @@ export default function AdminLayout({
   children: React.ReactNode;
 }) {
   const [isAuthenticated, setIsAuthenticated] = useState(false);
+  const [isLoading, setIsLoading] = useState(true);
   const [password, setPassword] = useState('');
   const [error, setError] = useState('');
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
   useEffect(() => {
-    // Check if already authenticated in session
-    const authenticated = sessionStorage.getItem('admin-authenticated');
-    if (authenticated === 'true') {
-      setIsAuthenticated(true);
+    // Check if already authenticated via server session
+    async function checkAuth() {
+      const session = await getSessionAction();
+      setIsAuthenticated(!!session);
+      setIsLoading(false);
     }
+    checkAuth();
   }, []);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    
-    if (password === ADMIN_PASSWORD) {
+    setIsSubmitting(true);
+    setError('');
+
+    const formData = new FormData(e.currentTarget);
+    const result = await loginAction(formData);
+
+    setIsSubmitting(false);
+
+    if (result.success) {
       setIsAuthenticated(true);
-      sessionStorage.setItem('admin-authenticated', 'true');
+      setPassword('');
       setError('');
     } else {
-      setError('Incorrect password');
+      setError(result.error || 'Login failed');
       setPassword('');
     }
   };
+
+  const handleLogout = async () => {
+    await logoutAction();
+  };
+
+  if (isLoading) {
+    return (
+      <main className="pt-16 sm:pt-20">
+        <div className="py-20 px-4 sm:px-6 lg:px-8 bg-white dark:bg-gray-900 min-h-screen flex items-center justify-center">
+          <div className="text-gray-600 dark:text-gray-400">Loading...</div>
+        </div>
+      </main>
+    );
+  }
 
   if (!isAuthenticated) {
     return (
@@ -60,11 +84,13 @@ export default function AdminLayout({
                   <input
                     type="password"
                     id="password"
+                    name="password"
                     value={password}
                     onChange={(e) => setPassword(e.target.value)}
                     className="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-md bg-white dark:bg-gray-700 text-gray-900 dark:text-gray-100 placeholder-gray-500 dark:placeholder-gray-400 focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                     placeholder="Enter admin password"
                     required
+                    disabled={isSubmitting}
                   />
                 </div>
 
@@ -76,20 +102,21 @@ export default function AdminLayout({
 
                 <button
                   type="submit"
-                  className="w-full bg-blue-600 hover:bg-blue-700 text-white font-medium py-2 px-4 rounded-md transition-colors duration-200 focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 dark:focus:ring-offset-gray-800"
+                  className="w-full bg-blue-600 hover:bg-blue-700 text-white font-medium py-2 px-4 rounded-md transition-colors duration-200 focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 dark:focus:ring-offset-gray-800 disabled:opacity-50 disabled:cursor-not-allowed"
+                  disabled={isSubmitting}
                 >
-                  Access Admin Panel
+                  {isSubmitting ? 'Logging in...' : 'Access Admin Panel'}
                 </button>
               </form>
 
-              <div className="mt-6 p-4 bg-yellow-50 dark:bg-yellow-900/20 border border-yellow-200 dark:border-yellow-800 rounded-md">
+              <div className="mt-6 p-4 bg-green-50 dark:bg-green-900/20 border border-green-200 dark:border-green-800 rounded-md">
                 <div className="flex">
-                  <svg className="w-5 h-5 text-yellow-400 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4c-.77-.833-1.964-.833-2.732 0L3.732 16.5c-.77.833.192 2.5 1.732 2.5z" />
+                  <svg className="w-5 h-5 text-green-400 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
                   </svg>
                   <div className="ml-3">
-                    <p className="text-sm text-yellow-700 dark:text-yellow-300">
-                      <strong>Security Note:</strong> Set a strong password in your environment variables for production use.
+                    <p className="text-sm text-green-700 dark:text-green-300">
+                      <strong>Secure Authentication:</strong> Server-side authentication with httpOnly cookies protects your admin panel.
                     </p>
                   </div>
                 </div>
@@ -101,5 +128,21 @@ export default function AdminLayout({
     );
   }
 
-  return <>{children}</>;
+  return (
+    <div>
+      <div className="pt-16 sm:pt-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <div className="flex justify-end mb-4">
+            <button
+              onClick={handleLogout}
+              className="bg-gray-600 hover:bg-gray-700 text-white font-medium py-2 px-4 rounded-md transition-colors duration-200 focus:ring-2 focus:ring-gray-500 focus:ring-offset-2"
+            >
+              Logout
+            </button>
+          </div>
+        </div>
+      </div>
+      {children}
+    </div>
+  );
 }

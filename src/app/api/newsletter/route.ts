@@ -1,5 +1,20 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { addSubscriber, isValidEmail, getAllSubscribers, exportSubscribersAsCSV, removeSubscriber } from '@/lib/newsletter-vercel';
+import { getSession } from '@/lib/auth-session';
+
+// Helper function to require authentication
+async function requireAuth(): Promise<NextResponse | null> {
+  const session = await getSession();
+
+  if (!session) {
+    return NextResponse.json(
+      { error: 'Unauthorized - Admin authentication required' },
+      { status: 401 }
+    );
+  }
+
+  return null; // Authorized
+}
 
 export async function POST(request: NextRequest) {
   try {
@@ -50,6 +65,10 @@ export async function POST(request: NextRequest) {
 
 export async function GET(request: NextRequest) {
   try {
+    // Require authentication for viewing subscriber data
+    const authError = await requireAuth();
+    if (authError) return authError;
+
     const { searchParams } = new URL(request.url);
     const format = searchParams.get('format');
 
@@ -81,6 +100,10 @@ export async function GET(request: NextRequest) {
 
 export async function DELETE(request: NextRequest) {
   try {
+    // Require authentication for deleting subscribers
+    const authError = await requireAuth();
+    if (authError) return authError;
+
     const body = await request.json();
     const { email } = body;
 
