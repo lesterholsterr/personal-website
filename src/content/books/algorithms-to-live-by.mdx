@@ -1,13 +1,39 @@
 ---
 title: "Algorithms to Live By"
 author: "Brian Christian & Tom Griffiths"
-rating: 0
+rating: 8.0
 genre: "Technology"
 status: "completed"
 isFavourite: false
 coverImage: "/books/algorithms-to-live-by.jpg"
 dateRead: "2024-10-15"
-dateReviewed: "2024-10-15"
+dateReviewed: "2025-12-21"
 ---
 
-Review coming soon.
+The premise of this book is: We solve problems in Computer Science as well as in real life, and some of those problems overlap. Each chapter goes into a different problem and they were somewhat hit or miss. But some of the hits were grand slams for me, so much so that one year later, I still find myself using these principles in daily life. I’ll go over a few of my favourites:
+
+### 1. Explore vs Exploit
+
+The classic problem here is the k-Armed Bandit Problem. Suppose you have k slot machines, each with a fixed but unknown probability distribution. Playing a slot machine will yield you a reward sampled from that machine’s distribution. If you can play the slot machines a total of n times (where n >> k), how can you maximize your reward?
+
+This machine learning problem introduces the idea of explore vs exploit - if you found a profitable machine, should you keep playing it (exploit) or try out new ones that might be better (explore)? As a Waterloo student, I find myself in a new location every 4 months. Treating the city as a multi-arm bandit, how can I make the most of my time there (e.g. restaurants to try, activities to do)? One solution is to select machines with the highest confidence interval upper bound. That encourages both the exploration of new places (since the confidence interval would be wide) and the exploitation of certified bangers (since the mean would be high). It’s a solution I’ve loosely applied in my head when exploring new cities, although I’m usually never in one place long enough to actually exploit anything 😛.
+
+### 2. Overfitting
+
+Overfitting is another concept from machine learning where increasing the complexity of your model can sometimes cause it to “memorize” the training data rather than actually capture useful patterns. As a result, overfitting makes the model perform worse at test time.
+
+In real life, I’m wary of overfitting too. For example, in school I want to focus on understanding course content rather than overfitting to what the exam questions might be. When preparing for interviews, I want to show that I’m the best candidate, not overfit to things like “leaked interview questions”.
+
+Strategies used to prevent overfitting can also be used in real-life decision making. For example, as an overthinker, early stopping shows that spending less time thinking can objectively be better. And regularization penalizes solutions that are more complex than they need to be.
+
+### 3. Randomness
+
+Sticking with machine learning, a common optimization challenge is getting stuck at a local optimum (i.e. finding a good solution, but not the best one). We try to avoid this by adding randomness to our optimization using processes like stochastic or mini batch gradient descent. Each individual step will be “worse” (that is, higher variance) than a deterministic step, but the random process can more successfully find globally optimal solutions.
+
+The key here is _controlled_ randomness - the expected value of your mini batch gradient step is the same as a deterministic one, but introducing more variance can be beneficial over the long run. In real life, here are a couple example of controlled randomness I’ve tried:
+
+- Taking a different route to work and discovering a new restaurant to try
+- Intentionally under-planning a solo-travelling itinerary to allow for more spontaneous activities
+- Making a conscious effort to hang out with people I wouldn’t otherwise hang out with
+
+Many more topics are discussed, but I will leave the review here. The last thing I’ll mention is that even people with 0 computer science experience can read this book. In fact, the authors basically assume no prerequisite knowledge in the reader, so I found myself able to skip parts of the book where they explain concepts such as sorting, caching, scheduling, Bayes’ Rule, etc. and jump straight to the application part. All in all, an enjoyable and valuable read!
