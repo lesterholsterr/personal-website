@@ -30,17 +30,17 @@ export const mdxComponents: MDXComponents = {
       </blockquote>
     ),
     ol: ({ children }) => (
-      <ol className="list-decimal list-inside mb-12 space-y-4 text-lg leading-loose text-gray-700 dark:text-gray-300">
+      <ol className="list-decimal list-outside mb-12 space-y-4 text-lg leading-loose text-gray-700 dark:text-gray-300 pl-6">
         {children}
       </ol>
     ),
     ul: ({ children }) => (
-      <ul className="list-disc list-inside mb-12 space-y-4 text-lg leading-loose text-gray-700 dark:text-gray-300">
+      <ul className="list-disc list-outside mb-12 space-y-4 text-lg leading-loose text-gray-700 dark:text-gray-300 pl-6">
         {children}
       </ul>
     ),
     li: ({ children }) => (
-      <li className="ml-4">{children}</li>
+      <li>{children}</li>
     ),
     a: ({ href, children }) => (
       <a
