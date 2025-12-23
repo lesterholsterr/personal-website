@@ -25,9 +25,9 @@ export const GENRES = [
   'Modern Fiction',
   'Self-Help',
   'Philosophy',
-  'Politics',
+  'Social Science',
   'History',
-  'Biography',
+  'Biography/Memoir',
   'Science',
   'Business',
   'Technology'
