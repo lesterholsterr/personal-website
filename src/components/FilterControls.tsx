@@ -37,32 +37,32 @@ export default function FilterControls({ filters, onFiltersChange, bookCount }: 
     },
     {
       range: "8.5 - 8.9",
-      description: "These books are both influential and enjoyable. However, something holds them back from breaking the 9.0 threshold, such as the magnitude of influence/enjoyability, the clarity, the writing style, or the length. I would still confidently recommend these books to most people.",
+      description: "These books are both influential and enjoyable, just of a lesser magnitude than the books that break the 9.0 threshold. I would still confidently recommend these books to most people.",
       color: "text-green-600 dark:text-green-400"
     },
     {
       range: "8.0 - 8.4",
-      description: "These books are great. My reaction upon finishing a book with this rating is something like: \"Nice, I'm glad I read that\". While they fall short of being transformative, I would have no problem recommending these books to the right people.",
+      description: "These books are great. My reaction upon finishing a book with this rating is something like: \"Nice, I'm glad I read that\". Of the books I've read, I believe these are definitely above average, and I would not hesitate recommending these books to the right people.",
       color: "text-blue-600 dark:text-blue-400"
     },
     {
-      range: "7.5 - 7.9",
-      description: "These books may change the way I think, but not the way I act. Alternatively, these books may be entertaining to read, but only provide surface level knowledge. I might recommend these books in very selective scenarios.",
+      range: "7.0 - 7.9",
+      description: "These books are average. They are usually either very enjoyable to read or very thought-provoking, but not both. I might recommend these books in selective scenarios.",
       color: "text-yellow-600 dark:text-yellow-400"
     },
     {
-      range: "7.0 - 7.4",
-      description: "These books are mediocre. My reaction upon finishing a book with this rating is something like: \"Hm, ok cool\". I could live without reading these books, but I don't regret reading them either.",
+      range: "6.0 - 6.9",
+      description: "These books are mediocre. My reaction upon finishing a book with this rating is something like: \"Hm, ok cool\". I could live without reading these books. In fact, I mildly regret reading them due to opportunity cost.",
       color: "text-orange-600 dark:text-orange-400"
     },
     {
-      range: "6.0 - 6.9",
-      description: "These books are subpar. They weakly satisfy a few metrics and I somewhat regret reading these books due to opportunity cost.",
+      range: "5.0 - 5.9",
+      description: "These books are subpar. They weakly satisfy a few metrics and I actively regret reading these books.",
       color: "text-orange-700 dark:text-orange-500"
     },
     {
-      range: "5.9 and below",
-      description: "These books are bad. They are neither enjoyable nor influential. Writing style, book length, and clarity determine how low the rating will go.",
+      range: "4.9 and below",
+      description: "These books are bad.",
       color: "text-red-600 dark:text-red-400"
     }
   ];
