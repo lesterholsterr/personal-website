@@ -69,10 +69,10 @@ export default function Hero() {
                 </span>
               </div>
               <p className="text-sm text-gray-600 dark:text-gray-300">
-                <a href="https://www.youtube.com/watch?v=FZoRlh35ODM"><u>rolling right along...</u></a>
+                Sidequesting in California 🌊☀️/🚗🏔️/⛷️/🎸/🥊
               </p>
               <p className="text-xs text-gray-500 dark:text-gray-400 mt-2">
-                Last updated November 6, 2025
+                Last updated January 21, 2026
               </p>
             </div>
           </div>

@@ -32,7 +32,7 @@ const experiences: ExperienceItem[] = [
     location: "San Francisco, USA",
     duration: "Jan 2026 - Apr 2026 (Expected)",
     logo: "/augment-logo.jpeg",
-    description: ["Incoming, Series A AI logistics startup"],
+    description: ["Series A AI logistics startup"],
   },
   {
     id: "p72",
