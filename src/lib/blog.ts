@@ -8,7 +8,6 @@ export interface BlogPost {
   slug: string;
   title: string;
   date: string;
-  subtitle?: string;
   tags: string[];
   content: string;
   disabled?: boolean;
@@ -26,7 +25,6 @@ export interface BlogPostMeta {
   slug: string;
   title: string;
   date: string;
-  subtitle?: string;
   tags: string[];
   disabled?: boolean;
   timeCapsule?: {
@@ -59,7 +57,6 @@ export function getPostBySlug(slug: string): BlogPost {
     slug,
     title: data.title || '',
     date: data.date || '',
-    subtitle: data.subtitle || '',
     tags: data.tags || [],
     content,
     disabled: data.disabled || false,
@@ -77,7 +74,6 @@ export function getAllPosts(): BlogPostMeta[] {
         slug: post.slug,
         title: post.title,
         date: post.date,
-        subtitle: post.subtitle,
         tags: post.tags,
         disabled: post.disabled,
         timeCapsule: post.timeCapsule,

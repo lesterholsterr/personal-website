@@ -156,11 +156,6 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
               <p className="text-lg text-gray-500 dark:text-gray-400 tracking-wide mb-6">
                 {formatDate(post.date)}
               </p>
-              {post.subtitle && (
-                <p className="text-lg sm:text-xl text-gray-600 dark:text-gray-300 font-light leading-relaxed">
-                  {post.subtitle}
-                </p>
-              )}
               {post.tags.length > 0 && (
                 <div className="flex flex-wrap gap-2 mt-6">
                   {post.tags.map((tag) => (

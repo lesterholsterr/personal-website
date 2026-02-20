@@ -131,15 +131,6 @@ function SeriesDropdownItem({ post }: { post: BlogPostMeta }) {
         }`}>
           {post.title}
         </h3>
-        {post.subtitle && (
-          <p className={`text-sm font-light ${
-            isDisabled
-              ? 'text-gray-500 dark:text-gray-500'
-              : 'text-gray-600 dark:text-gray-400'
-          }`}>
-            {post.subtitle}
-          </p>
-        )}
       </div>
     </article>
   );
@@ -235,11 +226,6 @@ function PostCard({ post }: { post: BlogPostMeta }) {
           <h2 className="text-2xl font-light text-gray-900 dark:text-gray-100 group-hover:text-gray-600 dark:group-hover:text-gray-400 transition-colors duration-200">
             {post.title}
           </h2>
-          {post.subtitle && (
-            <p className="text-lg text-gray-600 dark:text-gray-300 font-light">
-              {post.subtitle}
-            </p>
-          )}
           {post.tags.length > 0 && (
             <div className="flex flex-wrap gap-2 pt-2">
               {post.tags.map((tag) => (
