@@ -69,10 +69,15 @@ export default function Hero() {
                 </span>
               </div>
               <p className="text-sm text-gray-600 dark:text-gray-300">
-                Sidequesting in California 🌊☀️/🚗🏔️/⛷️/🎸/🥊
+                <a
+                  href="https://www.youtube.com/watch?v=IPKAwJKGSDc"
+                  className="underline"
+                >
+                  Loving every minute cause you make me so alive!
+                </a>
               </p>
               <p className="text-xs text-gray-500 dark:text-gray-400 mt-2">
-                Last updated January 21, 2026
+                Last updated March 30, 2026
               </p>
             </div>
           </div>
@@ -100,7 +105,7 @@ export default function Hero() {
                   Bookshelf
                 </h3>
                 <p className="text-gray-600 dark:text-gray-300">
-                  I also read other people&apos;s yaps
+                  I like to read other people&apos;s yaps
                 </p>
               </Link>
             </div>

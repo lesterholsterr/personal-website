@@ -32,7 +32,9 @@ const experiences: ExperienceItem[] = [
     location: "San Francisco, USA",
     duration: "Jan 2026 - Apr 2026 (Expected)",
     logo: "/augment-logo.jpeg",
-    description: ["Series A AI logistics startup"],
+    description: [
+      "Building a self-serve brokerage onboarding platform, enabling new customers to configure AI agent tools by authoring custom code that is safely executed in sandboxed JS runtimes",
+    ],
   },
   {
     id: "p72",
@@ -54,7 +56,7 @@ const experiences: ExperienceItem[] = [
     logo: "/onex-logo.jpeg",
     description: [
       "Developed an in-house risk management system, saving $300,000 annually by replacing a third-party service",
-      "Built quantitative analysis tools in Python to reveal factor bias and timing patterns from factor models",
+      "Built quantitative analysis tools in Python and presented timing and bias insights from factor models to portfolio managers",
     ],
   },
   {

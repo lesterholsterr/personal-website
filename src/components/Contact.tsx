@@ -1,12 +1,12 @@
-'use client';
+"use client";
 
-import { useState } from 'react';
+import { useState } from "react";
 
 export default function Contact() {
   const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    message: ''
+    name: "",
+    email: "",
+    message: "",
   });
 
   const handleSubmit = (e: React.FormEvent) => {
@@ -16,15 +16,20 @@ export default function Contact() {
     form.submit();
   };
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+  const handleChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
+  ) => {
     setFormData({
       ...formData,
-      [e.target.name]: e.target.value
+      [e.target.name]: e.target.value,
     });
   };
 
   return (
-    <section id="contact" className="py-20 px-4 sm:px-6 lg:px-8 bg-[#F8F6F3] dark:bg-gray-800">
+    <section
+      id="contact"
+      className="py-20 px-4 sm:px-6 lg:px-8 bg-[#F8F6F3] dark:bg-gray-800"
+    >
       <div className="max-w-4xl mx-auto">
         <h2 className="text-3xl sm:text-4xl font-light text-gray-900 dark:text-gray-100 mb-16 text-center">
           Get In Touch
@@ -36,18 +41,25 @@ export default function Contact() {
             <h3 className="text-xl font-medium text-gray-900 dark:text-gray-100 mb-6">
               Send me a message
             </h3>
-            
+
             <form
               action="https://formsubmit.co/mattyang98@gmail.com"
               method="POST"
               onSubmit={handleSubmit}
               className="space-y-6"
             >
-              <input type="hidden" name="_subject" value="Website form submission" />
-              
+              <input
+                type="hidden"
+                name="_subject"
+                value="Website form submission"
+              />
+
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 <div>
-                  <label htmlFor="name" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+                  <label
+                    htmlFor="name"
+                    className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2"
+                  >
                     Name
                   </label>
                   <input
@@ -61,9 +73,12 @@ export default function Contact() {
                     placeholder="John Smith"
                   />
                 </div>
-                
+
                 <div>
-                  <label htmlFor="email" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+                  <label
+                    htmlFor="email"
+                    className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2"
+                  >
                     Email
                   </label>
                   <input
@@ -80,7 +95,10 @@ export default function Contact() {
               </div>
 
               <div>
-                <label htmlFor="message" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+                <label
+                  htmlFor="message"
+                  className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2"
+                >
                   Message
                 </label>
                 <textarea
@@ -109,10 +127,12 @@ export default function Contact() {
             <h3 className="text-xl font-medium text-gray-900 dark:text-gray-100 mb-6">
               Contact Information
             </h3>
-            
+
             <div className="space-y-6 mb-8">
               <div>
-                <h4 className="text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">Email</h4>
+                <h4 className="text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+                  Email (Preferred)
+                </h4>
                 <a
                   href="mailto:mattyang98@gmail.com"
                   className="text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-gray-100 transition-colors text-lg"
@@ -120,9 +140,11 @@ export default function Contact() {
                   mattyang98@gmail.com
                 </a>
               </div>
-              
+
               <div>
-                <h4 className="text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">Instagram</h4>
+                <h4 className="text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+                  Instagram (If we've met before)
+                </h4>
                 <a
                   href="https://instagram.com/matthew.yang04"
                   target="_blank"
@@ -136,7 +158,9 @@ export default function Contact() {
 
             {/* Social Links */}
             <div>
-              <h4 className="text-sm font-medium text-gray-700 dark:text-gray-300 mb-3">Other Socials</h4>
+              <h4 className="text-sm font-medium text-gray-700 dark:text-gray-300 mb-3">
+                Other Socials
+              </h4>
               <div className="flex flex-col space-y-2">
                 <a
                   href="https://www.linkedin.com/in/matthew-yang-4b9728200/"
