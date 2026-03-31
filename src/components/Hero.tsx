@@ -116,7 +116,7 @@ export default function Hero() {
               className="block p-6 bg-gray-900 dark:bg-gray-700 text-white rounded-lg hover:bg-gray-800 dark:hover:bg-gray-600 transition-all duration-300 hover:translate-y-[-2px] group h-[120px] flex flex-col justify-center"
             >
               <h3 className="text-xl font-medium mb-2">Get in touch</h3>
-              <p className="text-gray-300 dark:text-gray-400">DMs are open</p>
+              <p className="text-gray-300 dark:text-gray-400">I like to meet people!</p>
             </a>
           </div>
         </div>
