@@ -17,23 +17,23 @@ module.exports = {
         DEFAULT: {
           css: {
             maxWidth: 'none',
-            color: '#4A4A4A', // warm gray (was gray-700)
+            color: '#484440', // warm gray (was gray-700)
             lineHeight: '2', // Loose line height
             fontSize: '1.125rem', // text-lg
             '[class~="lead"]': {
-              color: '#6B6B6B', // warm medium gray (was gray-600)
+              color: '#696560', // warm medium gray (was gray-600)
             },
             p: {
               marginBottom: '2rem', // mb-8
               lineHeight: '2',
             },
             a: {
-              color: '#6B6B6B', // warm medium gray (was gray-600)
+              color: '#696560', // warm medium gray (was gray-600)
               textDecoration: 'underline',
-              textDecorationColor: '#9B9B9B', // warm light gray (was gray-400)
+              textDecorationColor: '#979390', // warm light gray (was gray-400)
               '&:hover': {
                 color: '#2D2D2D', // warm near-black (was gray-800)
-                textDecorationColor: '#6B6B6B', // warm medium gray (was gray-500)
+                textDecorationColor: '#696560', // warm medium gray (was gray-500)
               },
             },
             strong: {

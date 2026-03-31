@@ -66,7 +66,7 @@ export default function BookModal({ book, onClose }: BookModalProps) {
       onClick={onClose}
     >
       <div
-        className="bg-[#F5F2EE] dark:bg-gray-800 rounded-xl max-w-4xl w-full max-h-[90vh] overflow-hidden shadow-2xl animate-fadeInUp"
+        className="bg-[#F2EDE5] dark:bg-gray-800 rounded-xl max-w-4xl w-full max-h-[90vh] overflow-hidden shadow-2xl animate-fadeInUp"
         onClick={(e) => e.stopPropagation()}
       >
         {/* Header */}

@@ -51,7 +51,7 @@ export default function AdminLayout({
   if (isLoading) {
     return (
       <main className="pt-16 sm:pt-20">
-        <div className="py-20 px-4 sm:px-6 lg:px-8 bg-white dark:bg-gray-900 min-h-screen flex items-center justify-center">
+        <div className="py-20 px-4 sm:px-6 lg:px-8 bg-[#F0EBE3] dark:bg-gray-900 min-h-screen flex items-center justify-center">
           <div className="text-gray-600 dark:text-gray-400">Loading...</div>
         </div>
       </main>
@@ -61,7 +61,7 @@ export default function AdminLayout({
   if (!isAuthenticated) {
     return (
       <main className="pt-16 sm:pt-20">
-        <div className="py-20 px-4 sm:px-6 lg:px-8 bg-white dark:bg-gray-900 min-h-screen">
+        <div className="py-20 px-4 sm:px-6 lg:px-8 bg-[#F0EBE3] dark:bg-gray-900 min-h-screen">
           <div className="max-w-md mx-auto">
             <div className="bg-white dark:bg-gray-800 shadow-lg rounded-lg p-8 border border-gray-200 dark:border-gray-700">
               <div className="text-center mb-6">

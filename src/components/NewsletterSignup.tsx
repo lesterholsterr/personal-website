@@ -100,7 +100,7 @@ export default function NewsletterSignup({
     <div
       className={`${className} ${
         compact ? "p-4" : "p-6"
-      } bg-[#F5F2EE] dark:bg-gray-800 border border-[#EDE8E3] dark:border-gray-700 rounded-lg`}
+      } bg-[#F2EDE5] dark:bg-gray-800 border border-[#D5CFC4] dark:border-gray-700 rounded-lg`}
     >
       <div className="text-center mb-4">
         <h3
@@ -128,7 +128,7 @@ export default function NewsletterSignup({
             placeholder="Enter your email address"
             className={`${
               compact ? "px-3 py-2 text-sm" : "px-4 py-3"
-            } flex-1 border border-[#E8E3DE] dark:border-gray-600 rounded-md bg-[#FEFCF9] dark:bg-gray-700 text-[#2D2D2D] dark:text-gray-100 placeholder-[#6B6B6B] dark:placeholder-gray-400 focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors duration-200`}
+            } flex-1 border border-[#CBC5BA] dark:border-gray-600 rounded-md bg-[#F0EBE3] dark:bg-gray-700 text-[#2D2D2D] dark:text-gray-100 placeholder-[#696560] dark:placeholder-gray-400 focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors duration-200`}
             disabled={status === "loading"}
             required
           />

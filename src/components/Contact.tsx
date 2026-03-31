@@ -28,7 +28,7 @@ export default function Contact() {
   return (
     <section
       id="contact"
-      className="py-20 px-4 sm:px-6 lg:px-8 bg-[#F8F6F3] dark:bg-gray-800"
+      className="py-20 px-4 sm:px-6 lg:px-8 bg-[#EDE8E0] dark:bg-gray-800"
     >
       <div className="max-w-4xl mx-auto">
         <h2 className="text-3xl sm:text-4xl font-light text-gray-900 dark:text-gray-100 mb-16 text-center">
@@ -37,7 +37,7 @@ export default function Contact() {
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
           {/* Contact Form */}
-          <div className="bg-[#F5F2EE] dark:bg-gray-900 p-8 rounded-lg border border-[#EDE8E3] dark:border-gray-700">
+          <div className="bg-[#F2EDE5] dark:bg-gray-900 p-8 rounded-lg border border-[#D5CFC4] dark:border-gray-700">
             <h3 className="text-xl font-medium text-gray-900 dark:text-gray-100 mb-6">
               Send me a message
             </h3>
@@ -69,7 +69,7 @@ export default function Contact() {
                     value={formData.name}
                     onChange={handleChange}
                     required
-                    className="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-md focus:outline-none focus:ring-2 focus:ring-gray-500 dark:focus:ring-gray-400 focus:border-transparent bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-100"
+                    className="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-md focus:outline-none focus:ring-2 focus:ring-gray-500 dark:focus:ring-gray-400 focus:border-transparent bg-[#F0EBE3] dark:bg-gray-800 text-gray-900 dark:text-gray-100"
                     placeholder="John Smith"
                   />
                 </div>
@@ -88,7 +88,7 @@ export default function Contact() {
                     value={formData.email}
                     onChange={handleChange}
                     required
-                    className="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-md focus:outline-none focus:ring-2 focus:ring-gray-500 dark:focus:ring-gray-400 focus:border-transparent bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-100"
+                    className="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-md focus:outline-none focus:ring-2 focus:ring-gray-500 dark:focus:ring-gray-400 focus:border-transparent bg-[#F0EBE3] dark:bg-gray-800 text-gray-900 dark:text-gray-100"
                     placeholder="me@example.com"
                   />
                 </div>
@@ -108,14 +108,14 @@ export default function Contact() {
                   value={formData.message}
                   onChange={handleChange}
                   required
-                  className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-gray-500 focus:border-transparent"
+                  className="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-md focus:outline-none focus:ring-2 focus:ring-gray-500 dark:focus:ring-gray-400 focus:border-transparent bg-[#F0EBE3] dark:bg-gray-800 text-gray-900 dark:text-gray-100"
                   placeholder="Your message..."
                 />
               </div>
 
               <button
                 type="submit"
-                className="w-full bg-gray-900 dark:bg-gray-700 text-white px-6 py-3 rounded-md hover:bg-gray-800 dark:hover:bg-gray-600 transition-colors font-medium"
+                className="w-full bg-gray-900 dark:bg-gray-700 text-white px-6 py-3 rounded-md hover:bg-gray-800 dark:hover:bg-gray-600 transition-colors font-medium cursor-pointer"
               >
                 Send Message
               </button>
@@ -123,7 +123,7 @@ export default function Contact() {
           </div>
 
           {/* Contact Info */}
-          <div className="bg-[#F5F2EE] dark:bg-gray-900 p-8 rounded-lg border border-[#EDE8E3] dark:border-gray-700 h-full">
+          <div className="bg-[#F2EDE5] dark:bg-gray-900 p-8 rounded-lg border border-[#D5CFC4] dark:border-gray-700 h-full">
             <h3 className="text-xl font-medium text-gray-900 dark:text-gray-100 mb-6">
               Contact Information
             </h3>
@@ -143,7 +143,7 @@ export default function Contact() {
 
               <div>
                 <h4 className="text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
-                  Instagram (If we've met before)
+                  Instagram (If we&apos;ve met before)
                 </h4>
                 <a
                   href="https://instagram.com/matthew.yang04"

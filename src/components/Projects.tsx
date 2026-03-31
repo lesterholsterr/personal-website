@@ -63,7 +63,7 @@ const sideQuests: SideQuest[] = [
         title: "Piano",
         duration: "2011 - Present",
         description:
-          "Classically trained from 2011 - 2016 (Asian canon event). Took a break, then picked up jazz piano in high school (2018 - 2022). Spent my first co-op's first co-op 1 paycheck on a Yamaha P125. Brought it to school with me and started playing + singing songs I liked!",
+          "Classically trained from 2011 - 2016 (Asian canon event). Took a break, then picked up jazz piano in high school (2018 - 2022). Spent my first co-op's first paycheck on a Yamaha P125. Brought it to school with me and started playing + singing songs I liked!",
         videos: [
           {
             description:
@@ -132,7 +132,7 @@ export default function Projects() {
   return (
     <section
       id="side-quests"
-      className="py-20 px-4 sm:px-6 lg:px-8 bg-[#F5F2EE] dark:bg-gray-900"
+      className="py-20 px-4 sm:px-6 lg:px-8 bg-[#F2EDE5] dark:bg-gray-900"
     >
       <div className="max-w-4xl mx-auto">
         <h2 className="text-3xl sm:text-4xl font-light text-gray-900 dark:text-gray-100 mb-12">
@@ -203,7 +203,7 @@ export default function Projects() {
 
                 {/* Individually expandable sub-sections */}
                 {quest.subSections && (
-                  <div className="mt-6 space-y-2 pl-4 border-l-2 border-[#EDE8E3] dark:border-gray-700">
+                  <div className="mt-6 space-y-2 pl-4 border-l-2 border-[#D5CFC4] dark:border-gray-700">
                     {quest.subSections.map((sub) => {
                       const subKey = `${quest.id}-${sub.title}`;
                       const isExpanded = expandedSubs.has(subKey);
@@ -225,7 +225,7 @@ export default function Projects() {
                         <div key={sub.title}>
                           <button
                             onClick={() => toggleSub(subKey)}
-                            className="w-full text-left py-2 flex items-center justify-between gap-4 hover:bg-[#F2EDE8] dark:hover:bg-gray-800 rounded-md px-2 -mx-2 transition-colors duration-200 cursor-pointer"
+                            className="w-full text-left py-2 flex items-center justify-between gap-4 hover:bg-[#E8E3DB] dark:hover:bg-gray-800 rounded-md px-2 -mx-2 transition-colors duration-200 cursor-pointer"
                           >
                             <div className="flex flex-col sm:flex-row sm:items-baseline sm:gap-3">
                               <h4 className="text-lg font-medium text-gray-900 dark:text-gray-100">
@@ -305,7 +305,7 @@ export default function Projects() {
                                           </p>
                                         </div>
                                       ) : (
-                                        <div className="flex items-center gap-3 py-3 px-4 rounded-lg bg-[#F0EBE5] dark:bg-gray-800 h-full">
+                                        <div className="flex items-center gap-3 py-3 px-4 rounded-lg bg-[#F2EDE5] dark:bg-gray-800 h-full">
                                           <svg
                                             className="w-5 h-5 text-gray-400 dark:text-gray-500 flex-shrink-0"
                                             fill="none"

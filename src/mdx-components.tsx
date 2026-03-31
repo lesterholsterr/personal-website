@@ -26,7 +26,7 @@ export const mdxComponents: MDXComponents = {
       </p>
     ),
     blockquote: ({ children }) => (
-      <blockquote className="border-l-4 border-[#E8E3DE] dark:border-gray-600 pl-6 pr-6 pt-4 pb-4 my-12 italic text-lg leading-loose text-[#6B6B6B] dark:text-gray-400 bg-[#F5F2EE] dark:bg-gray-800 text-justify [&>p]:mb-0">
+      <blockquote className="border-l-4 border-[#CBC5BA] dark:border-gray-600 pl-6 pr-6 pt-4 pb-4 my-12 italic text-lg leading-loose text-[#696560] dark:text-gray-400 bg-[#F2EDE5] dark:bg-gray-800 text-justify [&>p]:mb-0">
         {children}
       </blockquote>
     ),
@@ -54,17 +54,17 @@ export const mdxComponents: MDXComponents = {
       </a>
     ),
     code: ({ children }) => (
-      <code className="bg-[#F2EDE8] dark:bg-gray-800 px-2 py-1 rounded text-sm font-mono text-[#2D2D2D] dark:text-gray-200">
+      <code className="bg-[#E8E3DB] dark:bg-gray-800 px-2 py-1 rounded text-sm font-mono text-[#2D2D2D] dark:text-gray-200">
         {children}
       </code>
     ),
     pre: ({ children }) => (
-      <pre className="bg-[#F2EDE8] dark:bg-gray-800 p-4 rounded-lg overflow-x-auto mb-12 text-sm">
+      <pre className="bg-[#E8E3DB] dark:bg-gray-800 p-4 rounded-lg overflow-x-auto mb-12 text-sm">
         {children}
       </pre>
     ),
     hr: () => (
-      <hr className="my-16 border-t border-[#EDE8E3] dark:border-gray-600" />
+      <hr className="my-16 border-t border-[#D5CFC4] dark:border-gray-600" />
     ),
     Footnote: ({ text }: { text: string }) => <Footnote text={text} />,
     Highlight: ({ color, children }: { color: 'red' | 'yellow' | 'green'; children: React.ReactNode }) => <Highlight color={color}>{children}</Highlight>,

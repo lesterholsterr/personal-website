@@ -150,7 +150,7 @@ export default function Footnote({ text }: FootnoteProps) {
       {mounted && isVisible && positionReady && createPortal(
           <div
             ref={tooltipRef}
-            className="fixed z-50 px-3 py-2 text-sm text-gray-700 dark:text-gray-200 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-600 rounded-lg shadow-lg max-w-xs sm:max-w-sm animate-in fade-in-0 zoom-in-95 duration-200"
+            className="fixed z-50 px-3 py-2 text-sm text-gray-700 dark:text-gray-200 bg-[#F0EBE3] dark:bg-gray-800 border border-gray-200 dark:border-gray-600 rounded-lg shadow-lg max-w-xs sm:max-w-sm animate-in fade-in-0 zoom-in-95 duration-200"
             style={{
               top: `${position.top}px`,
               left: `${position.left}px`,

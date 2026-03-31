@@ -104,7 +104,7 @@ export default function NewsletterAdminPage() {
 
   if (loading) {
     return (
-      <main className="pt-16 sm:pt-20 bg-white dark:bg-gray-900">
+      <main className="pt-16 sm:pt-20 bg-[#F0EBE3] dark:bg-gray-900">
         <div className="py-20 px-4 sm:px-6 lg:px-8 min-h-screen">
           <div className="max-w-6xl mx-auto">
             <div className="text-center">
@@ -119,7 +119,7 @@ export default function NewsletterAdminPage() {
 
   if (error) {
     return (
-      <main className="pt-16 sm:pt-20 bg-white dark:bg-gray-900">
+      <main className="pt-16 sm:pt-20 bg-[#F0EBE3] dark:bg-gray-900">
         <div className="py-20 px-4 sm:px-6 lg:px-8 min-h-screen">
           <div className="max-w-6xl mx-auto">
             <div className="text-center">
@@ -144,7 +144,7 @@ export default function NewsletterAdminPage() {
   }
 
   return (
-    <main className="pt-16 sm:pt-20 bg-white dark:bg-gray-900">
+    <main className="pt-16 sm:pt-20 bg-[#F0EBE3] dark:bg-gray-900">
       <div className="py-20 px-4 sm:px-6 lg:px-8 min-h-screen">
         <div className="max-w-6xl mx-auto">
           {/* Header */}
@@ -194,7 +194,7 @@ export default function NewsletterAdminPage() {
 
           {/* Stats */}
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 mb-8">
-            <div className="bg-gray-50 dark:bg-gray-800 p-6 rounded-lg border border-gray-200 dark:border-gray-700">
+            <div className="bg-[#E8E3DA] dark:bg-gray-800 p-6 rounded-lg border border-gray-200 dark:border-gray-700">
               <div className="flex items-center">
                 <div className="flex-shrink-0">
                   <svg className="w-8 h-8 text-blue-600 dark:text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -212,7 +212,7 @@ export default function NewsletterAdminPage() {
               </div>
             </div>
 
-            <div className="bg-gray-50 dark:bg-gray-800 p-6 rounded-lg border border-gray-200 dark:border-gray-700">
+            <div className="bg-[#E8E3DA] dark:bg-gray-800 p-6 rounded-lg border border-gray-200 dark:border-gray-700">
               <div className="flex items-center">
                 <div className="flex-shrink-0">
                   <svg className="w-8 h-8 text-green-600 dark:text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -235,7 +235,7 @@ export default function NewsletterAdminPage() {
               </div>
             </div>
 
-            <div className="bg-gray-50 dark:bg-gray-800 p-6 rounded-lg border border-gray-200 dark:border-gray-700">
+            <div className="bg-[#E8E3DA] dark:bg-gray-800 p-6 rounded-lg border border-gray-200 dark:border-gray-700">
               <div className="flex items-center">
                 <div className="flex-shrink-0">
                   <svg className="w-8 h-8 text-purple-600 dark:text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -264,7 +264,7 @@ export default function NewsletterAdminPage() {
               </div>
               <div className="overflow-x-auto">
                 <table className="min-w-full divide-y divide-gray-200 dark:divide-gray-700">
-                  <thead className="bg-gray-50 dark:bg-gray-900">
+                  <thead className="bg-[#E8E3DA] dark:bg-gray-900">
                     <tr>
                       <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 dark:text-gray-400 uppercase tracking-wider">
                         Email
@@ -282,7 +282,7 @@ export default function NewsletterAdminPage() {
                   </thead>
                   <tbody className="bg-white dark:bg-gray-800 divide-y divide-gray-200 dark:divide-gray-700">
                     {data.subscribers.map((subscriber, index) => (
-                      <tr key={index} className="hover:bg-gray-50 dark:hover:bg-gray-700">
+                      <tr key={index} className="hover:bg-[#E8E3DA] dark:hover:bg-gray-700">
                         <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-900 dark:text-gray-100">
                           {subscriber.email}
                         </td>

@@ -4,7 +4,7 @@
 @custom-variant dark (&:where(.dark, .dark *));
 
 :root {
-  --background: #FAF8F5;
+  --background: #F0EBE3;
   --foreground: #2D2D2D;
 }
 
@@ -13,13 +13,6 @@
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
 }
 
 .dark {
@@ -48,16 +41,16 @@ body {
 }
 
 ::-webkit-scrollbar-track {
-  background: #F2EDE8;
+  background: #E8E3DB;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #D4CFC9;
+  background: #CEC8BF;
   border-radius: 3px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #C9C4BC;
+  background: #C2BCB3;
 }
 
 /* Dark mode scrollbar */
@@ -214,7 +207,7 @@ body {
 }
 
 .loading-shimmer {
-  background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+  background: linear-gradient(90deg, #EBE6DE 25%, #DDD8CF 50%, #EBE6DE 75%);
   background-size: 200px 100%;
   animation: shimmer 1.5s infinite;
 }
@@ -227,7 +220,7 @@ body {
 /* Form placeholder styling */
 input::placeholder,
 textarea::placeholder {
-  color: #6B6B6B; /* warm gray-500 */
+  color: #696560; /* warm gray-500 */
 }
 
 /* Dark mode placeholder styling */
