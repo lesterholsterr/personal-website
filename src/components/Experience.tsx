@@ -30,10 +30,10 @@ const experiences: ExperienceItem[] = [
     company: "Augment",
     role: "Software Engineering Intern",
     location: "San Francisco, USA",
-    duration: "Jan 2026 - Apr 2026 (Expected)",
+    duration: "Jan 2026 - Apr 2026",
     logo: "/augment-logo.jpeg",
     description: [
-      "Building a self-serve brokerage onboarding platform, enabling new customers to configure AI agent tools by authoring custom code that is safely executed in sandboxed JS runtimes",
+      "Building a self-serve brokerage onboarding platform, enabling new customers to customize AI agent tools by authoring custom code that can be safely executed in sandboxed JS runtimes",
     ],
   },
   {

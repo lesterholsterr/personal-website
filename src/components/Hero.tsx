@@ -2,11 +2,92 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
+import Image from "next/image";
+
+const PHOTOS = [
+  "/me/2022.png",
+  "/me/2023.jpg",
+  "/me/2024.jpg",
+  "/me/2025.jpg",
+  "/me/2026.jpg",
+];
+
+type Corner = "tl" | "tr" | "bl" | "br";
+
+const CORNERS: Corner[] = ["tl", "tr", "bl", "br"];
+
+const CORNER_CLASSES: Record<Corner, string> = {
+  tl: "top-10 left-4 xl:left-10 2xl:left-16",
+  tr: "top-10 right-4 xl:right-10 2xl:right-16",
+  bl: "bottom-10 left-4 xl:left-10 2xl:left-16",
+  br: "bottom-10 right-4 xl:right-10 2xl:right-16",
+};
+
+function ArrowButton({
+  direction,
+  onClick,
+}: {
+  direction: "prev" | "next";
+  onClick: () => void;
+}) {
+  const side = direction === "prev" ? "left-2" : "right-2";
+  const points =
+    direction === "prev" ? "15 18 9 12 15 6" : "9 18 15 12 9 6";
+  return (
+    <button
+      type="button"
+      onClick={onClick}
+      aria-label={direction === "prev" ? "Previous photo" : "Next photo"}
+      className={`absolute top-1/2 -translate-y-1/2 ${side} w-7 h-7 flex items-center justify-center rounded-full bg-black/40 hover:bg-black/70 text-white transition-colors z-10`}
+    >
+      <svg
+        width="14"
+        height="14"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        strokeWidth="2.5"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      >
+        <polyline points={points} />
+      </svg>
+    </button>
+  );
+}
+
+const STAIN_BACKGROUNDS: React.CSSProperties[] = [
+  { backgroundColor: "#ffffff" },
+  { backgroundColor: "#f2e8d5" },
+  {
+    backgroundColor: "#fbf6ed",
+    backgroundImage:
+      "linear-gradient(135deg, transparent 40%, #c9a77a 120%)",
+  },
+  {
+    backgroundColor: "#ece0c7",
+    backgroundImage:
+      "radial-gradient(ellipse at 85% 18%, #8b5a2b55 0%, transparent 22%), radial-gradient(circle at 18% 82%, #6b3e1a44 0%, transparent 18%)",
+  },
+];
 
 export default function Hero() {
   const [displayedText, setDisplayedText] = useState("");
   const [isTypingComplete, setIsTypingComplete] = useState(false);
+  const [photoIndex, setPhotoIndex] = useState(0);
+  const [rotation, setRotation] = useState(-4);
+  const [stainIndex, setStainIndex] = useState(0);
+  const [corner, setCorner] = useState<Corner>("tr");
+  const [ready, setReady] = useState(false);
   const fullText = "Hi, I'm Matthew!";
+
+  useEffect(() => {
+    setPhotoIndex(Math.floor(Math.random() * PHOTOS.length));
+    setRotation(Math.random() * 16 - 8);
+    setStainIndex(Math.floor(Math.random() * STAIN_BACKGROUNDS.length));
+    setCorner(CORNERS[Math.floor(Math.random() * CORNERS.length)]);
+    setReady(true);
+  }, []);
 
   useEffect(() => {
     let index = 0;
@@ -23,10 +104,48 @@ export default function Hero() {
     return () => clearInterval(timer);
   }, []);
 
+  const year = PHOTOS[photoIndex].match(/(\d{4})/)?.[1] ?? "";
+
+  const prevPhoto = () =>
+    setPhotoIndex((i) => (i - 1 + PHOTOS.length) % PHOTOS.length);
+  const nextPhoto = () => setPhotoIndex((i) => (i + 1) % PHOTOS.length);
+
   return (
-    <section className="py-20 lg:py-32 px-4 sm:px-6 lg:px-8 bg-[#F2EDE5] dark:bg-gray-900">
+    <section className="relative py-20 lg:pt-32 lg:pb-64 px-4 sm:px-6 lg:px-8 bg-[#F2EDE5] dark:bg-gray-900">
+      {/* Polaroid — desktop: absolute to section, randomized corner/rotation/stain */}
+      <div
+        className={`${ready ? "polaroid" : "opacity-0"} hidden lg:block absolute ${CORNER_CLASSES[corner]} w-[180px] xl:w-[230px] 2xl:w-[260px] z-10`}
+        style={{ ["--polaroid-rotate" as string]: `${rotation}deg` }}
+      >
+        <div
+          className="p-3 pb-8 shadow-xl dark:shadow-black/50"
+          style={STAIN_BACKGROUNDS[stainIndex]}
+        >
+          <div className="relative aspect-[4/5] bg-[#F2EDE5] overflow-hidden">
+            <Image
+              key={photoIndex}
+              src={PHOTOS[photoIndex]}
+              alt="Matthew"
+              fill
+              sizes="(min-width: 1536px) 520px, (min-width: 1280px) 460px, 360px"
+              quality={95}
+              className="object-cover"
+              priority
+            />
+            <ArrowButton direction="prev" onClick={prevPhoto} />
+            <ArrowButton direction="next" onClick={nextPhoto} />
+          </div>
+          <p
+            className="text-center text-xl text-gray-700 mt-2"
+            style={{ fontFamily: "var(--font-caveat), 'Segoe Script', cursive" }}
+          >
+            {year}
+          </p>
+        </div>
+      </div>
+
       <div className="max-w-4xl mx-auto">
-        <div className="text-center mb-16">
+        <div className="mb-8 sm:mb-16 text-center">
           <h1 className="text-5xl sm:text-6xl lg:text-7xl font-light tracking-tight text-gray-900 dark:text-gray-100 mb-8">
             {displayedText}
             <span
@@ -120,6 +239,36 @@ export default function Hero() {
                 I like to meet people!
               </p>
             </a>
+          </div>
+        </div>
+
+        {/* Polaroid — mobile/tablet: inline centered after buttons, unchanged */}
+        <div className="lg:hidden flex justify-center mt-16">
+          <div className="polaroid-mobile w-[200px] sm:w-[230px] md:w-[260px]">
+            <div className="bg-white p-3 pb-8 shadow-xl dark:shadow-black/50">
+              <div className="relative aspect-[4/5] bg-[#F2EDE5] overflow-hidden">
+                <Image
+                  key={photoIndex}
+                  src={PHOTOS[photoIndex]}
+                  alt="Matthew"
+                  fill
+                  sizes="(min-width: 768px) 520px, (min-width: 640px) 460px, 400px"
+                  quality={95}
+                  className="object-cover"
+                  priority
+                />
+                <ArrowButton direction="prev" onClick={prevPhoto} />
+                <ArrowButton direction="next" onClick={nextPhoto} />
+              </div>
+              <p
+                className="text-center text-xl text-gray-700 mt-2"
+                style={{
+                  fontFamily: "var(--font-caveat), 'Segoe Script', cursive",
+                }}
+              >
+                {year}
+              </p>
+            </div>
           </div>
         </div>
       </div>

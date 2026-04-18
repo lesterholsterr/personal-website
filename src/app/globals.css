@@ -154,6 +154,50 @@ body {
   animation: pulse 0.6s ease-in-out infinite;
 }
 
+@keyframes polaroidDrop {
+  from {
+    opacity: 0;
+    transform: scale(0.85) rotate(0deg);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1) rotate(var(--polaroid-rotate, -4deg));
+  }
+}
+
+@keyframes polaroidDropMobile {
+  from {
+    opacity: 0;
+    transform: scale(0.85) rotate(0deg);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1) rotate(-3deg);
+  }
+}
+
+.polaroid {
+  animation: polaroidDrop 0.7s ease-out 0.8s forwards;
+  opacity: 0;
+  transform-origin: center;
+  transition: transform 0.35s ease-out;
+}
+
+.polaroid:hover {
+  transform: scale(1.03) rotate(0deg);
+}
+
+.polaroid-mobile {
+  animation: polaroidDropMobile 0.7s ease-out 0.8s forwards;
+  opacity: 0;
+  transform-origin: center;
+  transition: transform 0.35s ease-out;
+}
+
+.polaroid-mobile:hover {
+  transform: scale(1.03) rotate(0deg);
+}
+
 /* View transition effects */
 .view-enter {
   opacity: 0;

@@ -48,8 +48,7 @@ const sideQuests: SideQuest[] = [
       {
         title: "This Website",
         duration: "Aug 2022 - Present",
-        description:
-          "Check out my blog :)",
+        description: "Check out my blog :)",
       },
     ],
   },
@@ -72,7 +71,7 @@ const sideQuests: SideQuest[] = [
           },
           {
             description:
-              "Probably the coolest solo piece I've arranged and performed, also from 2022. Yeah I used to play alto sax too 😎.",
+              "Probably the coolest solo piece I've arranged and performed back in high school music class. Yeah I used to play alto sax too 😎",
             youtubeId: "jEzC0_gdEEs",
           },
         ],
@@ -81,8 +80,14 @@ const sideQuests: SideQuest[] = [
         title: "Guitar",
         duration: "Jan 2026 - Present",
         description:
-          "Bought a Fender Dreadnought Acoustic my second day in SF. It's so addicting! (Video coming soon)",
-        videos: [],
+          "Bought a Fender Dreadnought Acoustic my second day in SF. It's so addicting!",
+        videos: [
+          {
+            youtubeId: "aYlzWi1EQJI",
+            description:
+              "3.5 months in. Fairly easy guitar song but tough vocals for me!",
+          },
+        ],
       },
       // {
       //   title: "Vocals",
@@ -101,16 +106,19 @@ const sideQuests: SideQuest[] = [
       {
         title: "Boxing",
         duration: "Jun 2025 - Aug 2025",
-        description:
-          "Amazing people, challenging workouts, and lots of fun!",
+        description: "Amazing people, challenging workouts, and lots of fun!",
         links: [{ label: "Gotham Gym", url: "https://www.gothamgymnyc.com/" }],
       },
       {
         title: "Muay Thai",
         duration: "Jan 2026 - Present",
-        description:
-          "Trying to learn the art of eight limbs.",
-        links: [{ label: "California Martial Athletics", url: "https://www.cmasf.com/" }],
+        description: "Trying to learn the art of eight limbs.",
+        links: [
+          {
+            label: "California Martial Athletics",
+            url: "https://www.cmasf.com/",
+          },
+        ],
       },
     ],
   },
