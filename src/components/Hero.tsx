@@ -74,7 +74,7 @@ const STAIN_BACKGROUNDS: React.CSSProperties[] = [
 export default function Hero() {
   const [displayedText, setDisplayedText] = useState("");
   const [isTypingComplete, setIsTypingComplete] = useState(false);
-  const [photoIndex, setPhotoIndex] = useState(0);
+  const [photoIndex, setPhotoIndex] = useState(PHOTOS.length - 1);
   const [rotation, setRotation] = useState(-4);
   const [stainIndex, setStainIndex] = useState(0);
   const [corner, setCorner] = useState<Corner>("tr");
@@ -82,7 +82,6 @@ export default function Hero() {
   const fullText = "Hi, I'm Matthew!";
 
   useEffect(() => {
-    setPhotoIndex(Math.floor(Math.random() * PHOTOS.length));
     setRotation(Math.random() * 16 - 8);
     setStainIndex(Math.floor(Math.random() * STAIN_BACKGROUNDS.length));
     setCorner(CORNERS[Math.floor(Math.random() * CORNERS.length)]);
@@ -106,9 +105,11 @@ export default function Hero() {
 
   const year = PHOTOS[photoIndex].match(/(\d{4})/)?.[1] ?? "";
 
-  const prevPhoto = () =>
-    setPhotoIndex((i) => (i - 1 + PHOTOS.length) % PHOTOS.length);
-  const nextPhoto = () => setPhotoIndex((i) => (i + 1) % PHOTOS.length);
+  const prevPhoto = () => setPhotoIndex((i) => Math.max(0, i - 1));
+  const nextPhoto = () =>
+    setPhotoIndex((i) => Math.min(PHOTOS.length - 1, i + 1));
+  const canPrev = photoIndex > 0;
+  const canNext = photoIndex < PHOTOS.length - 1;
 
   return (
     <section className="relative py-20 lg:pt-32 lg:pb-64 px-4 sm:px-6 lg:px-8 bg-[#F2EDE5] dark:bg-gray-900">
@@ -132,8 +133,8 @@ export default function Hero() {
               className="object-cover"
               priority
             />
-            <ArrowButton direction="prev" onClick={prevPhoto} />
-            <ArrowButton direction="next" onClick={nextPhoto} />
+            {canPrev && <ArrowButton direction="prev" onClick={prevPhoto} />}
+            {canNext && <ArrowButton direction="next" onClick={nextPhoto} />}
           </div>
           <p
             className="text-center text-xl text-gray-700 mt-2"

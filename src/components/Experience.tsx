@@ -33,7 +33,7 @@ const experiences: ExperienceItem[] = [
     duration: "Jan 2026 - Apr 2026",
     logo: "/augment-logo.jpeg",
     description: [
-      "Building a self-serve brokerage onboarding platform, enabling new customers to customize AI agent tools by authoring custom code that can be safely executed in sandboxed JS runtimes",
+      "Built a self-serve brokerage onboarding platform, enabling new customers to customize AI agent tools by authoring custom code that can be safely executed in sandboxed JS runtimes",
     ],
   },
   {

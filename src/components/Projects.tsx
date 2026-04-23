@@ -62,18 +62,22 @@ const sideQuests: SideQuest[] = [
         title: "Piano",
         duration: "2011 - Present",
         description:
-          "Classically trained from 2011 - 2016 (Asian canon event). Took a break, then picked up jazz piano in high school (2018 - 2022). Spent my first co-op's first paycheck on a Yamaha P125. Brought it to school with me and started playing + singing songs I liked!",
+          "Classically trained from 2011 - 2016 (Asian canon event). Took a break, then picked up jazz piano in high school (2018 - 2022). Spent my first paycheck on a Yamaha P125. Brought it to Waterloo with me and started playing and singing songs I liked!",
         videos: [
           {
             description:
-              "Probably peaked in terms of technical ability in 2022 right before going to Waterloo",
+              "For some reason, I decided to start learning this piece 3 months before leaving for Waterloo. Pretty happy with the result even though it's very much unfinished.",
             youtubeId: "Cm0hJSponxc",
           },
           {
             description:
-              "Probably the coolest solo piece I've arranged and performed back in high school music class. Yeah I used to play alto sax too 😎",
+              "Cool solo piece I arranged and performed back in high school music class. Yeah I used to play alto sax too 😎",
             youtubeId: "jEzC0_gdEEs",
           },
+          // {
+          //   description: "Post-exam jam sesh. Still getting the hang of playing and singing!",
+          //   youtubeId: "4As4CLz3D2w",
+          // },
         ],
       },
       {
