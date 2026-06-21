@@ -31,8 +31,7 @@ function ArrowButton({
   onClick: () => void;
 }) {
   const side = direction === "prev" ? "left-2" : "right-2";
-  const points =
-    direction === "prev" ? "15 18 9 12 15 6" : "9 18 15 12 9 6";
+  const points = direction === "prev" ? "15 18 9 12 15 6" : "9 18 15 12 9 6";
   return (
     <button
       type="button"
@@ -61,8 +60,7 @@ const STAIN_BACKGROUNDS: React.CSSProperties[] = [
   { backgroundColor: "#f2e8d5" },
   {
     backgroundColor: "#fbf6ed",
-    backgroundImage:
-      "linear-gradient(135deg, transparent 40%, #c9a77a 120%)",
+    backgroundImage: "linear-gradient(135deg, transparent 40%, #c9a77a 120%)",
   },
   {
     backgroundColor: "#ece0c7",
@@ -138,7 +136,9 @@ export default function Hero() {
           </div>
           <p
             className="text-center text-xl text-gray-700 mt-2"
-            style={{ fontFamily: "var(--font-caveat), 'Segoe Script', cursive" }}
+            style={{
+              fontFamily: "var(--font-caveat), 'Segoe Script', cursive",
+            }}
           >
             {year}
           </p>
@@ -190,14 +190,14 @@ export default function Hero() {
               </div>
               <p className="text-sm text-gray-600 dark:text-gray-300">
                 <a
-                  href="https://www.youtube.com/watch?v=IPKAwJKGSDc"
+                  href="https://www.youtube.com/watch?v=iM4LzEcaTK0"
                   className="underline"
                 >
-                  Loving every minute cause you make me so alive!
+                  https://www.youtube.com/watch?v=iM4LzEcaTK0
                 </a>
               </p>
               <p className="text-xs text-gray-500 dark:text-gray-400 mt-2">
-                Last updated March 30, 2026
+                Last updated June 21, 2026
               </p>
             </div>
           </div>

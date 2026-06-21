@@ -23,7 +23,7 @@ const experiences: ExperienceItem[] = [
     location: "New York City, USA",
     duration: "May 2026 - Aug 2026 (Expected)",
     logo: "/cubist-logo.jpg",
-    description: ["Incoming, Central Research Technology team"],
+    description: ["Summer internship on Cubist Central Research Technology team"],
   },
   {
     id: "augment",

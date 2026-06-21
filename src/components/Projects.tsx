@@ -91,6 +91,11 @@ const sideQuests: SideQuest[] = [
             description:
               "3.5 months in. Fairly easy guitar song but tough vocals for me!",
           },
+          {
+            youtubeId: "h1FMeop3GO4",
+            description:
+              "Half a year in. Still getting the hang of changing to/from F barre chord. Hoping to learn more scales and eventually improvise on the guitar!",
+          },
         ],
       },
       // {
@@ -121,6 +126,10 @@ const sideQuests: SideQuest[] = [
           {
             label: "California Martial Athletics",
             url: "https://www.cmasf.com/",
+          },
+          {
+            label: "Hinds Combat Midtown West",
+            url: "https://hindscombatmidtownwest.com/",
           },
         ],
       },
