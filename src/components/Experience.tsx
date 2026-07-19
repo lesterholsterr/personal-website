@@ -21,9 +21,9 @@ const experiences: ExperienceItem[] = [
     company: "Cubist Systematic Strategies",
     role: "Quantitative Developer Intern",
     location: "New York City, USA",
-    duration: "May 2026 - Aug 2026 (Expected)",
+    duration: "May 2026 - Aug 2026",
     logo: "/cubist-logo.jpg",
-    description: ["Summer internship on Cubist Central Research Technology team"],
+    description: ["Developing distributed systems in Ray to compute asset and factor returns for backtesting and real-time analysis"],
   },
   {
     id: "augment",

@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import Link from "next/link";
 import { compileMDX } from "next-mdx-remote/rsc";
@@ -8,6 +9,19 @@ import {
   formatDate,
   type BlogPostMeta,
 } from "@/lib/blog";
+
+// Build a plain-text excerpt from MDX content for meta descriptions.
+function excerpt(content: string, maxLength = 155): string {
+  const text = content
+    .replace(/```[\s\S]*?```/g, " ") // code blocks
+    .replace(/!\[[^\]]*\]\([^)]*\)/g, " ") // images
+    .replace(/\[([^\]]*)\]\([^)]*\)/g, "$1") // links -> text
+    .replace(/[#>*_`~-]/g, " ") // markdown symbols
+    .replace(/\s+/g, " ")
+    .trim();
+  if (text.length <= maxLength) return text;
+  return text.slice(0, maxLength).replace(/\s+\S*$/, "") + "…";
+}
 import { mdxComponents } from "@/mdx-components";
 import Comments from "@/components/Comments";
 import NewsletterSignup from "@/components/NewsletterSignup";
@@ -106,6 +120,39 @@ function PostNavigation({
       </div>
     </nav>
   );
+}
+
+export async function generateMetadata({
+  params,
+}: BlogPostPageProps): Promise<Metadata> {
+  try {
+    const { slug } = await params;
+    const post = getPostBySlug(slug);
+    const description =
+      excerpt(post.content) || `${post.title} — a blog post by Matthew Yang.`;
+    const url = `/blog/${slug}`;
+    return {
+      title: post.title,
+      description,
+      alternates: { canonical: url },
+      openGraph: {
+        type: "article",
+        url,
+        title: post.title,
+        description,
+        publishedTime: post.date,
+        authors: ["Matthew Yang"],
+        tags: post.tags,
+      },
+      twitter: {
+        card: "summary_large_image",
+        title: post.title,
+        description,
+      },
+    };
+  } catch {
+    return {};
+  }
 }
 
 export default async function BlogPostPage({ params }: BlogPostPageProps) {

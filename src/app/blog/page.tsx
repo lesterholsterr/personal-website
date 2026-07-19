@@ -1,6 +1,21 @@
+import type { Metadata } from "next";
 import { getAllPosts, getAllTags } from "@/lib/blog";
 import BlogFilters from "./BlogFilters";
 import NewsletterSignup from "@/components/NewsletterSignup";
+
+export const metadata: Metadata = {
+  title: "Blog",
+  description:
+    "Writings and essays by Matthew Yang, mostly about philosophy.",
+  alternates: { canonical: "/blog" },
+  openGraph: {
+    type: "website",
+    url: "/blog",
+    title: "Blog · Matthew Yang",
+    description:
+      "Writings and essays by Matthew Yang, mostly about philosophy.",
+  },
+};
 
 export default function BlogPage() {
   // Get actual posts and tags

@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import Link from "next/link";
 import Image from "next/image";
@@ -15,6 +16,32 @@ interface BookPageProps {
   params: Promise<{
     slug: string;
   }>;
+}
+
+export async function generateMetadata({
+  params,
+}: BookPageProps): Promise<Metadata> {
+  try {
+    const { slug } = await params;
+    const book = getBookBySlug(slug);
+    const ratingText = book.rating > 0 ? ` Rated ${book.rating}/10.` : "";
+    const description = `Matthew Yang's review of "${book.title}" by ${book.author}.${ratingText}`;
+    const url = `/bookshelf/${slug}`;
+    return {
+      title: `${book.title} by ${book.author}`,
+      description,
+      alternates: { canonical: url },
+      openGraph: {
+        type: "article",
+        url,
+        title: `${book.title} by ${book.author}`,
+        description,
+        images: book.coverImage ? [book.coverImage] : undefined,
+      },
+    };
+  } catch {
+    return {};
+  }
 }
 
 function BookNavigation({

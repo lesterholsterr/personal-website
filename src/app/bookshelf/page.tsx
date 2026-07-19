@@ -1,6 +1,21 @@
+import type { Metadata } from "next";
 import { Book } from "@/lib/bookshelf";
 import { getAllBooks } from "@/lib/books";
 import BookshelfClient from "@/components/BookshelfClient";
+
+export const metadata: Metadata = {
+  title: "Bookshelf",
+  description:
+    "Books Matthew Yang has read, with ratings and reviews across fiction, philosophy, finance, and more.",
+  alternates: { canonical: "/bookshelf" },
+  openGraph: {
+    type: "website",
+    url: "/bookshelf",
+    title: "Bookshelf · Matthew Yang",
+    description:
+      "Books Matthew Yang has read, with ratings and reviews across fiction, philosophy, finance, and more.",
+  },
+};
 
 // Convert BookMeta from new system to Book for existing components
 function convertBookMetaToBook(

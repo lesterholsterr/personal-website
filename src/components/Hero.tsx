@@ -148,8 +148,12 @@ export default function Hero() {
       <div className="max-w-4xl mx-auto">
         <div className="mb-8 sm:mb-16 text-center">
           <h1 className="text-5xl sm:text-6xl lg:text-7xl font-light tracking-tight text-gray-900 dark:text-gray-100 mb-8">
-            {displayedText}
+            {/* Server-rendered, real heading for crawlers and screen readers */}
+            <span className="sr-only">Hi, I&apos;m Matthew Yang</span>
+            {/* Visual typewriter animation (hidden from assistive tech / crawlers) */}
+            <span aria-hidden="true">{displayedText}</span>
             <span
+              aria-hidden="true"
               className={`inline-block w-1 h-16 bg-gray-900 dark:bg-gray-100 ml-1 transition-opacity duration-500 ${
                 isTypingComplete ? "opacity-0" : "animate-pulse"
               }`}

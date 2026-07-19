@@ -62,16 +62,16 @@ const sideQuests: SideQuest[] = [
         title: "Piano",
         duration: "2011 - Present",
         description:
-          "Classically trained from 2011 - 2016 (Asian canon event). Took a break, then picked up jazz piano in high school (2018 - 2022). Spent my first paycheck on a Yamaha P125. Brought it to Waterloo with me and started playing and singing songs I liked!",
+          "Classically trained from 2011 - 2016 (Asian canon event). Took a break, then picked up jazz piano in high school (2018 - 2022). Spent my first paycheck on a Yamaha P125 keyboard. Brought it to Waterloo with me and started playing and singing songs I liked!",
         videos: [
           {
             description:
-              "For some reason, I decided to start learning this piece 3 months before leaving for Waterloo. Pretty happy with the result even though it's very much unfinished.",
+              "For some reason, I decided to start learning this piece 3 months before moving out for college. Pretty happy with the result even though it's very much unfinished.",
             youtubeId: "Cm0hJSponxc",
           },
           {
             description:
-              "Cool solo piece I arranged and performed back in high school music class. Yeah I used to play alto sax too 😎",
+              "Cool solo piece I arranged and performed back in high school music class. Yeah I used to play the saxophone too 😎",
             youtubeId: "jEzC0_gdEEs",
           },
           // {
@@ -84,7 +84,7 @@ const sideQuests: SideQuest[] = [
         title: "Guitar",
         duration: "Jan 2026 - Present",
         description:
-          "Bought a Fender Dreadnought Acoustic my second day in SF. It's so addicting!",
+          "Bought a Fender Dreadnought Acoustic my second day in SF. Sold it before leaving, and am now rocking a Yamaha FS800 in NYC. Hope to get an electric guitar next!",
         videos: [
           {
             youtubeId: "aYlzWi1EQJI",
