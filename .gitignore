@@ -2,6 +2,9 @@
 
 old_website/
 
+# local-only notes (not for git)
+/_local/
+
 # dependencies
 /node_modules
 /.pnp
