@@ -23,7 +23,9 @@ const experiences: ExperienceItem[] = [
     location: "New York City, USA",
     duration: "May 2026 - Aug 2026",
     logo: "/cubist-logo.jpg",
-    description: ["Developing distributed systems in Ray to compute asset and factor returns for backtesting and real-time analysis"],
+    description: [
+      "Applied stream-based backtesting to verify the correctness of in-house intraday factor return calculations against 14 MSCI Barra models, driving firm-wide upstream data quality fixes",
+    ],
   },
   {
     id: "augment",
@@ -33,7 +35,7 @@ const experiences: ExperienceItem[] = [
     duration: "Jan 2026 - Apr 2026",
     logo: "/augment-logo.jpeg",
     description: [
-      "Built a self-serve brokerage onboarding platform, enabling new customers to customize AI agent tools by authoring custom code that can be safely executed in sandboxed JS runtimes",
+      "Built a self-serve brokerage onboarding platform, enabling new customers to customize AI agent tools by authoring custom code that can be safely executed by our agents in sandboxed JS runtimes",
     ],
   },
   {
@@ -55,8 +57,7 @@ const experiences: ExperienceItem[] = [
     duration: "Jan 2024 - Apr 2024 and Sep 2024 - Dec 2024",
     logo: "/onex-logo.jpeg",
     description: [
-      "Developed an in-house risk management system, saving $300,000 annually by replacing a third-party service",
-      "Built quantitative analysis tools in Python and presented timing and bias insights from factor models to portfolio managers",
+      "Built quantitative analysis tools with Bloomberg factor models and Python, presenting risk management insights to portfolio managers",
     ],
   },
   {
@@ -88,7 +89,7 @@ const experiences: ExperienceItem[] = [
     duration: "May 2023 - Aug 2023",
     logo: "/bofa-logo.jpeg",
     description: [
-      "Developed middleware API service in Scala to stream real-time payout calculations to a positions dashboard for eSWAP, an equity swaps trading platform processing over $40 billion in transactions annually",
+      "Developed middleware API service in Scala to stream real-time payout calculations to a positions dashboard for an equity swaps trading platform processing over $40 billion in transactions annually",
     ],
   },
   {

@@ -48,7 +48,7 @@ const sideQuests: SideQuest[] = [
       {
         title: "This Website",
         duration: "Aug 2022 - Present",
-        description: "Check out my blog :)",
+        description: "I try to write good blog posts!",
       },
     ],
   },
@@ -74,17 +74,18 @@ const sideQuests: SideQuest[] = [
               "Cool solo piece I arranged and performed back in high school music class. Yeah I used to play the saxophone too 😎",
             youtubeId: "jEzC0_gdEEs",
           },
-          // {
-          //   description: "Post-exam jam sesh. Still getting the hang of playing and singing!",
-          //   youtubeId: "4As4CLz3D2w",
-          // },
+          {
+            description:
+              "Post-exam jam sesh. Still getting the hang of playing and singing!",
+            youtubeId: "4As4CLz3D2w",
+          },
         ],
       },
       {
         title: "Guitar",
         duration: "Jan 2026 - Present",
         description:
-          "Bought a Fender Dreadnought Acoustic my second day in SF. Sold it before leaving, and am now rocking a Yamaha FS800 in NYC. Hope to get an electric guitar next!",
+          "Jan-Apr 2026: Bought a cheap acoustic guitar for a co-op term in San Francisco. Learned some open and barre chords, sang some pop songs.\n\nMay-Aug 2026: Bought another cheap acoustic for a co-op term in New York. Learning progress starting to slow down.\n\nSep 2026-Present: Trying to get on a more rigorous learning plan to improve faster. Also bought an electric (used Squier Standard Stratocaster)!",
         videos: [
           {
             youtubeId: "aYlzWi1EQJI",
@@ -98,19 +99,13 @@ const sideQuests: SideQuest[] = [
           },
         ],
       },
-      // {
-      //   title: "Vocals",
-      //   duration: "",
-      //   description: "",
-      //   comingSoon: true,
-      // },
     ],
   },
   {
     id: "combat-sports",
     title: "Combat Sports",
     duration: "Jun 2025 - Present",
-    description: "Goal: Attend a fighting competition before graduation.",
+    description: "Goal: Catharsismaxxing, Improve physical and mental health",
     subSections: [
       {
         title: "Boxing",
@@ -201,7 +196,7 @@ export default function Projects() {
                   {quest.duration}
                 </p>
 
-                <p className="text-gray-600 dark:text-gray-300 leading-relaxed text-base sm:text-lg group-hover:text-gray-700 dark:group-hover:text-gray-200 transition-colors duration-300">
+                <p className="whitespace-pre-line text-gray-600 dark:text-gray-300 leading-relaxed text-base sm:text-lg group-hover:text-gray-700 dark:group-hover:text-gray-200 transition-colors duration-300">
                   {quest.description}
                 </p>
 
@@ -275,7 +270,7 @@ export default function Projects() {
 
                           {isExpanded && (
                             <div className="pb-4 pt-2 px-2">
-                              <p className="text-gray-600 dark:text-gray-300 leading-relaxed">
+                              <p className="whitespace-pre-line text-gray-600 dark:text-gray-300 leading-relaxed">
                                 {sub.description}
                               </p>
 

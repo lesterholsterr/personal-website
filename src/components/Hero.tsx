@@ -110,7 +110,7 @@ export default function Hero() {
   const canNext = photoIndex < PHOTOS.length - 1;
 
   return (
-    <section className="relative py-20 lg:pt-32 lg:pb-64 px-4 sm:px-6 lg:px-8 bg-[#F2EDE5] dark:bg-gray-900">
+    <section className="relative py-20 lg:pt-32 lg:pb-20 px-4 sm:px-6 lg:px-8 bg-[#F2EDE5] dark:bg-gray-900">
       {/* Polaroid — desktop: absolute to section, randomized corner/rotation/stain */}
       <div
         className={`${ready ? "polaroid" : "opacity-0"} hidden lg:block absolute ${CORNER_CLASSES[corner]} w-[180px] xl:w-[230px] 2xl:w-[260px] z-10`}
@@ -162,30 +162,30 @@ export default function Hero() {
         </div>
 
         <div
-          className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start opacity-0 animate-fadeInUp"
+          className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-stretch opacity-0 animate-fadeInUp"
           style={{
             animation: "fadeInUp 0.8s ease-out forwards",
             animationDelay: "0.5s",
           }}
         >
           {/* About Content */}
-          <div>
+          <div className="flex flex-col h-full">
             <h2 className="text-2xl sm:text-3xl font-light text-gray-900 dark:text-gray-100 mb-6">
               About Me
             </h2>
 
             <div className="space-y-4 text-lg leading-relaxed text-gray-600 dark:text-gray-300 mb-6">
+              <p>Thanks for visiting my slice of the internet!</p>
               <p>
-                Hi there, thanks for visiting! I am a student at the University
-                of Waterloo pursuing a double major in Computer Science and
-                Finance. I enjoy learning new things because it is my strong
-                belief that the only reason you may find something uninteresting
-                is that you haven&apos;t learned enough of it yet.
+                I study CS and Finance at the University of Waterloo and will
+                (hopefully) graduate in April. These days, I&apos;m learning guitar,
+                Muay Thai, and spending time with friends before corporate life
+                starts.
               </p>
             </div>
 
             {/* Status Box */}
-            <div className="p-4 bg-[#F2EDE5] dark:bg-gray-800 rounded-lg border border-[#D5CFC4] dark:border-gray-700 h-[120px] flex flex-col justify-center">
+            <div className="mt-auto p-4 bg-[#F2EDE5] dark:bg-gray-800 rounded-lg border border-[#D5CFC4] dark:border-gray-700 h-[120px] flex flex-col justify-center">
               <div className="flex items-center gap-2 mb-2">
                 <div className="w-2 h-2 bg-green-500 rounded-full"></div>
                 <span className="text-sm font-medium text-gray-700 dark:text-gray-300">
@@ -193,22 +193,23 @@ export default function Hero() {
                 </span>
               </div>
               <p className="text-sm text-gray-600 dark:text-gray-300">
+                ⏳🫠 <br></br>
                 <a
-                  href="https://www.youtube.com/watch?v=iM4LzEcaTK0"
+                  href="https://www.youtube.com/watch?v=T648JT7Eaus"
                   className="underline"
                 >
-                  https://www.youtube.com/watch?v=iM4LzEcaTK0
+                  https://www.youtube.com/watch?v=T648JT7Eaus
                 </a>
               </p>
               <p className="text-xs text-gray-500 dark:text-gray-400 mt-2">
-                Last updated June 21, 2026
+                Last updated September 20, 2026
               </p>
             </div>
           </div>
 
           {/* Navigation Cards */}
-          <div>
-            <div className="space-y-4 mb-6">
+          <div className="flex flex-col h-full">
+            <div className="space-y-4">
               <Link
                 href="/blog"
                 className="block p-6 border border-[#D5CFC4] dark:border-gray-700 rounded-lg hover:border-[#CBC5BA] dark:hover:border-gray-600 hover:shadow-sm transition-all duration-300 hover:translate-y-[-2px] group bg-[#F2EDE5] dark:bg-gray-800"
@@ -216,9 +217,7 @@ export default function Hero() {
                 <h3 className="text-xl font-medium text-gray-900 dark:text-gray-100 mb-2 group-hover:text-gray-600 dark:group-hover:text-gray-400 transition-colors duration-200">
                   Blog
                 </h3>
-                <p className="text-gray-600 dark:text-gray-300">
-                  I like to think and yap
-                </p>
+                <p className="text-gray-600 dark:text-gray-300">My thoughts</p>
               </Link>
 
               <Link
@@ -229,7 +228,7 @@ export default function Hero() {
                   Bookshelf
                 </h3>
                 <p className="text-gray-600 dark:text-gray-300">
-                  I like to read other people&apos;s yaps
+                  My thoughts on other people&apos;s thoughts
                 </p>
               </Link>
             </div>
@@ -237,7 +236,7 @@ export default function Hero() {
             {/* Get in touch box - same height as Status box */}
             <a
               href="#contact"
-              className="block p-6 bg-gray-700 dark:bg-gray-700 text-white rounded-lg hover:bg-gray-600 dark:hover:bg-gray-600 transition-all duration-300 hover:translate-y-[-2px] group h-[120px] flex flex-col justify-center"
+              className="mt-auto p-6 bg-gray-700 dark:bg-gray-700 text-white rounded-lg hover:bg-gray-600 dark:hover:bg-gray-600 transition-all duration-300 hover:translate-y-[-2px] group h-[120px] flex flex-col justify-center"
             >
               <h3 className="text-xl font-medium mb-2">Get in touch</h3>
               <p className="text-gray-300 dark:text-gray-400">

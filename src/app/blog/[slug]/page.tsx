@@ -24,7 +24,7 @@ function excerpt(content: string, maxLength = 155): string {
 }
 import { mdxComponents } from "@/mdx-components";
 import Comments from "@/components/Comments";
-import NewsletterSignup from "@/components/NewsletterSignup";
+// import NewsletterSignup from "@/components/NewsletterSignup";
 
 interface BlogPostPageProps {
   params: Promise<{
@@ -230,10 +230,11 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
               />
             )}
 
-            {/* Newsletter Signup */}
+            {/* Newsletter Signup - temporarily disabled
             <div className="mt-16">
               <NewsletterSignup />
             </div>
+            */}
 
             {/* Comments */}
             <Comments />

@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { getAllPosts, getAllTags } from "@/lib/blog";
 import BlogFilters from "./BlogFilters";
-import NewsletterSignup from "@/components/NewsletterSignup";
+// import NewsletterSignup from "@/components/NewsletterSignup";
 
 export const metadata: Metadata = {
   title: "Blog",
@@ -44,10 +44,11 @@ export default function BlogPage() {
           {/* Blog Content with Filtering */}
           <BlogFilters posts={allPosts} tags={allTags} />
 
-          {/* Newsletter Signup */}
+          {/* Newsletter Signup - temporarily disabled
           <div className="mt-20 mb-12 max-w-2xl mx-auto">
             <NewsletterSignup compact={true} />
           </div>
+          */}
 
           {/* Footer */}
           <div className="mt-12 pt-8 border-t border-gray-200 dark:border-gray-700 text-center">
