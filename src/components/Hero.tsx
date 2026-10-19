@@ -178,9 +178,9 @@ export default function Hero() {
               <p>Thanks for visiting my slice of the internet!</p>
               <p>
                 I study CS and Finance at the University of Waterloo and will
-                (hopefully) graduate in April. These days, I&apos;m learning guitar,
-                Muay Thai, and spending time with friends before corporate life
-                starts.
+                (hopefully) graduate in April. These days, I&apos;m learning
+                guitar, Muay Thai, and spending time with friends before
+                corporate life starts.
               </p>
             </div>
 
@@ -193,16 +193,16 @@ export default function Hero() {
                 </span>
               </div>
               <p className="text-sm text-gray-600 dark:text-gray-300">
-                ⏳🫠 <br></br>
                 <a
-                  href="https://www.youtube.com/watch?v=T648JT7Eaus"
+                  href="https://www.azquotes.com/quote/1217864"
                   className="underline"
                 >
-                  https://www.youtube.com/watch?v=T648JT7Eaus
+                  https://www.azquotes.com/quote/1217864
                 </a>
+                , and even if they don&apos;t, you&apos;ll still have a beautiful garden.
               </p>
               <p className="text-xs text-gray-500 dark:text-gray-400 mt-2">
-                Last updated September 20, 2026
+                Last updated October 18, 2026
               </p>
             </div>
           </div>
